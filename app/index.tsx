@@ -1,66 +1,87 @@
-import { Image } from "expo-image";
-import { Platform, StyleSheet } from "react-native";
-
-import { HelloWave } from "@/components/hello-wave";
-import ParallaxScrollView from "@/components/parallax-scroll-view";
-import { ThemedText } from "@/components/themed-text";
-import { ThemedView } from "@/components/themed-view";
-
+import { View, Text, StyleSheet, ScrollView} from "react-native";
+import FlatSwapButton from "../components/ui/FlatSwapButton";
+import FlatSwapText from "../components/ui/FlatSwapText";
+import FlatSwapInput from "../components/ui/FlatSwapInput";
+import { DefaultStyles } from "../components/ui/DefaultStyles";
+import { useState } from "react";
+import { useRouter  } from "expo-router";
+import MapView, { Marker, Circle } from "react-native-maps";
 export default function HomeScreen() {
+const results = [
+  { key: 1, name: "Hotel Alpha", latitude: 48.2082, longitude: 16.3738 },
+  { key: 2, name: "Hotel Beta", latitude: 48.2100, longitude: 16.3700 },
+  { key: 3, name: "Hotel Gamma", latitude: 48.2050, longitude: 16.3800 },
+];
+
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
-      headerImage={
-        <Image
-          source={require("@/assets/images/partial-react-logo.png")}
-          style={styles.reactLogo}
-        />
-      }
-    >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit{" "}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{" "}
-          to see changes. Press{" "}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: "cmd + d",
-              android: "cmd + m",
-              web: "F12",
-            })}
-          </ThemedText>{" "}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+		<View style={{ flex: 1 }}>
+      <MapView
+        style={{ flex: 1 }}
+        initialRegion={{
+          latitude: 48.2082,
+          longitude: 16.3738,
+          latitudeDelta: 0.05,
+          longitudeDelta: 0.05,
+        }}
+      >
+	  {results.map((item) => (
+		<Circle
+      center={{
+        latitude: item.latitude,
+        longitude: item.longitude,
+      }}
+      radius={400} // meters
+      fillColor="rgba(37, 99, 235, 0.2)"
+      strokeColor="rgba(37, 99, 235, 0.6)"
+      strokeWidth={1}
+    />
+		
+  ))}
+	  
+	  
+	  
+      </MapView>
+    </View>
+
+
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
+  container: {
+    flex: 1,
+    padding: 10,
+	alignItems: "center",
+  },
+
+  title: {
+	textAlign: "center",
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+
+  deadspace: {
+    height: 20,
+  },
+
+  searchRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
+    gap: 5,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+
+  searchBar: {
+    flex: 7,              
+    height: 45,           
+    backgroundColor: "#f2f2f2",
+    borderRadius: 8,
+    paddingHorizontal: 10,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+
+
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
   },
 });
