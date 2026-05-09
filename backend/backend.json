@@ -1,0 +1,184 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "name": "Alexander Miller",
+      "city": "Vienna",
+      "latitude": 48.2102,
+      "longitude": 16.3634,
+      "pictures": [],
+      "description": "A modern 2-bedroom apartment in a quiet residential area, featuring an open-plan kitchen, balcony, and plenty of natural light."
+    },
+    {
+      "id": 2,
+      "name": "Emma Carter",
+      "city": "Paris",
+      "latitude": 48.8580,
+      "longitude": 2.3470,
+      "pictures": [],
+      "description": "A stylish studio apartment in central Paris with high ceilings, large windows, and a compact but fully equipped kitchen."
+    },
+    {
+      "id": 3,
+      "name": "Lucas Bennett",
+      "city": "London",
+      "latitude": 51.5090,
+      "longitude": -0.1180,
+      "pictures": [],
+      "description": "A spacious 3-bedroom apartment near public transport, offering modern furnishings and a shared garden."
+    },
+    {
+      "id": 4,
+      "name": "Sophie Laurent",
+      "city": "Paris",
+      "latitude": 48.8532,
+      "longitude": 2.3499,
+      "pictures": [],
+      "description": "A renovated one-bedroom apartment in a historic building with hardwood floors and a bright living area."
+    },
+    {
+      "id": 5,
+      "name": "Daniel Brooks",
+      "city": "Vienna",
+      "latitude": 48.2049,
+      "longitude": 16.3705,
+      "pictures": [],
+      "description": "A contemporary loft apartment with industrial design elements, high ceilings, and an open living space."
+    },
+    {
+      "id": 6,
+      "name": "Charlotte Evans",
+      "city": "London",
+      "latitude": 51.5135,
+      "longitude": -0.1312,
+      "pictures": [],
+      "description": "A cozy 2-bedroom apartment featuring a modern kitchen, private balcony, and excellent city views."
+    },
+    {
+      "id": 7,
+      "name": "Julian Weber",
+      "city": "Vienna",
+      "latitude": 48.2128,
+      "longitude": 16.3791,
+      "pictures": [],
+      "description": "A well-lit apartment in a central district, offering 2 bedrooms, a spacious living room, and underground parking."
+    },
+    {
+      "id": 8,
+      "name": "Isabelle Martin",
+      "city": "Paris",
+      "latitude": 48.8601,
+      "longitude": 2.3556,
+      "pictures": [],
+      "description": "A charming apartment near the river with elegant interiors, wooden floors, and a compact balcony."
+    },
+    {
+      "id": 9,
+      "name": "Henry Collins",
+      "city": "London",
+      "latitude": 51.5062,
+      "longitude": -0.1246,
+      "pictures": [],
+      "description": "A modern flat with 1 bedroom, open kitchen layout, and access to a rooftop terrace."
+    },
+    {
+      "id": 10,
+      "name": "Amelia Scott",
+      "city": "Vienna",
+      "latitude": 48.2067,
+      "longitude": 16.3759,
+      "pictures": [],
+      "description": "A newly renovated apartment featuring smart home systems, 2 bedrooms, and a spacious bathroom."
+    },
+    {
+      "id": 11,
+      "name": "Thomas Wright",
+      "city": "London",
+      "latitude": 51.5118,
+      "longitude": -0.1210,
+      "pictures": [],
+      "description": "A luxury apartment in a high-rise building with panoramic city views and premium finishes."
+    },
+    {
+      "id": 12,
+      "name": "Clara Dubois",
+      "city": "Paris",
+      "latitude": 48.8555,
+      "longitude": 2.3608,
+      "pictures": [],
+      "description": "A bright studio apartment with modern furnishings, located close to cafés and cultural landmarks."
+    },
+    {
+      "id": 13,
+      "name": "Benjamin Clarke",
+      "city": "Vienna",
+      "latitude": 48.2145,
+      "longitude": 16.3661,
+      "pictures": [],
+      "description": "A quiet apartment with 2 bedrooms, a separate kitchen, and excellent insulation for year-round comfort."
+    },
+    {
+      "id": 14,
+      "name": "Olivia Brown",
+      "city": "London",
+      "latitude": 51.5083,
+      "longitude": -0.1350,
+      "pictures": [],
+      "description": "A stylish apartment featuring an open-plan living space, modern appliances, and a private balcony."
+    },
+    {
+      "id": 15,
+      "name": "Louis Moreau",
+      "city": "Paris",
+      "latitude": 48.8520,
+      "longitude": 2.3625,
+      "pictures": [],
+      "description": "A compact yet elegant apartment in the city center with efficient layout and natural light."
+    },
+    {
+      "id": 16,
+      "name": "Mia Johnson",
+      "city": "Vienna",
+      "latitude": 48.2090,
+      "longitude": 16.3808,
+      "pictures": [],
+      "description": "A modern apartment designed for professionals, offering 1 bedroom, workspace area, and fast internet setup."
+    },
+    {
+      "id": 17,
+      "name": "George Taylor",
+      "city": "London",
+      "latitude": 51.5129,
+      "longitude": -0.1284,
+      "pictures": [],
+      "description": "A family-friendly apartment with 3 bedrooms, large kitchen, and access to nearby parks."
+    },
+    {
+      "id": 18,
+      "name": "Camille Rousseau",
+      "city": "Paris",
+      "latitude": 48.8571,
+      "longitude": 2.3509,
+      "pictures": [],
+      "description": "A refined apartment with classical Parisian design, tall windows, and decorative molding."
+    },
+    {
+      "id": 19,
+      "name": "Ethan Walker",
+      "city": "Vienna",
+      "latitude": 48.2038,
+      "longitude": 16.3729,
+      "pictures": [],
+      "description": "A secure apartment in a modern complex with underground parking and fitness facilities."
+    },
+    {
+      "id": 20,
+      "name": "Victoria Hill",
+      "city": "London",
+      "latitude": 51.5072,
+      "longitude": -0.1205,
+      "pictures": [],
+      "description": "A premium apartment featuring luxury interiors, concierge service, and a central location."
+    }
+  ]
+}
