@@ -27,6 +27,7 @@ type FlatSwapInputProps = {
 export default function FlatSwapInput({
   value,
   onChangeText,
+  onSubmitEditing,
   placeholder = "...",
   style=DefaultStyles.input,
 }: FlatSwapInputProps) {
@@ -34,8 +35,9 @@ export default function FlatSwapInput({
     <TextInput
       value={value}
       onChangeText={onChangeText}
+	  onSubmitEditing={onSubmitEditing}
       placeholder={placeholder}
       style={style}
     />
   );
-}a
+}

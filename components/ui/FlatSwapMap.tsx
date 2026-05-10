@@ -22,7 +22,7 @@ const results = getAllUsers();
 		
       <MapView
         style={{ flex: 4 }}
-        initialRegion={{
+        region={{
           latitude: latitude,
           longitude: longitude,
           latitudeDelta: 0.05,

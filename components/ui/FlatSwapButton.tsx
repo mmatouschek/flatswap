@@ -29,7 +29,7 @@ export default function FlatSwapButton({
   title,
   onPress,
   style = DefaultStyles.button,
-  textStyle DefaultStyles.buttonText,
+  textStyle = DefaultStyles.buttonText,
 }: ButtonProps) {
   return (
     <TouchableOpacity

@@ -17,10 +17,11 @@ entries.entries.forEach((item) => {
 return result;
 }
 
+
 export function getResults(city: string){
 let result = [];
 entries.entries.forEach((item) => {
-  if (item.city==city){
+  if (item.city.startsWith(city)){
 	result.push(item);
   }
 });
