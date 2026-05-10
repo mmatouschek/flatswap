@@ -7,6 +7,7 @@ import { DefaultStyles } from "../components/ui/DefaultStyles";
 import { useState } from "react";
 import { useRouter  } from "expo-router";
 import MapView, { Marker, Circle } from "react-native-maps";
+import { Alert } from "react-native";
 import getAllUsers, {getUser, getResults, getApartmentPictures} from "../backend/FlatSwapAPI"
 
 
@@ -31,15 +32,14 @@ const [long, setLong]= useState(16.3808);
 				setLong(result[0].longitude);
 			}
 			else{
-				console.log("No Results");
+				const message = `Unfortunately there are no swappers in ${query}!`;
+				Alert.alert("No results", message,
+				[{ text: "OK", onPress: () => {} }]);
+
 			
 			}
 		}}
 		placeholder="..."/>
-		<FlatSwapButton
-		title=" "
-		onPress={() => {console.log("render map:", lat, long)}}
-        />
 		</View>
 		<FlatSwapMap style={{flex: 5}} latitude={lat} longitude={long} />
     </View>
