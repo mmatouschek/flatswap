@@ -13,7 +13,7 @@ export default function ScrollListItem({id}: Properties) {
 	const red = 255-green;
 	const color = `rgb(${red}, ${green}, 0)`;
   return (	
-		<View style={{flex:1, flexDirection: "column",justifyContent: "center", alignItems: "center"}}>
+		<View style={{flex:1, flexDirection: "column",justifyContent: "center", alignItems: "center", padding:10, backgroundColor:"rgba(173, 216, 230, 0.7)"}}>
 		<View style={{height:300, width: "100%", backgroundColor:"black"}}>
 		{getApartmentPictures(user.id)[0]}
 		<View

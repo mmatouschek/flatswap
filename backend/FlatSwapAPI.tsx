@@ -53,9 +53,9 @@ const pic = [
 ];
 return(
 [<Image source={pic[id-1][0]}
-  style={{ width: "100%", height: 300 }}
+  style={{ width: "100%", height: 300  }}
   resizeMode="contain"/>,
-  <Image source={pic[id][1]}
+  <Image source={pic[id-1][1]}
   style={{ width: "100%", height: 300 }}
   resizeMode="contain"/>])
 
