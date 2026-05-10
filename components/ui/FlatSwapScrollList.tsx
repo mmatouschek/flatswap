@@ -18,19 +18,17 @@ export default function FlatSwapScrollList({searchResult}:Props) {
 
 
 
-
-
 if (searchResult.length<1){
 return <ScrollView style={{ flex:1 }} />
 
 }
 return(
+
 <ScrollView style={{ flex:1 }}>
 
-{searchResult.map((item) => {
-	console.log("-------------------------------------");
-			console.log(item);
-	console.log("-------------------------------------");
+{searchResult.sort((a: Item, b: Item) => {
+  return b.trustscore - a.trustscore;
+}).map((item) => {
   return (
     <View key={item.id} style={{ padding: 10 }}>
       <FlatSwapScrollViewItem id={item.id} />
