@@ -30,7 +30,7 @@ return(
   return b.trustscore - a.trustscore;
 }).map((item) => {
   return (
-    <View key={item.id} style={{ padding: 10 }}>
+    <View key={item.id} style={{ padding: 5 }}>
       <FlatSwapScrollViewItem id={item.id} />
     </View>
   );

@@ -13,11 +13,17 @@ import getAllUsers, {getUser, getResults, getApartmentPictures} from "../../back
 type MapProps = {
   latitude: string;
   longitude: number;
+  searchResult: any[];
 };
 
 
-export default function FlatSwapMap({latitude, longitude}: MapProps ) {
-const results = getAllUsers();
+export default function FlatSwapMap({latitude, longitude, searchResult}: MapProps ) {
+const results = searchResult;
+let delta = 0.05;
+if(results.length<1)
+{
+delta = 4;
+}
   return (
 		
       <MapView
@@ -25,8 +31,8 @@ const results = getAllUsers();
         region={{
           latitude: latitude,
           longitude: longitude,
-          latitudeDelta: 0.05,
-          longitudeDelta: 0.05,
+          latitudeDelta: delta,
+          longitudeDelta: delta,
         }}
       >
 	  {results.map((item) => {
@@ -51,8 +57,8 @@ const results = getAllUsers();
       <Marker
         key={`marker-${item.id}`}
         coordinate={{
-          latitude: item.latitude - 0.001,
-          longitude: item.longitude-0.001,
+          latitude: item.latitude,
+          longitude: item.longitude,
         }}
         onPress={() => {
           console.log("marker clicked");
@@ -70,6 +76,7 @@ const results = getAllUsers();
           </Text>
         </View>
       </Marker>
+	  
     </Fragment>
   );
 })}
@@ -80,3 +87,10 @@ const results = getAllUsers();
 
 );
   }
+  
+  
+  function formatDate(date: string){
+
+return `${date.slice(8,10)}.${date.slice(5,7)}.${date.slice(2,4)}`
+
+}
