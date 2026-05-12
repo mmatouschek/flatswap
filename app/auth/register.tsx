@@ -1,4 +1,5 @@
 import { Colors } from "@/constants/theme";
+import { useRef } from "react";
 import {
   StyleSheet,
   Text,
@@ -7,24 +8,47 @@ import {
   View,
 } from "react-native";
 export default function RegisterScreen() {
+  const passwordRef = useRef<TextInput>(null);
+  const emailRef = useRef<TextInput>(null);
+  const confirmPasswordRef = useRef<TextInput>(null);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Create Account</Text>
 
-      <TextInput placeholder="Username" style={styles.input} />
+      <TextInput
+        placeholder="Username"
+        style={styles.input}
+        returnKeyType="next"
+        onSubmitEditing={() => emailRef.current?.focus()}
+      />
 
       <TextInput
+        ref={emailRef}
         placeholder="Email"
         keyboardType="email-address"
         style={styles.input}
+        returnKeyType="next"
+        onSubmitEditing={() => passwordRef.current?.focus()}
       />
 
-      <TextInput placeholder="Password" secureTextEntry style={styles.input} />
+      <TextInput
+        ref={passwordRef}
+        placeholder="Password"
+        secureTextEntry
+        style={styles.input}
+        returnKeyType="next"
+        onSubmitEditing={() => confirmPasswordRef.current?.focus()}
+      />
 
       <TextInput
+        ref={confirmPasswordRef}
         placeholder="Confirm Password"
         secureTextEntry
         style={styles.input}
+        returnKeyType="done"
+        onSubmitEditing={() => {
+          console.log("Register");
+        }}
       />
 
       <TouchableOpacity style={styles.registerButton}>

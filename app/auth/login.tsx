@@ -1,5 +1,6 @@
 import { Colors } from "@/constants/theme";
 import { useRouter } from "expo-router";
+import { useRef } from "react";
 import {
   StyleSheet,
   Text,
@@ -9,6 +10,7 @@ import {
 } from "react-native";
 export default function ProfileScreen() {
   const router = useRouter();
+  const passwordRef = useRef<TextInput>(null);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to FlatSwap!</Text>
@@ -17,9 +19,20 @@ export default function ProfileScreen() {
         placeholder="Email"
         style={styles.input}
         keyboardType="email-address"
+        returnKeyType="next"
+        onSubmitEditing={() => passwordRef.current?.focus()}
       />
 
-      <TextInput placeholder="Password" secureTextEntry style={styles.input} />
+      <TextInput
+        ref={passwordRef}
+        placeholder="Password"
+        secureTextEntry
+        style={styles.input}
+        returnKeyType="done"
+        onSubmitEditing={() => {
+          console.log("Login");
+        }}
+      />
 
       <TouchableOpacity style={styles.loginButton}>
         <Text style={styles.buttonText}>Login</Text>

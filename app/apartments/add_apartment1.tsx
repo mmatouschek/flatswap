@@ -1,3 +1,9 @@
+import DateTimePicker from "@react-native-community/datetimepicker";
+import { useLocalSearchParams, useRouter } from "expo-router";
+import { useEffect, useRef, useState } from "react";
+
+import { Colors } from "@/constants/theme";
+
 import {
   Alert,
   ScrollView,
@@ -8,24 +14,24 @@ import {
   View,
 } from "react-native";
 
-import DateTimePicker from "@react-native-community/datetimepicker";
-
-import { useLocalSearchParams, useRouter } from "expo-router";
-
-import { Colors } from "@/constants/theme";
-import { useEffect, useState } from "react";
-
 export default function AddApartmentScreen() {
   const router = useRouter();
   const params = useLocalSearchParams();
+
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
   const [guests, setGuests] = useState("");
+
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+
   const [showStartPicker, setShowStartPicker] = useState(false);
   const [showEndPicker, setShowEndPicker] = useState(false);
+
   const [suggestions, setSuggestions] = useState<string[]>([]);
+
+  const locationRef = useRef<TextInput>(null);
+  const guestsRef = useRef<TextInput>(null);
 
   useEffect(() => {
     if (params.selectedLocation) {
@@ -66,6 +72,14 @@ export default function AddApartmentScreen() {
     router.push("/apartments/add_apartment2");
   };
 
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "2-digit",
+    });
+  };
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Add Apartment</Text>
@@ -77,15 +91,20 @@ export default function AddApartmentScreen() {
         value={title}
         onChangeText={setTitle}
         style={styles.input}
+        returnKeyType="next"
+        onSubmitEditing={() => locationRef.current?.focus()}
       />
 
       <Text style={styles.sectionTitle}>Location</Text>
 
       <TextInput
+        ref={locationRef}
         placeholder="Search district or city"
         value={location}
         onChangeText={searchLocation}
         style={styles.input}
+        returnKeyType="next"
+        onSubmitEditing={() => guestsRef.current?.focus()}
       />
 
       {location.length > 0 && !suggestions.includes(location) && (
@@ -96,7 +115,6 @@ export default function AddApartmentScreen() {
               style={styles.suggestionItem}
               onPress={() => {
                 setLocation(item);
-
                 setSuggestions([]);
               }}
             >
@@ -112,23 +130,24 @@ export default function AddApartmentScreen() {
         style={styles.mapButton}
         onPress={() => router.push("/apartments/select_location")}
       >
-        <Text style={styles.mapButtonText}>Choose location on Map</Text>
+        <Text style={styles.mapButtonText}>📍 Choose location on Map</Text>
       </TouchableOpacity>
 
-      <TextInput
-        placeholder="Max number of Guests"
-        keyboardType="numeric"
-        value={guests}
-        onChangeText={setGuests}
-        style={styles.input}
-      />
+      <View style={styles.dateRow}>
+        <TouchableOpacity
+          style={styles.dateInput}
+          onPress={() => setShowStartPicker(true)}
+        >
+          <Text style={styles.dateText}>📅 {formatDate(startDate)}</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.input}
-        onPress={() => setShowStartPicker(true)}
-      >
-        <Text>Available From: {startDate.toDateString()}</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.dateInput}
+          onPress={() => setShowEndPicker(true)}
+        >
+          <Text style={styles.dateText}>📅 {formatDate(endDate)}</Text>
+        </TouchableOpacity>
+      </View>
 
       {showStartPicker && (
         <DateTimePicker
@@ -144,13 +163,6 @@ export default function AddApartmentScreen() {
         />
       )}
 
-      <TouchableOpacity
-        style={styles.input}
-        onPress={() => setShowEndPicker(true)}
-      >
-        <Text>Available Until: {endDate.toDateString()}</Text>
-      </TouchableOpacity>
-
       {showEndPicker && (
         <DateTimePicker
           value={endDate}
@@ -164,6 +176,17 @@ export default function AddApartmentScreen() {
           }}
         />
       )}
+
+      <TextInput
+        ref={guestsRef}
+        placeholder="Max number of Guests"
+        keyboardType="numeric"
+        value={guests}
+        onChangeText={setGuests}
+        style={styles.input}
+        returnKeyType="done"
+        onSubmitEditing={goNext}
+      />
 
       <TouchableOpacity style={styles.button} onPress={goNext}>
         <Text style={styles.buttonText}>Next</Text>
@@ -185,6 +208,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
+    color: Colors.light.text,
   },
 
   subtitle: {
@@ -199,6 +223,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 8,
     fontSize: 16,
+    color: Colors.light.text,
   },
 
   input: {
@@ -209,7 +234,8 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     marginBottom: 16,
     fontSize: 16,
-    justifyContent: "center",
+    backgroundColor: Colors.light.background,
+    color: Colors.light.text,
   },
 
   suggestionsBox: {
@@ -233,15 +259,40 @@ const styles = StyleSheet.create({
   },
 
   mapButton: {
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#e8f0ff",
     padding: 16,
     borderRadius: 12,
     alignItems: "center",
+    justifyContent: "center",
     marginBottom: 16,
   },
 
   mapButtonText: {
     fontWeight: "600",
+    color: Colors.light.tint,
+  },
+
+  dateRow: {
+    flexDirection: "row",
+    gap: 12,
+    marginBottom: 16,
+  },
+
+  dateInput: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 12,
+    paddingVertical: 16,
+    paddingHorizontal: 16,
+    justifyContent: "center",
+    backgroundColor: Colors.light.background,
+  },
+
+  dateText: {
+    color: Colors.light.text,
+    fontWeight: "500",
+    textAlign: "center",
   },
 
   button: {

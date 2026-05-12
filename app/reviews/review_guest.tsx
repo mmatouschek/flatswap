@@ -1,3 +1,6 @@
+import { Colors } from "@/constants/theme";
+import { useRouter } from "expo-router";
+import { useState } from "react";
 import {
   Alert,
   ScrollView,
@@ -7,10 +10,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-
-import { Colors } from "@/constants/theme";
-import { useState } from "react";
 export default function ReviewGuestScreen() {
+  const router = useRouter();
   const [respectRating, setRespectRating] = useState(0);
   const [cleanlinessRating, setCleanlinessRating] = useState(0);
   const [communicationRating, setCommunicationRating] = useState(0);
@@ -33,7 +34,12 @@ export default function ReviewGuestScreen() {
       return;
     }
 
-    Alert.alert("Guest and Host reviews submitted. Thank you!");
+    Alert.alert("Success", "Guest and Host reviews submitted. Thank you!", [
+      {
+        text: "OK",
+        onPress: () => router.replace("/"),
+      },
+    ]);
   };
 
   const renderRatingButtons = (
@@ -78,6 +84,9 @@ export default function ReviewGuestScreen() {
         value={reviewText}
         onChangeText={setReviewText}
         style={[styles.input, styles.reviewInput]}
+        returnKeyType="done"
+        onSubmitEditing={submitReview}
+        blurOnSubmit={true}
       />
 
       <TouchableOpacity style={styles.button} onPress={submitReview}>

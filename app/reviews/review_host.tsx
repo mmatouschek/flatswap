@@ -15,13 +15,9 @@ import { useState } from "react";
 export default function ReviewHostScreen() {
   const router = useRouter();
   const [photosRating, setPhotosRating] = useState(0);
-
   const [cleanlinessRating, setCleanlinessRating] = useState(0);
-
   const [communicationRating, setCommunicationRating] = useState(0);
-
   const [recommendRating, setRecommendRating] = useState(0);
-
   const [reviewText, setReviewText] = useState("");
 
   const submitReview = () => {
@@ -32,20 +28,12 @@ export default function ReviewHostScreen() {
       !recommendRating ||
       reviewText.length < 20
     ) {
-      if (
-        !photosRating ||
-        !cleanlinessRating ||
-        !communicationRating ||
-        !recommendRating ||
-        reviewText.length < 20
-      ) {
-        Alert.alert(
-          "Missing information",
-          "Please complete all ratings and write at least 20 characters",
-        );
+      Alert.alert(
+        "Missing information",
+        "Please complete all ratings and write at least 20 characters",
+      );
 
-        return;
-      }
+      return;
     }
 
     router.push("/reviews/review_guest");
@@ -80,21 +68,13 @@ export default function ReviewHostScreen() {
       <Text style={styles.subtitle}>
         Rate your experience with the apartment and host
       </Text>
-
       <Text style={styles.label}>Apartment matched photos</Text>
-
       {renderRatingButtons(photosRating, setPhotosRating)}
-
       <Text style={styles.label}>Cleanliness</Text>
-
       {renderRatingButtons(cleanlinessRating, setCleanlinessRating)}
-
       <Text style={styles.label}>Communication</Text>
-
       {renderRatingButtons(communicationRating, setCommunicationRating)}
-
       <Text style={styles.label}>Would you recommend this host?</Text>
-
       {renderRatingButtons(recommendRating, setRecommendRating)}
 
       <TextInput
@@ -104,6 +84,9 @@ export default function ReviewHostScreen() {
         value={reviewText}
         onChangeText={setReviewText}
         style={[styles.input, styles.reviewInput]}
+        returnKeyType="done"
+        onSubmitEditing={submitReview}
+        blurOnSubmit={true}
       />
 
       <TouchableOpacity style={styles.button} onPress={submitReview}>
