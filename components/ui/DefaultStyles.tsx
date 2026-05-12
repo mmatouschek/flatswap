@@ -25,7 +25,7 @@ export const DefaultStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ccc",
     borderRadius: 10,
-    fontSize: 16,
+    fontSize: 12,
     color: "#111",
   },
 });
