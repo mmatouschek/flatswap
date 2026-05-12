@@ -1,5 +1,4 @@
 import {
-    Alert,
     ScrollView,
     StyleSheet,
     Text,
@@ -31,10 +30,7 @@ export default function ReviewHostScreen() {
       !recommendRating ||
       reviewText.length < 20
     ) {
-      Alert.alert(
-        "Missing information",
-        "Please complete all ratings and write at least 20 characters.",
-      );
+      router.replace("/");
 
       return;
     }

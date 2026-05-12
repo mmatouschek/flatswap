@@ -71,36 +71,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
-// import { useRouter } from "expo-router";
-// import { Button, StyleSheet, View } from "react-native";
-
-// export default function HomeScreen() {
-//   const router = useRouter();
-
-//   return (
-//     <View style={styles.container}>
-//       <Button title="Profile" onPress={() => router.push("/auth/login")} />
-
-//       <Button title="Register" onPress={() => router.push("/auth/register")} />
-
-//       <Button
-//         title="Add Apartment"
-//         onPress={() => router.push("/apartments/add_apartment1")}
-//       />
-//       <Button
-//         title="Review"
-//         onPress={() => router.push("/reviews/review_host")}
-//       />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: "center",
-//     gap: 20,
-//     padding: 24,
-//   },
-// });

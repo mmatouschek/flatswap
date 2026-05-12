@@ -86,7 +86,7 @@ export default function SelectLocationScreen() {
         onPress={() => {
           console.log(locationName);
           router.replace({
-            pathname: "/app/apartments/add_apartment1",
+            pathname: "/apartments/add_apartment1",
 
             params: {
               selectedLocation: locationName,

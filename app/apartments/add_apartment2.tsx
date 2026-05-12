@@ -39,7 +39,7 @@ export default function AddApartmentDetailsScreen() {
       return;
     }
 
-    router.push("/app/apartments/search_preferences");
+    router.push("/apartments/search_preferences");
   };
 
   return (
