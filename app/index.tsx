@@ -20,6 +20,7 @@ export default function HomeScreen() {
       >
         {results.map((item) => (
           <Circle
+            key={item.key}
             center={{
               latitude: item.latitude,
               longitude: item.longitude,
