@@ -19,11 +19,7 @@ type MapProps = {
 
 export default function FlatSwapMap({latitude, longitude, searchResult}: MapProps ) {
 const results = searchResult;
-let delta = 0.05;
-if(results.length<1)
-{
-delta = 4;
-}
+const delta = 0.05;
   return (
 		
       <MapView
