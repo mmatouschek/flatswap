@@ -13,17 +13,18 @@ type Properties = {
   onDatePress: () => void;
 };
 
-export default function FlatSwapCalendar({isVisible, top="100", left="100", startDate, endDate, onBackdropPress,onDatePress}: Properties) {
-
+export default function FlatSwapCalendar({isVisible, top="30", left="152", startDate, endDate, onBackdropPress,onDatePress}: Properties) {
   const markedDates = buildMarkedDateRange(
     startDate,
     endDate
   );
+  const currentDate = startDate ? startDate : "2026-06-01"
   return (
     <Modal visible={isVisible} transparent animationType="fade">
 	<Pressable style={styles.background} onPress={onBackdropPress}/>
       <View style={[styles.modal, {top:top, left:left}]}>
       <Calendar
+		current={currentDate}
 		startDate={startDate}
 		endDate={endDate}
 		markingType="period"
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   modal: {
 	position: "absolute",
 	flex:1,
-    width: 300,
+    width: 220,
     height: 150,
     backgroundColor: "white",
 	flexDirection: "column",
@@ -58,7 +59,9 @@ const styles = StyleSheet.create({
   const  color = "#00adf5";
   const textColor = "#ffffff";
   const markedDates = {};
-  
+  if(startDate==null){
+	return markedDates;
+  }
   if (endDate==null){
 	markedDates[startDate]={
       color: color,
