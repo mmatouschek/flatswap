@@ -1,12 +1,14 @@
 import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Alert,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
+import { Colors } from "@/constants/theme";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 
@@ -30,9 +32,20 @@ export default function ReviewHostScreen() {
       !recommendRating ||
       reviewText.length < 20
     ) {
-      router.replace("/");
+      if (
+        !photosRating ||
+        !cleanlinessRating ||
+        !communicationRating ||
+        !recommendRating ||
+        reviewText.length < 20
+      ) {
+        Alert.alert(
+          "Missing information",
+          "Please complete all ratings and write at least 20 characters",
+        );
 
-      return;
+        return;
+      }
     }
 
     router.push("/reviews/review_guest");
@@ -103,7 +116,7 @@ export default function ReviewHostScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: "#fff",
+    backgroundColor: Colors.light.background,
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -113,11 +126,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
+    color: Colors.light.text,
   },
 
   subtitle: {
     textAlign: "center",
-    color: "#666",
+    color: Colors.light.text,
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -128,6 +142,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 12,
     marginTop: 8,
+    color: Colors.light.text,
   },
 
   ratingRow: {
@@ -146,13 +161,13 @@ const styles = StyleSheet.create({
   },
 
   selectedRating: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
   },
 
   ratingText: {
     fontWeight: "bold",
     fontSize: 16,
-    color: "#000",
+    color: Colors.light.text,
   },
 
   input: {
@@ -163,6 +178,8 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     fontSize: 16,
     marginTop: 12,
+    backgroundColor: Colors.light.background,
+    color: Colors.light.text,
   },
 
   reviewInput: {
@@ -171,7 +188,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
     padding: 18,
     borderRadius: 12,
     alignItems: "center",
@@ -179,7 +196,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#fff",
+    color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
   },

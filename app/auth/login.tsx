@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/theme";
 import { useRouter } from "expo-router";
 import {
   StyleSheet,
@@ -6,7 +7,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-
 export default function ProfileScreen() {
   const router = useRouter();
   return (
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 24,
-    backgroundColor: "#fff",
+    backgroundColor: Colors.light.background,
   },
 
   title: {
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 32,
     textAlign: "center",
+    color: Colors.light.text,
   },
 
   input: {
@@ -57,10 +58,12 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     paddingHorizontal: 16,
     marginBottom: 16,
+    backgroundColor: Colors.light.background,
+    color: Colors.light.text,
   },
 
   loginButton: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
     padding: 16,
     borderRadius: 12,
     alignItems: "center",
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#fff",
+    color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
   },
@@ -79,7 +82,7 @@ const styles = StyleSheet.create({
   },
 
   registerText: {
-    color: "#2563eb",
+    color: Colors.light.tint,
     fontWeight: "600",
   },
 });

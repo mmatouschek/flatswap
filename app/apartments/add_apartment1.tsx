@@ -12,6 +12,7 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 
 import { useLocalSearchParams, useRouter } from "expo-router";
 
+import { Colors } from "@/constants/theme";
 import { useEffect, useState } from "react";
 
 export default function AddApartmentScreen() {
@@ -174,7 +175,7 @@ export default function AddApartmentScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: "#fff",
+    backgroundColor: Colors.light.background,
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -188,7 +189,7 @@ const styles = StyleSheet.create({
 
   subtitle: {
     textAlign: "center",
-    color: "#666",
+    color: Colors.light.text,
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -232,7 +233,7 @@ const styles = StyleSheet.create({
   },
 
   mapButton: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: Colors.light.background,
     padding: 16,
     borderRadius: 12,
     alignItems: "center",
@@ -244,7 +245,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
     padding: 18,
     borderRadius: 12,
     alignItems: "center",
@@ -252,7 +253,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#fff",
+    color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
   },

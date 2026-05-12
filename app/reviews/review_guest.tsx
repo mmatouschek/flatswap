@@ -1,24 +1,20 @@
 import {
-    Alert,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Alert,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
+import { Colors } from "@/constants/theme";
 import { useState } from "react";
-
 export default function ReviewGuestScreen() {
   const [respectRating, setRespectRating] = useState(0);
-
   const [cleanlinessRating, setCleanlinessRating] = useState(0);
-
   const [communicationRating, setCommunicationRating] = useState(0);
-
   const [hostAgainRating, setHostAgainRating] = useState(0);
-
   const [reviewText, setReviewText] = useState("");
 
   const submitReview = () => {
@@ -65,23 +61,14 @@ export default function ReviewGuestScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Review Guest</Text>
-
       <Text style={styles.subtitle}>Rate your experience with the guest</Text>
-
       <Text style={styles.label}>Respect for apartment</Text>
-
       {renderRatingButtons(respectRating, setRespectRating)}
-
       <Text style={styles.label}>Cleanliness</Text>
-
       {renderRatingButtons(cleanlinessRating, setCleanlinessRating)}
-
       <Text style={styles.label}>Communication</Text>
-
       {renderRatingButtons(communicationRating, setCommunicationRating)}
-
       <Text style={styles.label}>Would you host this guest again?</Text>
-
       {renderRatingButtons(hostAgainRating, setHostAgainRating)}
 
       <TextInput
@@ -103,7 +90,7 @@ export default function ReviewGuestScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: "#fff",
+    backgroundColor: Colors.light.background,
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -113,11 +100,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
+    color: Colors.light.text,
   },
 
   subtitle: {
     textAlign: "center",
-    color: "#666",
+    color: Colors.light.text,
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -128,6 +116,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 12,
     marginTop: 8,
+    color: Colors.light.text,
   },
 
   ratingRow: {
@@ -146,13 +135,13 @@ const styles = StyleSheet.create({
   },
 
   selectedRating: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
   },
 
   ratingText: {
     fontWeight: "bold",
     fontSize: 16,
-    color: "#000",
+    color: Colors.light.text,
   },
 
   input: {
@@ -163,6 +152,8 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     fontSize: 16,
     marginTop: 12,
+    backgroundColor: Colors.light.background,
+    color: Colors.light.text,
   },
 
   reviewInput: {
@@ -171,7 +162,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
     padding: 18,
     borderRadius: 12,
     alignItems: "center",
@@ -179,7 +170,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#fff",
+    color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
   },

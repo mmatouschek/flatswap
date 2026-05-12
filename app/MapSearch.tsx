@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Alert, View } from "react-native";
-import {
-	filterDate,
-	getResults
-} from "../backend/FlatSwapAPI";
+import { filterDate, getResults } from "../backend/FlatSwapAPI";
 import { DefaultStyles } from "../components/ui/DefaultStyles";
 import FlatSwapCalendar from "../components/ui/FlatSwapCalendar";
 import FlatSwapIconButton from "../components/ui/FlatSwapIconButton";

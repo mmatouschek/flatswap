@@ -1,3 +1,7 @@
+import { Colors } from "@/constants/theme";
+import * as ImagePicker from "expo-image-picker";
+import { useRouter } from "expo-router";
+import { useState } from "react";
 import {
   Alert,
   Image,
@@ -7,10 +11,6 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-
-import * as ImagePicker from "expo-image-picker";
-import { useRouter } from "expo-router";
-import { useState } from "react";
 
 export default function AddApartmentDetailsScreen() {
   const [description, setDescription] = useState("");
@@ -73,7 +73,7 @@ export default function AddApartmentDetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: "#fff",
+    backgroundColor: Colors.light.background,
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -83,11 +83,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
+    color: Colors.light.text,
   },
 
   subtitle: {
     textAlign: "center",
-    color: "#666",
+    color: Colors.light.text,
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -101,6 +102,8 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     marginBottom: 16,
     fontSize: 16,
+    backgroundColor: Colors.light.background,
+    color: Colors.light.text,
   },
 
   descriptionInput: {
@@ -118,6 +121,7 @@ const styles = StyleSheet.create({
 
   imageButtonText: {
     fontWeight: "600",
+    color: Colors.light.text,
   },
 
   previewImage: {
@@ -128,7 +132,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
     padding: 18,
     borderRadius: 12,
     alignItems: "center",
@@ -136,7 +140,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#fff",
+    color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
   },

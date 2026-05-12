@@ -1,3 +1,6 @@
+import { Colors } from "@/constants/theme";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import { useState } from "react";
 import {
   Alert,
   ScrollView,
@@ -8,25 +11,14 @@ import {
   View,
 } from "react-native";
 
-import DateTimePicker from "@react-native-community/datetimepicker";
-
-import { useState } from "react";
-
 export default function SearchPreferencesScreen() {
   const [cityInput, setCityInput] = useState("");
-
   const [locations, setLocations] = useState<string[]>([]);
-
   const [guests, setGuests] = useState("");
-
   const [startDate, setStartDate] = useState(new Date());
-
   const [endDate, setEndDate] = useState(new Date());
-
   const [showStartPicker, setShowStartPicker] = useState(false);
-
   const [showEndPicker, setShowEndPicker] = useState(false);
-
   const addLocation = () => {
     if (!cityInput.trim()) {
       return;
@@ -134,89 +126,191 @@ export default function SearchPreferencesScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: "#fff",
+
+    backgroundColor: Colors.light.background,
+
     flexGrow: 1,
+
     paddingBottom: 80,
   },
 
   title: {
     fontSize: 30,
+
     fontWeight: "bold",
+
     textAlign: "center",
+
     marginTop: 40,
+
+    color: Colors.light.text,
   },
 
   subtitle: {
     textAlign: "center",
-    color: "#666",
+
+    color: Colors.light.text,
+
     marginTop: 8,
+
     marginBottom: 32,
+
     fontSize: 14,
   },
 
   sectionTitle: {
     fontWeight: "600",
-    marginBottom: 10,
+
+    marginBottom: 8,
+
     fontSize: 16,
+
+    color: Colors.light.text,
+  },
+
+  input: {
+    borderWidth: 1,
+
+    borderColor: "#ddd",
+
+    borderRadius: 12,
+
+    paddingHorizontal: 16,
+
+    paddingVertical: 14,
+
+    marginBottom: 16,
+
+    fontSize: 16,
+
+    justifyContent: "center",
+
+    backgroundColor: Colors.light.background,
+
+    color: Colors.light.text,
   },
 
   locationRow: {
     flexDirection: "row",
-    gap: 10,
+
+    gap: 12,
+
     marginBottom: 16,
   },
 
   locationInput: {
     flex: 1,
+
     borderWidth: 1,
+
     borderColor: "#ddd",
+
     borderRadius: 12,
+
     paddingHorizontal: 16,
+
     paddingVertical: 14,
+
     fontSize: 16,
+
+    backgroundColor: Colors.light.background,
+
+    color: Colors.light.text,
   },
 
   addButton: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
+
+    paddingHorizontal: 20,
+
     borderRadius: 12,
+
     justifyContent: "center",
-    paddingHorizontal: 18,
+
+    alignItems: "center",
   },
 
   addButtonText: {
-    color: "#fff",
+    color: Colors.light.background,
+
     fontWeight: "bold",
+
+    fontSize: 16,
   },
 
   locationTag: {
     backgroundColor: "#f2f2f2",
-    padding: 14,
+
+    padding: 12,
+
     borderRadius: 12,
-    marginBottom: 10,
+
+    marginBottom: 12,
   },
 
-  input: {
-    borderWidth: 1,
-    borderColor: "#ddd",
+  suggestionsBox: {
+    backgroundColor: "#f7f7f7",
+
     borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
+
+    marginTop: -8,
+
     marginBottom: 16,
-    fontSize: 16,
-    justifyContent: "center",
+  },
+
+  suggestionItem: {
+    padding: 14,
+
+    borderBottomWidth: 1,
+
+    borderBottomColor: "#eee",
+  },
+
+  orText: {
+    textAlign: "center",
+
+    marginBottom: 16,
+
+    color: "#777",
+
+    fontWeight: "600",
+  },
+
+  mapButton: {
+    backgroundColor: "#f2f2f2",
+
+    padding: 16,
+
+    borderRadius: 12,
+
+    alignItems: "center",
+
+    marginBottom: 16,
+  },
+
+  mapButtonText: {
+    fontWeight: "600",
+
+    color: Colors.light.text,
   },
 
   button: {
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
+
     padding: 18,
+
     borderRadius: 12,
+
     alignItems: "center",
+
     marginTop: 12,
   },
 
   buttonText: {
-    color: "#fff",
+    color: Colors.light.background,
+
     fontWeight: "bold",
+
     fontSize: 16,
   },
 });

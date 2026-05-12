@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/theme";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
@@ -103,6 +104,7 @@ export default function SelectLocationScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: Colors.light.background,
   },
 
   map: {
@@ -114,14 +116,14 @@ const styles = StyleSheet.create({
     bottom: 40,
     left: 24,
     right: 24,
-    backgroundColor: "#2563eb",
+    backgroundColor: Colors.light.tint,
     padding: 18,
     borderRadius: 12,
     alignItems: "center",
   },
 
   buttonText: {
-    color: "#fff",
+    color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
   },
