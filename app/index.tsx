@@ -1,21 +1,14 @@
-import { View, Text, StyleSheet, ScrollView} from "react-native";
-import FlatSwapButton from "../components/ui/FlatSwapButton";
-import FlatSwapText from "../components/ui/FlatSwapText";
-import FlatSwapInput from "../components/ui/FlatSwapInput";
-import { DefaultStyles } from "../components/ui/DefaultStyles";
-import { useState } from "react";
-import { useRouter  } from "expo-router";
-import MapView, { Marker, Circle } from "react-native-maps";
+import { StyleSheet, View } from "react-native";
+import MapView, { Circle } from "react-native-maps";
 export default function HomeScreen() {
-const results = [
-  { key: 1, name: "Hotel Alpha", latitude: 48.2082, longitude: 16.3738 },
-  { key: 2, name: "Hotel Beta", latitude: 48.2100, longitude: 16.3700 },
-  { key: 3, name: "Hotel Gamma", latitude: 48.2050, longitude: 16.3800 },
-];
-
+  const results = [
+    { key: 1, name: "Hotel Alpha", latitude: 48.2082, longitude: 16.3738 },
+    { key: 2, name: "Hotel Beta", latitude: 48.21, longitude: 16.37 },
+    { key: 3, name: "Hotel Gamma", latitude: 48.205, longitude: 16.38 },
+  ];
 
   return (
-		<View style={{ flex: 1 }}>
+    <View style={{ flex: 1 }}>
       <MapView
         style={{ flex: 1 }}
         initialRegion={{
@@ -25,26 +18,20 @@ const results = [
           longitudeDelta: 0.05,
         }}
       >
-	  {results.map((item) => (
-		<Circle
-      center={{
-        latitude: item.latitude,
-        longitude: item.longitude,
-      }}
-      radius={400} // meters
-      fillColor="rgba(37, 99, 235, 0.2)"
-      strokeColor="rgba(37, 99, 235, 0.6)"
-      strokeWidth={1}
-    />
-		
-  ))}
-	  
-	  
-	  
+        {results.map((item) => (
+          <Circle
+            center={{
+              latitude: item.latitude,
+              longitude: item.longitude,
+            }}
+            radius={400} // meters
+            fillColor="rgba(37, 99, 235, 0.2)"
+            strokeColor="rgba(37, 99, 235, 0.6)"
+            strokeWidth={1}
+          />
+        ))}
       </MapView>
     </View>
-
-
   );
 }
 
@@ -52,11 +39,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-	alignItems: "center",
+    alignItems: "center",
   },
 
   title: {
-	textAlign: "center",
+    textAlign: "center",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -72,16 +59,48 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-    flex: 7,              
-    height: 45,           
+    flex: 7,
+    height: 45,
     backgroundColor: "#f2f2f2",
     borderRadius: 8,
     paddingHorizontal: 10,
   },
-
 
   buttonText: {
     color: "white",
     fontWeight: "bold",
   },
 });
+
+// import { useRouter } from "expo-router";
+// import { Button, StyleSheet, View } from "react-native";
+
+// export default function HomeScreen() {
+//   const router = useRouter();
+
+//   return (
+//     <View style={styles.container}>
+//       <Button title="Profile" onPress={() => router.push("/auth/login")} />
+
+//       <Button title="Register" onPress={() => router.push("/auth/register")} />
+
+//       <Button
+//         title="Add Apartment"
+//         onPress={() => router.push("/apartments/add_apartment1")}
+//       />
+//       <Button
+//         title="Review"
+//         onPress={() => router.push("/reviews/review_host")}
+//       />
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: "center",
+//     gap: 20,
+//     padding: 24,
+//   },
+// });
