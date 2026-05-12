@@ -16,23 +16,14 @@ import { useEffect, useState } from "react";
 
 export default function AddApartmentScreen() {
   const router = useRouter();
-
   const params = useLocalSearchParams();
-
   const [title, setTitle] = useState("");
-
   const [location, setLocation] = useState("");
-
   const [guests, setGuests] = useState("");
-
   const [startDate, setStartDate] = useState(new Date());
-
   const [endDate, setEndDate] = useState(new Date());
-
   const [showStartPicker, setShowStartPicker] = useState(false);
-
   const [showEndPicker, setShowEndPicker] = useState(false);
-
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
   useEffect(() => {

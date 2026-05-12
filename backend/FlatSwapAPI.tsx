@@ -17,10 +17,11 @@ entries.entries.forEach((item) => {
 return result;
 }
 
+
 export function getResults(city: string){
 let result = [];
 entries.entries.forEach((item) => {
-  if (item.city==city){
+  if (item.city.startsWith(city)){
 	result.push(item);
   }
 });
@@ -51,12 +52,40 @@ const pic = [
   [require("./20/1.jpg"), require("./20/2.jpg")],
 ];
 return(
-[<Image source={pic[id-1][0]}
-  style={{ width: "100%", height: 300 }}
+[<Image source={pic[(id-1)%20][0]}
+  style={{ width: "100%", height: 300  }}
   resizeMode="contain"/>,
-  <Image source={pic[id][1]}
+  <Image source={pic[(id-1)%20][1]}
   style={{ width: "100%", height: 300 }}
   resizeMode="contain"/>])
 
+}
+
+
+export function filterDate(startDate: string, endDate: string, list:any[]){
+if (startDate==null){
+	return list;
+} 
+let result=[];
+const start = new Date(startDate);
+if(endDate==null){
+	list.forEach((item) => {
+	const itemStart = new Date(item.startDate);
+	const itemEnd = new Date(item.endDate);
+	if (itemStart.getTime()<=start.getTime() && start.getTime()<=itemEnd.getTime())
+	result.push(item);
+  }
+)}
+else{
+	list.forEach((item) => {
+	const itemStart = new Date(item.startDate);
+	const itemEnd = new Date(item.endDate);
+	const end = new Date(endDate);
+	if (itemStart.getTime()<=start.getTime() && end.getTime()<=itemEnd.getTime()){
+	result.push(item);
+  }
+})}
+return result;
 
 }
+
