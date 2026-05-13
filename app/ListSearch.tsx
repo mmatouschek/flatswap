@@ -1,4 +1,4 @@
-import { default as React, default as React, useState } from "react";
+import { default as React, useState } from "react";
 import { Alert, View } from "react-native";
 import { filterDate, getResults } from "../backend/FlatSwapAPI";
 import { DefaultStyles } from "../components/ui/DefaultStyles";
