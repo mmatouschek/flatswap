@@ -1,22 +1,37 @@
 import { Colors } from "@/constants/theme";
-import { useRef } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { useRef, useState } from "react";
 import {
+  Alert,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
+
+import { loginUser, registerUser } from "@/backend/services/AuthStorage";
+
 export default function RegisterScreen() {
+  const navigation = useNavigation<any>();
+
   const passwordRef = useRef<TextInput>(null);
   const emailRef = useRef<TextInput>(null);
   const confirmPasswordRef = useRef<TextInput>(null);
+
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Create Account</Text>
 
       <TextInput
         placeholder="Username"
+        value={username}
+        onChangeText={setUsername}
         style={styles.input}
         returnKeyType="next"
         onSubmitEditing={() => emailRef.current?.focus()}
@@ -25,6 +40,8 @@ export default function RegisterScreen() {
       <TextInput
         ref={emailRef}
         placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
         keyboardType="email-address"
         style={styles.input}
         returnKeyType="next"
@@ -34,6 +51,8 @@ export default function RegisterScreen() {
       <TextInput
         ref={passwordRef}
         placeholder="Password"
+        value={password}
+        onChangeText={setPassword}
         secureTextEntry
         style={styles.input}
         returnKeyType="next"
@@ -43,15 +62,39 @@ export default function RegisterScreen() {
       <TextInput
         ref={confirmPasswordRef}
         placeholder="Confirm Password"
+        value={confirmPassword}
+        onChangeText={setConfirmPassword}
         secureTextEntry
         style={styles.input}
         returnKeyType="done"
-        onSubmitEditing={() => {
-          console.log("Register");
-        }}
       />
 
-      <TouchableOpacity style={styles.registerButton}>
+      <TouchableOpacity
+        style={styles.registerButton}
+        onPress={async () => {
+          if (!username || !email || !password || !confirmPassword) {
+            Alert.alert("Missing fields", "Please fill in all fields.");
+
+            return;
+          }
+
+          if (password !== confirmPassword) {
+            Alert.alert("Password mismatch", "Passwords do not match.");
+
+            return;
+          }
+
+          await registerUser({
+            username,
+            email,
+            password,
+          });
+
+          await loginUser();
+
+          navigation.goBack();
+        }}
+      >
         <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
     </View>

@@ -1,22 +1,34 @@
+import { loginUser, validateUser } from "@/backend/services/AuthStorage";
+
 import { Colors } from "@/constants/theme";
 import { useNavigation } from "@react-navigation/native";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+
 import {
+  Alert,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
+
 export default function ProfileScreen() {
   const navigation = useNavigation<any>();
+
   const passwordRef = useRef<TextInput>(null);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to FlatSwap!</Text>
 
       <TextInput
         placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
         style={styles.input}
         keyboardType="email-address"
         returnKeyType="next"
@@ -26,15 +38,35 @@ export default function ProfileScreen() {
       <TextInput
         ref={passwordRef}
         placeholder="Password"
+        value={password}
+        onChangeText={setPassword}
         secureTextEntry
         style={styles.input}
         returnKeyType="done"
-        onSubmitEditing={() => {
-          console.log("Login");
-        }}
       />
 
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={async () => {
+          if (!email || !password) {
+            Alert.alert("Missing fields", "Please enter email and password.");
+
+            return;
+          }
+
+          const user = await validateUser(email, password);
+
+          if (!user) {
+            Alert.alert("Login failed", "Invalid email or password.");
+
+            return;
+          }
+
+          await loginUser();
+
+          navigation.goBack();
+        }}
+      >
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 
@@ -87,11 +119,6 @@ const styles = StyleSheet.create({
     color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
-  },
-
-  registerButton: {
-    marginTop: 20,
-    alignItems: "center",
   },
 
   registerContainer: {

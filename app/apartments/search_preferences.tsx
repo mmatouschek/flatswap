@@ -1,5 +1,7 @@
+import { saveTrip } from "@/backend/services/UserStorage";
 import { Colors } from "@/constants/theme";
 import DateTimePicker from "@react-native-community/datetimepicker";
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 
 import {
@@ -21,25 +23,51 @@ export default function SearchPreferencesScreen() {
   const [endDate, setEndDate] = useState(new Date());
   const [showStartPicker, setShowStartPicker] = useState(false);
   const [showEndPicker, setShowEndPicker] = useState(false);
+  const navigation = useNavigation<any>();
 
   const addLocation = () => {
-    if (!cityInput.trim()) {
+    const trimmed = cityInput.trim();
+
+    if (!trimmed) {
       return;
     }
 
-    setLocations([...locations, cityInput]);
+    if (locations.includes(trimmed)) {
+      Alert.alert("Already added", "This location already exists.");
+
+      return;
+    }
+
+    setLocations([...locations, trimmed]);
 
     setCityInput("");
   };
 
-  const finishSetup = () => {
+  const finishSetup = async () => {
     if (locations.length === 0 || !guests) {
       Alert.alert("Missing fields", "Please complete all required fields.");
 
       return;
     }
 
-    Alert.alert("Success", "Apartment and preferences created!");
+    const trip = {
+      locations,
+      guests,
+      startDate,
+      endDate,
+      createdAt: new Date(),
+    };
+
+    await saveTrip(trip);
+
+    Alert.alert("Success 🎉", "Your offer has been created!", [
+      {
+        text: "OK",
+        onPress: () => {
+          navigation.navigate("Your Trip");
+        },
+      },
+    ]);
   };
 
   const formatDate = (date: Date) => {
@@ -71,9 +99,19 @@ export default function SearchPreferencesScreen() {
         </TouchableOpacity>
       </View>
 
-      {locations.map((location) => (
-        <View key={location} style={styles.locationTag}>
-          <Text>{location}</Text>
+      {locations.map((location, index) => (
+        <View key={index} style={styles.locationTag}>
+          <Text style={styles.locationText}>{location}</Text>
+
+          <TouchableOpacity
+            onPress={() => {
+              const updated = locations.filter((_, i) => i !== index);
+
+              setLocations(updated);
+            }}
+          >
+            <Text style={styles.deleteLocation}>✕</Text>
+          </TouchableOpacity>
         </View>
       ))}
 
@@ -229,9 +267,14 @@ const styles = StyleSheet.create({
 
   locationTag: {
     backgroundColor: "#f2f2f2",
-    padding: 12,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
     borderRadius: 12,
     marginBottom: 12,
+
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
 
   checkboxRow: {
@@ -299,5 +342,16 @@ const styles = StyleSheet.create({
     color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
+  },
+  locationText: {
+    fontSize: 16,
+    color: Colors.light.text,
+    fontWeight: "500",
+  },
+
+  deleteLocation: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#d9534f",
   },
 });

@@ -1,40 +1,118 @@
+import { isUserLoggedIn } from "@/backend/services/AuthStorage";
+import { deleteTrip, getTrips } from "@/backend/services/UserStorage";
 import { Colors } from "@/constants/theme";
-import { useNavigation } from "@react-navigation/native";
-import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
+import { useCallback, useState } from "react";
+import {
+  Alert, ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
 
 export default function TripsScreen() {
   const navigation = useNavigation<any>();
-  const router = useRouter();
+
+  const [trips, setTrips] = useState<any[]>([]);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadTrips();
+    }, []),
+  );
+
+  const loadTrips = async () => {
+    const savedTrips = await getTrips();
+
+    setTrips(savedTrips);
+  };
+
+  const formatDate = (date: string) => {
+    return new Date(date).toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "2-digit",
+    });
+  };
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Your Trips</Text>
 
-      <View style={styles.emptyBox}>
-        <Text style={styles.emptyText}>You don’t have any trips yet</Text>
+      {trips.length === 0 ? (
+        <>
+          <Text style={styles.emptyTitle}>You don't have any trips yet 🙁</Text>
 
-        <Text style={styles.subText}>
-          Start by creating your first apartment offer
-        </Text>
-      </View>
+          <Text style={styles.emptySubtitle}>
+            Start by creating your first apartment offer
+          </Text>
+        </>
+      ) : (
+        <>
+          {trips.map((trip, index) => (
+            <View key={index} style={styles.tripCard}>
+              <View style={styles.tripHeader}>
+                <Text style={styles.tripTitle}>
+                  {trip.locations.join(", ")}
+                </Text>
+
+                <Text style={styles.tripGuests}>👥 {trip.guests}</Text>
+              </View>
+
+              <Text style={styles.tripDates}>
+                📅 {formatDate(trip.startDate)}
+                {"  -  "}
+                {formatDate(trip.endDate)}
+              </Text>
+
+              <TouchableOpacity
+                style={styles.deleteButton}
+                onPress={async () => {
+                  await deleteTrip(index);
+
+                  loadTrips();
+                }}
+              >
+                <Text style={styles.deleteButtonText}>Delete Trip</Text>
+              </TouchableOpacity>
+            </View>
+          ))}
+        </>
+      )}
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("AddApartment")}
+        onPress={async () => {
+          const loggedIn = await isUserLoggedIn();
+
+          if (!loggedIn) {
+            Alert.alert(
+              "Login required",
+              "Please login before creating a trip.",
+            );
+
+            navigation.navigate("Profile");
+
+            return;
+          }
+
+          navigation.navigate("AddApartment");
+        }}
       >
         <Text style={styles.buttonText}>Add Trip</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: Colors.light.background,
     padding: 24,
-    justifyContent: "center",
+    paddingTop: 60,
+    paddingBottom: 80,
+    backgroundColor: Colors.light.background,
+    flexGrow: 1,
   },
 
   title: {
@@ -45,34 +123,82 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 
-  emptyBox: {
-    backgroundColor: "#f7f7f7",
-    borderRadius: 16,
-    padding: 28,
-    alignItems: "center",
-    marginBottom: 32,
-  },
-
-  emptyText: {
-    fontSize: 18,
-    fontWeight: "600",
+  emptyTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 12,
     color: Colors.light.text,
-    marginBottom: 8,
-    textAlign: "center",
   },
 
-  subText: {
-    fontSize: 14,
-    color: "#777",
+  emptySubtitle: {
     textAlign: "center",
-    lineHeight: 20,
+    color: "#777",
+    fontSize: 16,
+    marginBottom: 32,
+    lineHeight: 22,
+  },
+
+  tripCard: {
+    backgroundColor: "#fff",
+    borderRadius: 18,
+    padding: 18,
+    marginBottom: 18,
+
+    shadowColor: "#000",
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+
+    elevation: 2,
+  },
+
+  tripHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+
+  tripTitle: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: Colors.light.text,
+    flex: 1,
+    marginRight: 12,
+  },
+
+  tripGuests: {
+    color: "#777",
+    fontWeight: "600",
+    fontSize: 15,
+  },
+
+  tripDates: {
+    color: "#666",
+    marginTop: 4,
+    fontSize: 14,
+  },
+
+  deleteButton: {
+    marginTop: 16,
+    backgroundColor: "#ffebeb",
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: "center",
+  },
+
+  deleteButtonText: {
+    color: "#d9534f",
+    fontWeight: "700",
+    fontSize: 15,
   },
 
   button: {
     backgroundColor: Colors.light.tint,
     padding: 18,
-    borderRadius: 12,
+    borderRadius: 14,
     alignItems: "center",
+    marginTop: 12,
   },
 
   buttonText: {
