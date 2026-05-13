@@ -1,12 +1,12 @@
 import { Colors } from "@/constants/theme";
-import { useRouter } from "expo-router";
+
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-
 import MapView, { Marker } from "react-native-maps";
 
 export default function SelectLocationScreen() {
-  const router = useRouter();
+  const navigation = useNavigation<any>();
 
   const [marker, setMarker] = useState({
     latitude: 48.2082,
@@ -86,12 +86,9 @@ export default function SelectLocationScreen() {
         style={styles.button}
         onPress={() => {
           console.log(locationName);
-          router.replace({
-            pathname: "/apartments/add_apartment1",
 
-            params: {
-              selectedLocation: locationName,
-            },
+          navigation.navigate("AddApartment", {
+            selectedLocation: locationName,
           });
         }}
       >
@@ -116,6 +113,8 @@ const styles = StyleSheet.create({
     bottom: 40,
     left: 24,
     right: 24,
+    zIndex: 10,
+
     backgroundColor: Colors.light.tint,
     padding: 18,
     borderRadius: 12,

@@ -1,5 +1,5 @@
 import DateTimePicker from "@react-native-community/datetimepicker";
-import { useLocalSearchParams, useRouter } from "expo-router";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useRef, useState } from "react";
 
 import { Colors } from "@/constants/theme";
@@ -15,8 +15,8 @@ import {
 } from "react-native";
 
 export default function AddApartmentScreen() {
-  const router = useRouter();
-  const params = useLocalSearchParams();
+  const navigation = useNavigation<any>();
+  const route = useRoute<any>();
 
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
@@ -34,10 +34,10 @@ export default function AddApartmentScreen() {
   const guestsRef = useRef<TextInput>(null);
 
   useEffect(() => {
-    if (params.selectedLocation) {
-      setLocation(params.selectedLocation as string);
+    if (route.params?.selectedLocation) {
+      setLocation(route.params.selectedLocation);
     }
-  }, [params.selectedLocation]);
+  }, [route.params]);
 
   const searchLocation = async (text: string) => {
     setLocation(text);
@@ -69,7 +69,7 @@ export default function AddApartmentScreen() {
       return;
     }
 
-    router.push("/apartments/add_apartment2");
+    navigation.navigate("AddApartment2");
   };
 
   const formatDate = (date: Date) => {
@@ -128,7 +128,7 @@ export default function AddApartmentScreen() {
 
       <TouchableOpacity
         style={styles.mapButton}
-        onPress={() => router.push("/apartments/select_location")}
+        onPress={() => navigation.navigate("SelectLocation")}
       >
         <Text style={styles.mapButtonText}>📍 Choose location on Map</Text>
       </TouchableOpacity>

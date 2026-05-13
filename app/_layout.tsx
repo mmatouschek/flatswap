@@ -1,7 +1,14 @@
 import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StyleSheet } from "react-native";
-import ListSearch from "./ListSearch";
+import AddApartmentScreen from "./apartments/add_apartment1";
+import AddApartment2Screen from "./apartments/add_apartment2";
+import PreferencesScreen from "./apartments/search_preferences";
+import SelectLocationScreen from "./apartments/select_location";
+import TripsScreen from "./apartments/tripsScreen";
+import LoginScreen from "./auth/login";
+import ProfileScreen from "./auth/profile";
+import CreateAccountScreen from "./auth/register";
 import MapSearch from "./MapSearch";
 import Placeholder from "./placeholder";
 
@@ -11,10 +18,10 @@ export default function TabLayout() {
   return (
     <Tab.Navigator
       initialRouteName="Search"
-      animation="fade"
+      //animation="fade"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
+          let iconName: any;
 
           if (route.name === "Search") {
             iconName = "magnifying-glass";
@@ -45,10 +52,64 @@ export default function TabLayout() {
       })}
     >
       <Tab.Screen name="MapSearch" component={MapSearch} />
-      <Tab.Screen name="Search" component={ListSearch} />
-      <Tab.Screen name="Your Trip" component={Placeholder} />
+      <Tab.Screen name="Search" component={Placeholder} />
+      <Tab.Screen name="Your Trip" component={TripsScreen} />
       <Tab.Screen name="Your Conversations" component={Placeholder} />
-      <Tab.Screen name="Profile" component={Placeholder} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+
+      <Tab.Screen
+        name="AddApartment"
+        component={AddApartmentScreen} // hidden Button
+        options={{
+          tabBarButton: () => null,
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+      <Tab.Screen
+        name="AddApartment2"
+        component={AddApartment2Screen} // hidden Button
+        options={{
+          tabBarButton: () => null,
+
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+      <Tab.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{
+          tabBarButton: () => null,
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+
+      <Tab.Screen
+        name="CreateAccount"
+        component={CreateAccountScreen}
+        options={{
+          tabBarButton: () => null,
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+      <Tab.Screen
+        name="Preferences"
+        component={PreferencesScreen}
+        options={{
+          tabBarButton: () => null,
+
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+
+      <Tab.Screen
+        name="SelectLocation"
+        component={SelectLocationScreen}
+        options={{
+          tabBarButton: () => null,
+
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
     </Tab.Navigator>
   );
 }

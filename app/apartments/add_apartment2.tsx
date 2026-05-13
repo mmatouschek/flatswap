@@ -1,6 +1,7 @@
 import { Colors } from "@/constants/theme";
+import { useNavigation } from "@react-navigation/native";
 import * as ImagePicker from "expo-image-picker";
-import { useRouter } from "expo-router";
+
 import { useState } from "react";
 import {
   Alert,
@@ -15,7 +16,7 @@ import {
 export default function AddApartmentDetailsScreen() {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState<string | null>(null);
-  const router = useRouter();
+  const navigation = useNavigation<any>();
 
   const pickImage = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
@@ -30,7 +31,6 @@ export default function AddApartmentDetailsScreen() {
 
   const publishApartment = () => {
     if (description.length < 50) {
-      // (!image || description.length < 50)
       Alert.alert(
         "Missing information",
         "Please upload a photo and write at least 50 characters.",
@@ -39,7 +39,7 @@ export default function AddApartmentDetailsScreen() {
       return;
     }
 
-    router.push("/apartments/search_preferences");
+    navigation.navigate("Preferences");
   };
 
   return (

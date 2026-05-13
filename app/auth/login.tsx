@@ -1,5 +1,5 @@
 import { Colors } from "@/constants/theme";
-import { useRouter } from "expo-router";
+import { useNavigation } from "@react-navigation/native";
 import { useRef } from "react";
 import {
   StyleSheet,
@@ -9,7 +9,7 @@ import {
   View,
 } from "react-native";
 export default function ProfileScreen() {
-  const router = useRouter();
+  const navigation = useNavigation<any>();
   const passwordRef = useRef<TextInput>(null);
   return (
     <View style={styles.container}>
@@ -39,8 +39,8 @@ export default function ProfileScreen() {
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.registerButton}
-        onPress={() => router.push("/auth/register")}
+        style={styles.registerContainer}
+        onPress={() => navigation.navigate("CreateAccount")}
       >
         <Text style={styles.registerText}>Create Account</Text>
       </TouchableOpacity>
@@ -94,8 +94,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
+  registerContainer: {
+    marginTop: 20,
+    alignItems: "center",
+  },
+
   registerText: {
     color: Colors.light.tint,
+    fontSize: 16,
     fontWeight: "600",
   },
 });
