@@ -9,7 +9,7 @@ import TripsScreen from "./apartments/tripsScreen";
 import LoginScreen from "./auth/login";
 import ProfileScreen from "./auth/profile";
 import CreateAccountScreen from "./auth/register";
-import MapSearch from "./MapSearch";
+import SearchTabs from "./SearchTabs";
 import Placeholder from "./placeholder";
 
 const Tab = createBottomTabNavigator();
@@ -25,8 +25,6 @@ export default function TabLayout() {
 
           if (route.name === "Search") {
             iconName = "magnifying-glass";
-          } else if (route.name === "MapSearch") {
-            iconName = "map";
           } else if (route.name === "Your Trip") {
             iconName = "suitcase";
           } else if (route.name === "Your Conversations") {
@@ -51,8 +49,8 @@ export default function TabLayout() {
         },
       })}
     >
-      <Tab.Screen name="MapSearch" component={MapSearch} />
-      <Tab.Screen name="Search" component={Placeholder} />
+
+      <Tab.Screen name="Search" component={SearchTabs} />
       <Tab.Screen name="Your Trip" component={TripsScreen} />
       <Tab.Screen name="Your Conversations" component={Placeholder} />
       <Tab.Screen name="Profile" component={ProfileScreen} />

@@ -25,26 +25,28 @@ const [page, setPage] = useState(true);
 
 	if (page){
 	return (
-	<View style ={{flex:1}}>
-	<View style ={{height:100}}/>
-	<View style = {{flex:2, padding: 5, flexDirection: "row", justifyContent: "center"}}>
-		<FlatSwapButton style={[DefaultStyles.button,{flex:1, backgroundColor:"rgba(173, 216, 230,0.3)"}]} title = "List" onPress={()=>{setPage(false);}}/>
-		<FlatSwapButton style={[DefaultStyles.button,{flex:1, backgroundColor:"rgba(173, 216, 230,1)"}]} title = "Map" onPress={()=>{setPage(true);}}/>
+	<View style ={{flex:1, flexDirection: "column"}}>
+	<View style ={{flex:1, flexDirection: "column", justifyContent: "center"}}>
+		<View style = {{flex:1, padding:4, flexDirection: "row", justifyContent: "center"}}>
+			<FlatSwapButton style={[DefaultStyles.button,{flex:1, backgroundColor:"rgba(173, 216, 230,0.3)"}]} title = "List" onPress={()=>{setPage(false);}}/>
+			<FlatSwapButton style={[DefaultStyles.button,{flex:1, backgroundColor:"rgba(173, 216, 230,1)"}]} title = "Map" onPress={()=>{setPage(true);}}/>
+		</View>
 	</View>
-	<View style = {{flex: 19}}>
+	<View style = {{flex: 70}}>
 		<MapSearch />
 	</View>
 	</View>
   );}
   else{
 	return (
-	<View style ={{flex:1}}>
-	<View style ={{height:100}}/>
-	<View style = {{flex:2, padding: 5, flexDirection: "row", justifyContent: "center"}}>
+	<View style ={{flex:1, flexDirection: "column"}}>
+	<View style ={{flex:1, flexDirection: "column", justifyContent: "center"}}>
+		<View style = {{flex:1, padding:4, flexDirection: "row", justifyContent: "center"}}>
 		<FlatSwapButton style={[DefaultStyles.button,{flex:1, backgroundColor:"rgba(173, 216, 230,1)"}]} title = "List" onPress={()=>{setPage(false);}}/>
 		<FlatSwapButton style={[DefaultStyles.button,{flex:1, backgroundColor:"rgba(173, 216, 230,0.3)"}]} title = "Map" onPress={()=>{setPage(true);}}/>
 	</View>
-	<View style = {{flex: 19}}>
+	</View>
+	<View style = {{flex: 70}}>
 		<ListSearch />
 	</View>
 	</View>

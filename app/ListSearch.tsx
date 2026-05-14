@@ -4,6 +4,8 @@ import { filterDate, getResults } from "../backend/FlatSwapAPI";
 import { DefaultStyles } from "../components/ui/DefaultStyles";
 import FlatSwapCalendar from "../components/ui/FlatSwapCalendar";
 import FlatSwapIconButton from "../components/ui/FlatSwapIconButton";
+import FlatSwapInput from "../components/ui/FlatSwapInput";
+import FlatSwapScrollList from "../components/ui/FlatSwapScrollList"
 import { useSearchData } from "./SearchData";
 
 export default function ListSearch() {
