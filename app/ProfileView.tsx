@@ -2,39 +2,22 @@ import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-fre
 import { useRoute } from "@react-navigation/native";
 import { useState } from "react";
 import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Image,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from "react-native";
 import { getUser } from "../backend/FlatSwapAPI";
-//import userData from "../backend/user_images.json";
 
-export default function DetailView() {
+export default function ProfileView() {
   const route = useRoute();
   const { id } = route.params;
   const user = getUser(id);
 
   const [currentImage, setCurrentImage] = useState(1);
 
-  /*
-  let imageSource;
-  if (id <= 20) {
-    const base64Data = userData[id][currentImage + ".jpg"];
-
-    imageSource = base64Data
-      ? { uri: `data:image/jpeg;base64,${base64Data}` }
-      : null;
-  } else {
-    imageSource = "";
-  }*/
-
-  const imageSource = "";
-  console.log(
-    "ID " + id + " currentImage " + currentImage + "imageSource " + imageSource,
-  );
   const toggleImage = () => {
     setCurrentImage((prev) => (prev == 1 ? 2 : 1));
   };
@@ -42,6 +25,7 @@ export default function DetailView() {
   return (
     <View>
       <View
+        style={styles.imageContainer}
         style={{
           width: "100%",
           height: "300",
@@ -50,7 +34,7 @@ export default function DetailView() {
         }}
       >
         <Image
-          source={imageSource}
+          source={image_ref[(id - 1) * 2 + currentImage]}
           style={{ width: "100%", height: "100%" }}
           resizeMode="contain"
         />
