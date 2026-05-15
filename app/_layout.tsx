@@ -10,8 +10,8 @@ import TripsScreen from "./apartments/tripsScreen";
 import LoginScreen from "./auth/login";
 import ProfileScreen from "./auth/profile";
 import CreateAccountScreen from "./auth/register";
+import Conversations from "./Conversations";
 import DetailView from "./DetailView";
-import Placeholder from "./placeholder";
 import SearchTabs from "./SearchTabs";
 
 const Tab = createBottomTabNavigator();
@@ -54,7 +54,7 @@ function TabLayout() {
     >
       <Tab.Screen name="Search" component={SearchTabs} />
       <Tab.Screen name="Your Trip" component={TripsScreen} />
-      <Tab.Screen name="Your Conversations" component={Placeholder} />
+      <Tab.Screen name="Your Conversations" component={Conversations} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
 
       <Tab.Screen

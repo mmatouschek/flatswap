@@ -135,7 +135,7 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
               </View>
             </View>
             <Text style={styles.dateText}>
-              {request.startDate} to {request.endDate}
+              {formatDate(request.startDate)} to {formatDate(request.endDate)}
             </Text>
             <Text numberOfLines={2} style={styles.messageText}>
               {request.message}
@@ -157,6 +157,11 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
     </ScrollView>
   );
 }
+
+  function formatDate(date: string) {
+    if (!date || date.length < 10) return date;
+    return `${date.slice(8, 10)}.${date.slice(5, 7)}.${date.slice(2, 4)}`;
+  }
 
 const styles = StyleSheet.create({
   container: {
