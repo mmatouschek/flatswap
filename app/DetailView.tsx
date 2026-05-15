@@ -2,12 +2,12 @@ import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-fre
 import { useRoute } from "@react-navigation/native";
 import { useState } from "react";
 import {
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { getUser } from "../backend/FlatSwapAPI";
 
@@ -27,18 +27,19 @@ export default function DetailView() {
   };
 
   return (
-    <View style={styles.detailWrapper}>
-      <ScrollView>
-        <View styles={styles.detailHeader}>
-          <Text style={styles.headline}>
-            <Text style={styles.username}>{user.name}'s</Text> Accomodation (id
-            = {id})
-          </Text>
-        </View>
-
+    <View>
+      <View
+        style={styles.imageContainer}
+        style={{
+          width: "100%",
+          height: "300",
+          top: -50,
+          backgroundColor: "#eee",
+        }}
+      >
         <Image
           source={image_ref[currentImage]}
-          style={{ width: "100%", height: 300 }}
+          style={{ width: "100%", height: "100%" }}
           resizeMode="contain"
         />
         <TouchableOpacity
@@ -59,45 +60,75 @@ export default function DetailView() {
             color={"white"}
           />
         </TouchableOpacity>
+      </View>
+      <View style={styles.detailWrapper}>
+        <ScrollView>
+          <View styles={styles.detailHeader}>
+            <Text style={styles.headline}>
+              <Text style={styles.username}>{user.name}'s</Text> Accomodation
+            </Text>
+            <Text style={styles.location}>
+              <FontAwesomeFreeSolid
+                name={"location-dot"}
+                size={12}
+                color={"black"}
+              />{" "}
+              {user.city}
+            </Text>
+          </View>
+          <View style={styles.divider} />
 
-        <View style={{ marginTop: 10 }}>
-          <Text style={styles.text}>Location: {user.city}</Text>
-          <Text style={styles.text}>Description: {user.description}</Text>
-          <Text style={styles.text}>Trust Score: {user.trustscore}</Text>
-          <Text style={styles.text}>Size: {user.size} m²</Text>
-          <Text style={styles.text}>Beds: {user.beds}</Text>
-          <Text style={styles.text}>
-            Available: {user.startDate} to {user.endDate}
-          </Text>
-          <Text style={styles.text}>
-            Coordinates: {user.latitude}, {user.longitude}
-          </Text>
-        </View>
-      </ScrollView>
+          <View style={{ marginTop: 10 }}>
+            <Text style={styles.text}>Description: {user.description}</Text>
+            <Text style={styles.text}>Trust Score: {user.trustscore}</Text>
+            <Text style={styles.text}>Size: {user.size} m²</Text>
+            <Text style={styles.text}>Beds: {user.beds}</Text>
+            <Text style={styles.text}>
+              Available: {user.startDate} to {user.endDate}
+            </Text>
+            <Text style={styles.text}>
+              Coordinates: {user.latitude}, {user.longitude}
+            </Text>
+          </View>
+        </ScrollView>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  detailWrapper: { padding: 10, backgroundColor: "white" },
-  headline: { fontSize: 20, color: "#555", alignSelf: "center" },
+  detailWrapper: {
+    position: "relative",
+    top: -100,
+    padding: 15,
+    backgroundColor: "white",
+    borderRadius: 10,
+  },
+  location: {
+    fontSize: 16,
+    color: "#555",
+  },
+  headline: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#555",
+  },
   text: { fontSize: 16 },
   username: {
     color: "#1ca349",
   },
-  detailHeader: { alignContent: "center" },
+  detailHeader: { borderWidth: 3, borderColor: "black" },
+  divider: {
+    height: 1,
+    backgroundColor: "#eee",
+    marginVertical: 10,
+  },
   arrow: {
     position: "absolute",
-    top: "31%",
+    top: "44%",
     width: 40,
     height: 40,
     justifyContent: "center",
     alignItems: "center",
-  },
-  dotContainer: {
-    flexDirection: "row",
-    position: "absolute",
-    bottom: 15,
-    alignSelf: "center",
   },
 });
