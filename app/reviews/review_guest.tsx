@@ -1,64 +1,68 @@
-import { useRouter } from "expo-router";
+import Slider from "@react-native-community/slider";
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
+
 import {
   Alert,
   ScrollView,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
+
 export default function ReviewGuestScreen() {
-  const router = useRouter();
-  const [respectRating, setRespectRating] = useState(0);
-  const [cleanlinessRating, setCleanlinessRating] = useState(0);
-  const [communicationRating, setCommunicationRating] = useState(0);
-  const [hostAgainRating, setHostAgainRating] = useState(0);
+  const navigation = useNavigation<any>();
+
+  const [respectRating, setRespectRating] = useState(50);
+  const [cleanlinessRating, setCleanlinessRating] = useState(50);
+  const [rulesRating, setRulesRating] = useState(50);
+  const [punctualityRating, setPunctualityRating] = useState(50);
+  const [hostAgainRating, setHostAgainRating] = useState(50);
+
   const [reviewText, setReviewText] = useState("");
 
+  const totalScore =
+    respectRating +
+    cleanlinessRating +
+    rulesRating +
+    punctualityRating +
+    hostAgainRating;
+
   const submitReview = () => {
-    if (
-      !respectRating ||
-      !cleanlinessRating ||
-      !communicationRating ||
-      !hostAgainRating ||
-      reviewText.length < 20
-    ) {
-      Alert.alert(
-        "Missing information",
-        "Please complete all ratings and write at least 20 characters.",
-      );
-
-      return;
-    }
-
-    Alert.alert("Success", "Guest and Host reviews submitted. Thank you!", [
+    Alert.alert("Success", `Guest review submitted!`, [
       {
         text: "OK",
-        onPress: () => router.replace("/"),
+        onPress: () => {
+          navigation.navigate("Your Trip");
+        },
       },
     ]);
   };
 
-  const renderRatingButtons = (
-    selected: number,
-    setSelected: (value: number) => void,
+  const renderSlider = (
+    label: string,
+    value: number,
+    setValue: (value: number) => void,
   ) => {
     return (
-      <View style={styles.ratingRow}>
-        {[1, 2, 3, 4, 5].map((number) => (
-          <TouchableOpacity
-            key={number}
-            style={[
-              styles.ratingButton,
-              selected === number && styles.selectedRating,
-            ]}
-            onPress={() => setSelected(number)}
-          >
-            <Text style={styles.ratingText}>{number}</Text>
-          </TouchableOpacity>
-        ))}
+      <View style={styles.sliderContainer}>
+        <View style={styles.sliderHeader}>
+          <Text style={styles.label}>{label}</Text>
+
+          <Text style={styles.scoreText}>{value}</Text>
+        </View>
+
+        <Slider
+          minimumValue={0}
+          maximumValue={100}
+          step={1}
+          value={value}
+          onValueChange={setValue}
+          minimumTrackTintColor="#1ca349"
+          maximumTrackTintColor="#cfe3ea"
+          thumbTintColor="#1ca349"
+        />
       </View>
     );
   };
@@ -66,30 +70,35 @@ export default function ReviewGuestScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Review Guest</Text>
-      <Text style={styles.subtitle}>Rate your experience with the guest</Text>
-      <Text style={styles.label}>Respect for apartment</Text>
-      {renderRatingButtons(respectRating, setRespectRating)}
-      <Text style={styles.label}>Cleanliness</Text>
-      {renderRatingButtons(cleanlinessRating, setCleanlinessRating)}
-      <Text style={styles.label}>Communication</Text>
-      {renderRatingButtons(communicationRating, setCommunicationRating)}
-      <Text style={styles.label}>Would you host this guest again?</Text>
-      {renderRatingButtons(hostAgainRating, setHostAgainRating)}
 
-      <TextInput
-        placeholder="Write your review..."
-        multiline
-        numberOfLines={6}
-        value={reviewText}
-        onChangeText={setReviewText}
-        style={[styles.input, styles.reviewInput]}
-        returnKeyType="done"
-        onSubmitEditing={submitReview}
-        blurOnSubmit={true}
-      />
+      <Text style={styles.subtitle}>Rate your experience with the guest</Text>
+
+      {renderSlider("Respect for apartment", respectRating, setRespectRating)}
+
+      {renderSlider(
+        "Cleanliness after stay",
+        cleanlinessRating,
+        setCleanlinessRating,
+      )}
+
+      {renderSlider("Following house rules", rulesRating, setRulesRating)}
+
+      {renderSlider("Punctuality", punctualityRating, setPunctualityRating)}
+
+      {renderSlider(
+        "Would you host again?",
+        hostAgainRating,
+        setHostAgainRating,
+      )}
+
+      <View style={styles.totalBox}>
+        <Text style={styles.totalLabel}>Guest Trust Score</Text>
+
+        <Text style={styles.totalScore}>{totalScore}/500</Text>
+      </View>
 
       <TouchableOpacity style={styles.button} onPress={submitReview}>
-        <Text style={styles.buttonText}>Submit Reviews</Text>
+        <Text style={styles.buttonText}>Submit Review</Text>
       </TouchableOpacity>
     </ScrollView>
   );
@@ -119,39 +128,52 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  label: {
-    fontSize: 16,
-    fontWeight: "600",
-    marginBottom: 12,
-    marginTop: 8,
-    color: "#0f1720",
-  },
-
-  ratingRow: {
-    flexDirection: "row",
-    gap: 10,
+  sliderContainer: {
     marginBottom: 24,
   },
 
-  ratingButton: {
-    width: 48,
-    height: 48,
-    borderRadius: 12,
-    backgroundColor: "rgba(173, 216, 230, 0.55)",
-    justifyContent: "center",
+  sliderHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 8,
+  },
+
+  label: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#0f1720",
+    flex: 1,
+    marginRight: 12,
+  },
+
+  scoreText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#1ca349",
+  },
+
+  totalBox: {
+    backgroundColor: "#eef7fa",
+    borderRadius: 16,
+    padding: 20,
+    alignItems: "center",
+    marginTop: 12,
+    marginBottom: 24,
     borderWidth: 1,
     borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
-  selectedRating: {
-    backgroundColor: "#1ca349",
+  totalLabel: {
+    fontSize: 16,
+    color: "#54707f",
+    marginBottom: 8,
   },
 
-  ratingText: {
+  totalScore: {
+    fontSize: 36,
     fontWeight: "bold",
-    fontSize: 16,
-    color: "#0f1720",
+    color: "#1ca349",
   },
 
   input: {
@@ -162,13 +184,8 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     fontSize: 16,
     marginTop: 12,
-    backgroundColor: "rgba(173, 216, 230, 0.55)",
+    backgroundColor: "#eef7fa",
     color: "#0f1720",
-  },
-
-  reviewInput: {
-    height: 160,
-    textAlignVertical: "top",
   },
 
   button: {

@@ -1,5 +1,6 @@
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { useNavigation, useRoute } from "@react-navigation/native";
+
 import { useEffect, useRef, useState } from "react";
 
 import {
@@ -16,14 +17,25 @@ export default function AddApartmentScreen() {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
 
-  const [title, setTitle] = useState("");
-  const [location, setLocation] = useState("");
-  const [guests, setGuests] = useState("");
+  const tripData = route.params?.tripData;
+  const editIndex = route.params?.editIndex;
 
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [title, setTitle] = useState(tripData?.title || "");
+
+  const [location, setLocation] = useState(tripData?.locations?.[0] || "");
+
+  const [guests, setGuests] = useState(tripData?.guests?.toString() || "");
+
+  const [startDate, setStartDate] = useState(
+    tripData?.startDate ? new Date(tripData.startDate) : new Date(),
+  );
+
+  const [endDate, setEndDate] = useState(
+    tripData?.endDate ? new Date(tripData.endDate) : new Date(),
+  );
 
   const [showStartPicker, setShowStartPicker] = useState(false);
+
   const [showEndPicker, setShowEndPicker] = useState(false);
 
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -42,6 +54,7 @@ export default function AddApartmentScreen() {
 
     if (text.length < 2) {
       setSuggestions([]);
+
       return;
     }
 
@@ -67,7 +80,23 @@ export default function AddApartmentScreen() {
       return;
     }
 
-    navigation.navigate("AddApartment2");
+    navigation.navigate("AddApartment2", {
+      editIndex,
+
+      tripData: {
+        ...tripData,
+
+        title,
+
+        locations: [location],
+
+        guests,
+
+        startDate,
+
+        endDate,
+      },
+    });
   };
 
   const formatDate = (date: Date) => {
@@ -80,7 +109,9 @@ export default function AddApartmentScreen() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Add Apartment</Text>
+      <Text style={styles.title}>
+        {editIndex !== undefined ? "Edit Apartment" : "Add Apartment"}
+      </Text>
 
       <Text style={styles.subtitle}>Step 1: Basic Information</Text>
 
@@ -113,6 +144,7 @@ export default function AddApartmentScreen() {
               style={styles.suggestionItem}
               onPress={() => {
                 setLocation(item);
+
                 setSuggestions([]);
               }}
             >

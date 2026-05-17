@@ -1,6 +1,6 @@
-import { saveTrip } from "@/backend/services/UserStorage";
+import { saveTrip, updateTrip } from "@/backend/services/UserStorage";
 import DateTimePicker from "@react-native-community/datetimepicker";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { useState } from "react";
 
 import {
@@ -14,59 +14,84 @@ import {
 } from "react-native";
 
 export default function SearchPreferencesScreen() {
+  const navigation = useNavigation<any>();
+  const route = useRoute<any>();
+  const tripData = route.params?.tripData;
+  const editIndex = route.params?.editIndex;
   const [cityInput, setCityInput] = useState("");
-  const [locations, setLocations] = useState<string[]>([]);
-  const [guests, setGuests] = useState("");
+  const [locations, setLocations] = useState<string[]>(
+    tripData?.preferredLocations || [],
+  );
+  const [guests, setGuests] = useState(
+    tripData?.preferredGuests?.toString() || "",
+  );
   const [useSameDates, setUseSameDates] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(
+    tripData?.preferredStartDate
+      ? new Date(tripData.preferredStartDate)
+      : new Date(),
+  );
+
+  const [endDate, setEndDate] = useState(
+    tripData?.preferredEndDate
+      ? new Date(tripData.preferredEndDate)
+      : new Date(),
+  );
+
   const [showStartPicker, setShowStartPicker] = useState(false);
   const [showEndPicker, setShowEndPicker] = useState(false);
-  const navigation = useNavigation<any>();
 
   const addLocation = () => {
     const trimmed = cityInput.trim();
-
     if (!trimmed) {
       return;
     }
-
     if (locations.includes(trimmed)) {
       Alert.alert("Already added", "This location already exists.");
-
       return;
     }
 
     setLocations([...locations, trimmed]);
-
     setCityInput("");
   };
 
   const finishSetup = async () => {
     if (locations.length === 0 || !guests) {
       Alert.alert("Missing fields", "Please complete all required fields.");
-
       return;
     }
 
-    const trip = {
-      locations,
-      guests,
-      startDate,
-      endDate,
-      createdAt: new Date(),
+    const finalTrip = {
+      ...tripData,
+      preferredLocations: locations,
+      preferredGuests: guests,
+      preferredStartDate: startDate,
+      preferredEndDate: endDate,
+      createdAt: tripData?.createdAt || new Date(),
     };
 
-    await saveTrip(trip);
-
-    Alert.alert("Success 🎉", "Your offer has been created!", [
-      {
-        text: "OK",
-        onPress: () => {
-          navigation.navigate("Your Trip");
+    if (editIndex !== undefined) {
+      await updateTrip(editIndex, finalTrip);
+      Alert.alert("Updated 🎉", "Your offer has been updated!", [
+        {
+          text: "OK",
+          onPress: () => {
+            navigation.navigate("Your Trip");
+          },
         },
-      },
-    ]);
+      ]);
+    } else {
+      await saveTrip(finalTrip);
+
+      Alert.alert("Success 🎉", "Your offer has been created!", [
+        {
+          text: "OK",
+          onPress: () => {
+            navigation.navigate("Your Trip");
+          },
+        },
+      ]);
+    }
   };
 
   const formatDate = (date: Date) => {
@@ -80,11 +105,8 @@ export default function SearchPreferencesScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Search Preferences</Text>
-
       <Text style={styles.subtitle}>Step 3: What are you looking for?</Text>
-
       <Text style={styles.sectionTitle}>Preferred Locations</Text>
-
       <View style={styles.locationRow}>
         <TextInput
           placeholder="City or district"
@@ -183,7 +205,9 @@ export default function SearchPreferencesScreen() {
       )}
 
       <TouchableOpacity style={styles.button} onPress={finishSetup}>
-        <Text style={styles.buttonText}>Post my Offer</Text>
+        <Text style={styles.buttonText}>
+          {editIndex !== undefined ? "Update Offer" : "Post my Offer"}
+        </Text>
       </TouchableOpacity>
     </ScrollView>
   );
@@ -222,20 +246,13 @@ const styles = StyleSheet.create({
 
   input: {
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
-
     borderRadius: 12,
-
     paddingHorizontal: 16,
     paddingVertical: 14,
-
     marginBottom: 16,
-
     fontSize: 16,
-
     backgroundColor: "rgba(173, 216, 230, 0.55)",
-
     color: "#0f1720",
   },
 
@@ -247,30 +264,20 @@ const styles = StyleSheet.create({
 
   locationInput: {
     flex: 1,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
-
     borderRadius: 12,
-
     paddingHorizontal: 16,
     paddingVertical: 14,
-
     fontSize: 16,
-
     backgroundColor: "rgba(173, 216, 230, 0.55)",
-
     color: "#0f1720",
   },
 
   addButton: {
     backgroundColor: "#1ca349",
-
     paddingHorizontal: 20,
-
     borderRadius: 12,
-
     justifyContent: "center",
     alignItems: "center",
   },
@@ -283,22 +290,14 @@ const styles = StyleSheet.create({
 
   locationTag: {
     backgroundColor: "rgba(173, 216, 230, 0.55)",
-
     paddingVertical: 14,
     paddingHorizontal: 16,
-
     borderRadius: 12,
-
     marginBottom: 12,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.08)",
-
     flexDirection: "row",
-
     justifyContent: "space-between",
-
     alignItems: "center",
   },
 
@@ -311,25 +310,18 @@ const styles = StyleSheet.create({
   checkbox: {
     width: 24,
     height: 24,
-
     borderRadius: 6,
-
     borderWidth: 2,
-
     borderColor: "#1ca349",
-
     alignItems: "center",
     justifyContent: "center",
-
     marginRight: 12,
   },
 
   checkboxInner: {
     width: 12,
     height: 12,
-
     borderRadius: 3,
-
     backgroundColor: "#1ca349",
   },
 
@@ -347,18 +339,12 @@ const styles = StyleSheet.create({
 
   dateInput: {
     flex: 1,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
-
     borderRadius: 12,
-
     paddingVertical: 16,
     paddingHorizontal: 16,
-
     justifyContent: "center",
-
     backgroundColor: "rgba(173, 216, 230, 0.55)",
   },
 
@@ -370,13 +356,9 @@ const styles = StyleSheet.create({
 
   button: {
     backgroundColor: "#1ca349",
-
     padding: 18,
-
     borderRadius: 12,
-
     alignItems: "center",
-
     marginTop: 12,
   },
 

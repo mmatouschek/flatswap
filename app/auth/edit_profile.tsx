@@ -1,4 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 
 import {
@@ -12,13 +13,10 @@ import {
 
 export default function EditProfile() {
   const [user, setUser] = useState<any>(null);
-
+  const navigation = useNavigation<any>();
   const [email, setEmail] = useState("");
-
   const [country, setCountry] = useState("");
-
   const [age, setAge] = useState("");
-
   const [about, setAbout] = useState("");
 
   useEffect(() => {
@@ -62,8 +60,8 @@ export default function EditProfile() {
     };
 
     await AsyncStorage.setItem("users", JSON.stringify(parsed));
-
     Alert.alert("Saved", "Profile updated successfully.");
+    navigation.goBack();
   };
 
   return (
@@ -99,7 +97,7 @@ export default function EditProfile() {
       />
 
       <TextInput
-        placeholder="About"
+        placeholder="About you"
         value={about}
         onChangeText={setAbout}
         multiline
@@ -132,20 +130,19 @@ const styles = StyleSheet.create({
 
   input: {
     borderWidth: 1,
-    borderColor: "rgba(28, 163, 73, 0.1)",
+    borderColor: "rgba(28, 163, 73, 0.08)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 14,
     marginBottom: 16,
-    backgroundColor: "rgba(173, 216, 230, 0.55)",
+    backgroundColor: "#eef7fa",
     color: "#0f1720",
     fontSize: 16,
   },
 
   disabledInput: {
-    backgroundColor: "rgba(173, 216, 230, 0.3)",
+    backgroundColor: "#e8f2f5",
     color: "#54707f",
-    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   aboutInput: {

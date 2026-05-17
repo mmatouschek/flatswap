@@ -13,6 +13,8 @@ import ProfileScreen from "./auth/profile";
 import CreateAccountScreen from "./auth/register";
 import Conversations from "./Conversations";
 import DetailView from "./DetailView";
+import ReviewGuestScreen from "./reviews/review_guest";
+import ReviewHostScreen from "./reviews/review_host";
 import SearchTabs from "./SearchTabs";
 
 const Tab = createBottomTabNavigator();
@@ -66,6 +68,7 @@ function TabLayout() {
           tabBarItemStyle: { display: "none" },
         }}
       />
+
       <Tab.Screen
         name="AddApartment2"
         component={AddApartment2Screen} // hidden Button
@@ -78,6 +81,23 @@ function TabLayout() {
       <Tab.Screen
         name="Login"
         component={LoginScreen}
+        options={{
+          tabBarButton: () => null,
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+      <Tab.Screen
+        name="ReviewHost"
+        component={ReviewHostScreen}
+        options={{
+          tabBarButton: () => null,
+          tabBarItemStyle: { display: "none" },
+        }}
+      />
+
+      <Tab.Screen
+        name="ReviewGuest"
+        component={ReviewGuestScreen}
         options={{
           tabBarButton: () => null,
           tabBarItemStyle: { display: "none" },

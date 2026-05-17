@@ -2,7 +2,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { isUserLoggedIn, logoutUser } from "@/backend/services/AuthStorage";
 
-
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 
 import { useCallback, useState } from "react";
@@ -66,23 +65,14 @@ export default function ProfileScreen() {
 
           <View style={styles.infoBox}>
             <Text style={styles.infoLabel}>Username</Text>
-
             <Text style={styles.infoText}>{user?.username || "-"}</Text>
-
             <Text style={styles.infoLabel}>Email</Text>
-
             <Text style={styles.infoText}>{user?.email || "-"}</Text>
-
             <Text style={styles.infoLabel}>Country</Text>
-
             <Text style={styles.infoText}>{user?.country || "-"}</Text>
-
             <Text style={styles.infoLabel}>Age</Text>
-
             <Text style={styles.infoText}>{user?.age || "-"}</Text>
-
-            <Text style={styles.infoLabel}>About</Text>
-
+            <Text style={styles.infoLabel}>About you</Text>
             <Text style={styles.infoText}>{user?.about || "-"}</Text>
           </View>
 
@@ -90,7 +80,6 @@ export default function ProfileScreen() {
             style={styles.button}
             onPress={async () => {
               await logoutUser();
-
               setLoggedIn(false);
             }}
           >
@@ -100,9 +89,7 @@ export default function ProfileScreen() {
       ) : (
         <>
           <Text style={styles.title}>Welcome to FlatSwap</Text>
-
           <Text style={styles.subtitle}>Login or create an account</Text>
-
           <TouchableOpacity
             style={styles.loginButton}
             onPress={() => navigation.navigate("Login")}
@@ -147,14 +134,10 @@ const styles = StyleSheet.create({
     width: 110,
     height: 110,
     borderRadius: 55,
-
     backgroundColor: "#1ca349",
-
     justifyContent: "center",
     alignItems: "center",
-
     marginBottom: 24,
-
     shadowColor: "#1ca349",
     shadowOpacity: 0.15,
     shadowOffset: {
@@ -162,7 +145,6 @@ const styles = StyleSheet.create({
       height: 3,
     },
     shadowRadius: 8,
-
     elevation: 3,
   },
 
@@ -189,17 +171,11 @@ const styles = StyleSheet.create({
 
   infoBox: {
     width: "100%",
-
     backgroundColor: "rgba(173, 216, 230, 0.55)",
-
     borderRadius: 16,
-
     padding: 20,
-
     marginBottom: 24,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
@@ -218,18 +194,12 @@ const styles = StyleSheet.create({
 
   button: {
     backgroundColor: "rgba(173, 216, 230, 0.4)",
-
     paddingVertical: 16,
     paddingHorizontal: 32,
-
     borderRadius: 12,
-
     width: "100%",
-
     alignItems: "center",
-
     borderWidth: 1,
-
     borderColor: "rgba(217, 83, 79, 0.1)",
   },
 
@@ -241,16 +211,11 @@ const styles = StyleSheet.create({
 
   loginButton: {
     backgroundColor: "#1ca349",
-
     paddingVertical: 16,
     paddingHorizontal: 32,
-
     borderRadius: 12,
-
     width: "100%",
-
     alignItems: "center",
-
     marginBottom: 16,
   },
 
@@ -262,9 +227,7 @@ const styles = StyleSheet.create({
 
   secondaryButton: {
     backgroundColor: "rgba(173, 216, 230, 0.4)",
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
@@ -276,20 +239,18 @@ const styles = StyleSheet.create({
 
   editProfileButton: {
     position: "absolute",
-
     top: 60,
     right: 24,
-
-    backgroundColor: "#1ca349",
-
+    backgroundColor: "#eef7fa",
     paddingHorizontal: 16,
     paddingVertical: 10,
-
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   editProfileText: {
-    color: "white",
+    color: "#0f1720",
     fontWeight: "600",
     fontSize: 14,
   },

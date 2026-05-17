@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { getUser } from "../backend/FlatSwapAPI";
+import { getUser, getApartmentPictures } from "../backend/FlatSwapAPI";
 //import userData from "../backend/user_images.json";
 
 export default function DetailView() {
@@ -49,11 +49,7 @@ export default function DetailView() {
           backgroundColor: "#eee",
         }}
       >
-        <Image
-          source={imageSource}
-          style={{ width: "100%", height: "100%" }}
-          resizeMode="contain"
-        />
+        {getApartmentPictures(id)[currentImage-1]}
         <TouchableOpacity
           style={[styles.arrow, { left: 10 }]}
           onPress={toggleImage}

@@ -54,7 +54,8 @@ export default function TripsScreen() {
             <View key={index} style={styles.tripCard}>
               <View style={styles.tripHeader}>
                 <Text style={styles.tripTitle}>
-                  {trip.locations.join(", ")}
+                  ✈️ {trip.locations?.[0]} →{" "}
+                  {trip.preferredLocations?.join(", ")}
                 </Text>
 
                 <Text style={styles.tripGuests}>👥 {trip.guests}</Text>
@@ -76,6 +77,27 @@ export default function TripsScreen() {
               >
                 <Text style={styles.deleteButtonText}>Delete Trip</Text>
               </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.editButton}
+                onPress={() => {
+                  navigation.navigate("AddApartment", {
+                    editIndex: index,
+                    tripData: trip,
+                  });
+                }}
+              >
+                <Text style={styles.editButtonText}>Edit Trip</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.reviewButton}
+                onPress={() => {
+                  navigation.navigate("ReviewHost");
+                }}
+              >
+                <Text style={styles.reviewButtonText}>Leave Review</Text>
+              </TouchableOpacity>
             </View>
           ))}
         </>
@@ -91,12 +113,9 @@ export default function TripsScreen() {
               "Login required",
               "Please login before creating a trip.",
             );
-
             navigation.navigate("Profile");
-
             return;
           }
-
           navigation.navigate("AddApartment");
         }}
       >
@@ -140,15 +159,20 @@ const styles = StyleSheet.create({
   },
 
   tripCard: {
-    backgroundColor: "rgba(173, 216, 230, 0.55)",
+    backgroundColor: "#ffffff",
     borderRadius: 18,
     padding: 18,
     marginBottom: 18,
     borderWidth: 1,
-    borderColor: "rgba(28, 163, 73, 0.08)",
-    shadowColor: "#1ca349",
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
+    borderColor: "rgba(28, 163, 73, 0.06)",
+    shadowColor: "#000",
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+
     elevation: 2,
   },
 
@@ -181,19 +205,17 @@ const styles = StyleSheet.create({
 
   deleteButton: {
     marginTop: 16,
-    backgroundColor: "#ffebeb",
+    backgroundColor: "#fff5f5",
     paddingVertical: 12,
     borderRadius: 12,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(217, 83, 79, 0.15)",
+    borderColor: "rgba(217, 83, 79, 0.12)",
   },
 
   deleteButtonText: {
     color: "#d9534f",
-
     fontWeight: "700",
-
     fontSize: 15,
   },
 
@@ -209,5 +231,33 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     fontSize: 16,
+  },
+  editButton: {
+    marginTop: 12,
+    backgroundColor: "#eef7fa",
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(28, 163, 73, 0.08)",
+  },
+
+  editButtonText: {
+    color: "#0f1720",
+    fontWeight: "700",
+    fontSize: 15,
+  },
+  reviewButton: {
+    marginTop: 12,
+    backgroundColor: "#1ca349",
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: "center",
+  },
+
+  reviewButtonText: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 15,
   },
 });

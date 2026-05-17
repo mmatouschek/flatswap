@@ -1,7 +1,7 @@
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import * as ImagePicker from "expo-image-picker";
-
 import { useState } from "react";
+
 import {
   Alert,
   Image,
@@ -13,9 +13,15 @@ import {
 } from "react-native";
 
 export default function AddApartmentDetailsScreen() {
-  const [description, setDescription] = useState("");
-  const [image, setImage] = useState<string | null>(null);
   const navigation = useNavigation<any>();
+  const route = useRoute<any>();
+
+  const tripData = route.params?.tripData;
+  const editIndex = route.params?.editIndex;
+
+  const [description, setDescription] = useState(tripData?.description || "");
+
+  const [image, setImage] = useState<string | null>(tripData?.image || null);
 
   const pickImage = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
@@ -38,17 +44,31 @@ export default function AddApartmentDetailsScreen() {
       return;
     }
 
-    navigation.navigate("Preferences");
+    navigation.navigate("Preferences", {
+      editIndex,
+
+      tripData: {
+        ...tripData,
+
+        description,
+
+        image,
+      },
+    });
   };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Apartment Details</Text>
+      <Text style={styles.title}>
+        {editIndex !== undefined ? "Edit Apartment" : "Apartment Details"}
+      </Text>
 
       <Text style={styles.subtitle}>Step 2: Add photos & description</Text>
 
       <TouchableOpacity style={styles.imageButton} onPress={pickImage}>
-        <Text style={styles.imageButtonText}>Upload Apartment Photo</Text>
+        <Text style={styles.imageButtonText}>
+          {image ? "Change Apartment Photo" : "Upload Apartment Photo"}
+        </Text>
       </TouchableOpacity>
 
       {image && <Image source={{ uri: image }} style={styles.previewImage} />}
@@ -95,20 +115,13 @@ const styles = StyleSheet.create({
 
   input: {
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
-
     borderRadius: 12,
-
     paddingHorizontal: 16,
     paddingVertical: 14,
-
     marginBottom: 16,
-
     fontSize: 16,
-
-    backgroundColor: "rgba(173, 216, 230, 0.55)",
-
+    backgroundColor: "#eef7fa",
     color: "#0f1720",
   },
 
@@ -118,18 +131,12 @@ const styles = StyleSheet.create({
   },
 
   imageButton: {
-    backgroundColor: "rgba(173, 216, 230, 0.55)",
-
+    backgroundColor: "#eef7fa",
     padding: 16,
-
     borderRadius: 12,
-
     alignItems: "center",
-
     marginBottom: 16,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
   },
 
@@ -147,13 +154,9 @@ const styles = StyleSheet.create({
 
   button: {
     backgroundColor: "#1ca349",
-
     padding: 18,
-
     borderRadius: 12,
-
     alignItems: "center",
-
     marginTop: 12,
   },
 
