@@ -7,6 +7,7 @@ import AddApartment2Screen from "./apartments/add_apartment2";
 import PreferencesScreen from "./apartments/search_preferences";
 import SelectLocationScreen from "./apartments/select_location";
 import TripsScreen from "./apartments/tripsScreen";
+import EditProfile from "./auth/edit_profile";
 import LoginScreen from "./auth/login";
 import ProfileScreen from "./auth/profile";
 import CreateAccountScreen from "./auth/register";
@@ -123,7 +124,7 @@ export default function RootStack() {
         options={{ headerShown: false }}
       />
       <Stack.Screen name="DetailView" component={DetailView} />
-      {/* Routen  */}
+      <Stack.Screen name="EditProfile" component={EditProfile} />
     </Stack.Navigator>
   );
 }

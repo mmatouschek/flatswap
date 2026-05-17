@@ -1,13 +1,14 @@
 import { Colors } from "@/constants/theme";
 import { useNavigation } from "@react-navigation/native";
 import { useRef, useState } from "react";
+
 import {
   Alert,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
-  View,
+  TouchableOpacity
 } from "react-native";
 
 import { loginUser, registerUser } from "@/backend/services/AuthStorage";
@@ -20,12 +21,21 @@ export default function RegisterScreen() {
   const confirmPasswordRef = useRef<TextInput>(null);
 
   const [username, setUsername] = useState("");
+
   const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
+
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const [country, setCountry] = useState("");
+
+  const [age, setAge] = useState("");
+
+  const [about, setAbout] = useState("");
+
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Create Account</Text>
 
       <TextInput
@@ -46,6 +56,29 @@ export default function RegisterScreen() {
         style={styles.input}
         returnKeyType="next"
         onSubmitEditing={() => passwordRef.current?.focus()}
+      />
+
+      <TextInput
+        placeholder="Country"
+        value={country}
+        onChangeText={setCountry}
+        style={styles.input}
+      />
+
+      <TextInput
+        placeholder="Age (optional)"
+        value={age}
+        onChangeText={setAge}
+        keyboardType="numeric"
+        style={styles.input}
+      />
+
+      <TextInput
+        placeholder="Something about you (optional)"
+        value={about}
+        onChangeText={setAbout}
+        multiline
+        style={[styles.input, styles.aboutInput]}
       />
 
       <TextInput
@@ -72,8 +105,17 @@ export default function RegisterScreen() {
       <TouchableOpacity
         style={styles.registerButton}
         onPress={async () => {
-          if (!username || !email || !password || !confirmPassword) {
-            Alert.alert("Missing fields", "Please fill in all fields.");
+          if (
+            !username ||
+            !email ||
+            !password ||
+            !confirmPassword ||
+            !country
+          ) {
+            Alert.alert(
+              "Missing fields",
+              "Please fill in all required fields.",
+            );
 
             return;
           }
@@ -88,6 +130,9 @@ export default function RegisterScreen() {
             username,
             email,
             password,
+            country,
+            age,
+            about,
           });
 
           await loginUser();
@@ -97,15 +142,16 @@ export default function RegisterScreen() {
       >
         <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: "center",
     padding: 24,
+    paddingBottom: 60,
     backgroundColor: Colors.light.background,
   },
 
@@ -118,14 +164,21 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    height: 50,
+    minHeight: 50,
     borderWidth: 1,
     borderColor: "#ddd",
     borderRadius: 12,
     paddingHorizontal: 16,
+    paddingVertical: 14,
     marginBottom: 16,
     backgroundColor: Colors.light.background,
     color: Colors.light.text,
+    fontSize: 16,
+  },
+
+  aboutInput: {
+    height: 120,
+    textAlignVertical: "top",
   },
 
   registerButton: {
@@ -140,11 +193,5 @@ const styles = StyleSheet.create({
     color: Colors.light.background,
     fontWeight: "bold",
     fontSize: 16,
-  },
-
-  footerText: {
-    marginTop: 24,
-    textAlign: "center",
-    color: Colors.light.text,
   },
 });
