@@ -31,14 +31,6 @@ type ConversationsRequestsProps = {
   setChats: React.Dispatch<React.SetStateAction<ChatItem[]>>;
 };
 
-<<<<<<< HEAD
-export default function ConversationsRequests({ chats, setChats }: ConversationsRequestsProps) {
-  const navigation = useNavigation<any>();
-  const [requestStatuses, setRequestStatuses] = useState<{ [key: number]: string }>({
-    1: 'accepted',
-    2: 'pending',
-    3: 'pending',
-=======
 export default function ConversationsRequests({
   chats,
   setChats,
@@ -50,66 +42,41 @@ export default function ConversationsRequests({
     1: "accepted",
     2: "pending",
     3: "pending",
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
   });
 
   const [mockRequests, setMockRequests] = useState([
     {
       id: 1,
       userId: 42,
-<<<<<<< HEAD
-      name: 'Mateo Silva',
-      startDate: '2026-06-10',
-      endDate: '2026-07-01',
-      message: 'Hi! I would love to swap my Paris flat with yours in June.',
-=======
       name: "Mateo Silva",
       startDate: "2026-06-10",
       endDate: "2026-07-01",
       message: "Hi! I would love to swap my Paris flat with yours in June.",
       outgoing: 0,
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
     },
     {
       id: 2,
       userId: 43,
-<<<<<<< HEAD
-      name: 'Yuki Tanaka',
-      startDate: '2026-06-15',
-      endDate: '2026-07-06',
-      message: 'Hey! Interested in a summer swap? I have a beautiful flat in London.',
-=======
       name: "Yuki Tanaka",
       startDate: "2026-06-15",
       endDate: "2026-07-06",
       message:
         "Hey! Interested in a summer swap? I have a beautiful flat in London.",
       outgoing: 0,
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
     },
     {
       id: 3,
       userId: 44,
-<<<<<<< HEAD
-      name: 'Amélie Dubois',
-      startDate: '2026-06-20',
-      endDate: '2026-07-11',
-      message: 'Would love to do a month-long swap in Vienna!',
-=======
       name: "Amélie Dubois",
       startDate: "2026-06-20",
       endDate: "2026-07-11",
       message: "Would love to do a month-long swap in Vienna!",
       outgoing: 0,
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
     },
   ]);
 
   const getLastMessageText = (messages: ChatMessage[]) =>
     messages.length > 0 ? messages[messages.length - 1].text : "";
-
-  const getLastMessageText = (messages: ChatMessage[]) =>
-    messages.length > 0 ? messages[messages.length - 1].text : '';
 
   const getStatusColor = (status: string) => {
     if (status === "accepted") return "#1ca349";
@@ -139,17 +106,6 @@ export default function ConversationsRequests({
     const time = `${hours}:${minutes}`;
 
     if (existing) {
-<<<<<<< HEAD
-        const appended: ChatMessage = { id: existing.messages.length + 1, sender: 'other', text: request.message, time };
-        const updatedExisting: ChatItem = {
-          ...existing,
-          messages: [...existing.messages, appended],
-          lastMessage: request.message,
-          timestamp: time,
-          unread: 0,
-        };
-        setChats((prev) => [updatedExisting, ...prev.filter((c) => c.id !== existing.id)]);
-=======
       const appended: ChatMessage = {
         id: existing.messages.length + 1,
         sender: "other",
@@ -167,7 +123,6 @@ export default function ConversationsRequests({
         updatedExisting,
         ...prev.filter((c) => c.id !== existing.id),
       ]);
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
       return;
     }
 
@@ -192,16 +147,6 @@ export default function ConversationsRequests({
   };
 
   useEffect(() => {
-<<<<<<< HEAD
-    mockRequests.forEach((request) => {
-      const status = currentStatus(request.id);
-      if (status === 'accepted') {
-        const exists = chats.find((c) => c.userId === request.userId);
-        if (!exists) {
-          const now = new Date();
-          const hours = String(now.getHours()).padStart(2, '0');
-          const minutes = String(now.getMinutes()).padStart(2, '0');
-=======
     const subscription = DeviceEventEmitter.addListener(
       "ADD_OUTGOING_REQUEST",
       (newRequest) => {
@@ -226,7 +171,6 @@ export default function ConversationsRequests({
           const now = new Date();
           const hours = String(now.getHours()).padStart(2, "0");
           const minutes = String(now.getMinutes()).padStart(2, "0");
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
           const time = `${hours}:${minutes}`;
           const newId = Math.max(0, ...chats.map((c) => c.id)) + 1;
           const newChat: ChatItem = {
@@ -236,11 +180,7 @@ export default function ConversationsRequests({
             lastMessage: request.message,
             timestamp: time,
             unread: 0,
-<<<<<<< HEAD
-            messages: [{ id: 1, sender: 'other', text: request.message, time }],
-=======
             messages: [{ id: 1, sender: "other", text: request.message, time }],
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
           };
           setChats((prev) => [newChat, ...prev]);
         }
@@ -249,11 +189,7 @@ export default function ConversationsRequests({
   }, []);
 
   const handleViewProfile = (userId: number) => {
-<<<<<<< HEAD
-    navigation.navigate('DetailView', { id: userId });
-=======
     navigation.navigate("DetailView", { id: userId });
->>>>>>> be0d3b297e6c1761d1bdf69799eb00f532ae4ec3
   };
 
   const currentStatus = (requestId: number) =>
