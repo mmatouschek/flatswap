@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { getApartmentPictureSource } from '../backend/FlatSwapAPI';
 
 type ChatMessage = {
   id: number;
@@ -159,7 +160,16 @@ export default function ConversationsChats({ chats, setChats }: ConversationsCha
           style={styles.chatItem}
         >
           <Pressable style={styles.avatar} onPress={() => openProfile(chat.userId)}>
-            <Text style={styles.avatarText}>{chat.name[0]}</Text>
+            {
+              (() => {
+                try {
+                  const src = getApartmentPictureSource(chat.userId);
+                  return <Image source={src} style={styles.avatarImage} />;
+                } catch (e) {
+                  return <Text style={styles.avatarText}>{chat.name[0]}</Text>;
+                }
+              })()
+            }
           </Pressable>
 
           <View style={styles.chatContent}>
@@ -302,11 +312,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#1ca349',
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden',
     shadowColor: '#1ca349',
     shadowOpacity: 0.18,
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 6,
     elevation: 2,
+  },
+  avatarImage: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
   },
   avatarText: {
     color: 'white',

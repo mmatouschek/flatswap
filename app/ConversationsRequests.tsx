@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 type ChatMessage = {
@@ -90,18 +90,15 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
     const time = `${hours}:${minutes}`;
 
     if (existing) {
-      const updatedMessages = existing.messages;
-      setChats((prev) =>
-        [
-          {
-            ...existing,
-            lastMessage: getLastMessageText(updatedMessages),
-            timestamp: time,
-            unread: 0,
-          },
-          ...prev.filter((c) => c.id !== existing.id),
-        ]
-      );
+        const appended: ChatMessage = { id: existing.messages.length + 1, sender: 'other', text: request.message, time };
+        const updatedExisting: ChatItem = {
+          ...existing,
+          messages: [...existing.messages, appended],
+          lastMessage: request.message,
+          timestamp: time,
+          unread: 0,
+        };
+        setChats((prev) => [updatedExisting, ...prev.filter((c) => c.id !== existing.id)]);
       return;
     }
 
@@ -124,6 +121,32 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
       [requestId]: 'rejected',
     }));
   };
+
+  useEffect(() => {
+    mockRequests.forEach((request) => {
+      const status = currentStatus(request.id);
+      if (status === 'accepted') {
+        const exists = chats.find((c) => c.userId === request.userId);
+        if (!exists) {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const time = `${hours}:${minutes}`;
+          const newId = Math.max(0, ...chats.map((c) => c.id)) + 1;
+          const newChat: ChatItem = {
+            id: newId,
+            userId: request.userId,
+            name: request.name,
+            lastMessage: request.message,
+            timestamp: time,
+            unread: 0,
+            messages: [{ id: 1, sender: 'other', text: request.message, time }],
+          };
+          setChats((prev) => [newChat, ...prev]);
+        }
+      }
+    });
+  }, []);
 
   const handleViewProfile = (userId: number) => {
     navigation.navigate('DetailView', { id: userId });
