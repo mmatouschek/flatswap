@@ -89,15 +89,6 @@ export default function TripsScreen() {
               >
                 <Text style={styles.editButtonText}>Edit Trip</Text>
               </TouchableOpacity>
-
-              <TouchableOpacity
-                style={styles.reviewButton}
-                onPress={() => {
-                  navigation.navigate("ReviewHost");
-                }}
-              >
-                <Text style={styles.reviewButtonText}>Leave Review</Text>
-              </TouchableOpacity>
             </View>
           ))}
         </>
