@@ -10,20 +10,19 @@ export default function SearchTabs() {
 
   if (page) {
     return (
-      <View style={{ flex: 1 }}>
-        <View style={{ height: 100 }} />
+      <View style={{ flex: 1}}>
         <View
           style={{
-            flex: 2,
+            flex: 1,
             padding: 5,
             flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "left",
           }}
         >
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex: 1, backgroundColor: "rgba(173, 216, 230,0.3)" },
+              {flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,0.3)" },
             ]}
             title="List"
             onPress={() => {
@@ -33,7 +32,7 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex: 1, backgroundColor: "rgba(173, 216, 230,1)" },
+              { flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
             ]}
             title="Map"
             onPress={() => {
@@ -41,7 +40,7 @@ export default function SearchTabs() {
             }}
           />
         </View>
-        <View style={{ flex: 19 }}>
+        <View style={{ flex: 17 }}>
           <MapSearch />
         </View>
       </View>
@@ -49,19 +48,18 @@ export default function SearchTabs() {
   } else {
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ height: 100 }} />
         <View
           style={{
-            flex: 2,
+            flex: 1,
             padding: 5,
             flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "left",
           }}
         >
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex: 1, backgroundColor: "rgba(173, 216, 230,1)" },
+              {flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
             ]}
             title="List"
             onPress={() => {
@@ -71,7 +69,7 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex: 1, backgroundColor: "rgba(173, 216, 230,0.3)" },
+              { flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,0.3)" },
             ]}
             title="Map"
             onPress={() => {
@@ -79,7 +77,7 @@ export default function SearchTabs() {
             }}
           />
         </View>
-        <View style={{ flex: 19 }}>
+        <View style={{ flex: 17 }}>
           <ListSearch />
         </View>
       </View>
