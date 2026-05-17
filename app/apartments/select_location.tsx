@@ -1,4 +1,3 @@
-import { Colors } from "@/constants/theme";
 
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
@@ -101,7 +100,7 @@ export default function SelectLocationScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
   },
 
   map: {
@@ -110,19 +109,28 @@ const styles = StyleSheet.create({
 
   button: {
     position: "absolute",
+
     bottom: 40,
     left: 24,
     right: 24,
+
     zIndex: 10,
 
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
+
     padding: 18,
+
     borderRadius: 12,
+
     alignItems: "center",
+
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },

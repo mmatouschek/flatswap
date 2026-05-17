@@ -2,8 +2,6 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useEffect, useRef, useState } from "react";
 
-import { Colors } from "@/constants/theme";
-
 import {
   Alert,
   ScrollView,
@@ -198,7 +196,7 @@ export default function AddApartmentScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -208,12 +206,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   subtitle: {
     textAlign: "center",
-    color: Colors.light.text,
+    color: "#54707f",
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -223,53 +221,71 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 8,
     fontSize: 16,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 14,
     marginBottom: 16,
     fontSize: 16,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
+    color: "#0f1720",
   },
 
   suggestionsBox: {
-    backgroundColor: "#f7f7f7",
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
     borderRadius: 12,
+
     marginTop: -8,
     marginBottom: 16,
+
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   suggestionItem: {
     padding: 14,
+
     borderBottomWidth: 1,
-    borderBottomColor: "#eee",
+
+    borderBottomColor: "rgba(28, 163, 73, 0.08)",
   },
 
   orText: {
     textAlign: "center",
     marginBottom: 16,
-    color: "#777",
+    color: "#54707f",
     fontWeight: "600",
   },
 
   mapButton: {
-    backgroundColor: "#e8f0ff",
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
     padding: 16,
     borderRadius: 12,
+
     alignItems: "center",
     justifyContent: "center",
+
     marginBottom: 16,
+
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
   },
 
   mapButtonText: {
     fontWeight: "600",
-    color: Colors.light.tint,
+    color: "#1ca349",
   },
 
   dateRow: {
@@ -280,31 +296,41 @@ const styles = StyleSheet.create({
 
   dateInput: {
     flex: 1,
+
     borderWidth: 1,
-    borderColor: "#ddd",
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
+
     borderRadius: 12,
+
     paddingVertical: 16,
     paddingHorizontal: 16,
+
     justifyContent: "center",
-    backgroundColor: Colors.light.background,
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
   },
 
   dateText: {
-    color: Colors.light.text,
+    color: "#0f1720",
     fontWeight: "500",
     textAlign: "center",
   },
 
   button: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
+
     padding: 18,
+
     borderRadius: 12,
+
     alignItems: "center",
+
     marginTop: 12,
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },

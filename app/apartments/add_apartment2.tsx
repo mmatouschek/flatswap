@@ -1,4 +1,3 @@
-import { Colors } from "@/constants/theme";
 import { useNavigation } from "@react-navigation/native";
 import * as ImagePicker from "expo-image-picker";
 
@@ -73,7 +72,7 @@ export default function AddApartmentDetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -83,12 +82,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   subtitle: {
     textAlign: "center",
-    color: Colors.light.text,
+    color: "#54707f",
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -96,14 +95,21 @@ const styles = StyleSheet.create({
 
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
+
     borderRadius: 12,
+
     paddingHorizontal: 16,
     paddingVertical: 14,
+
     marginBottom: 16,
+
     fontSize: 16,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
+    color: "#0f1720",
   },
 
   descriptionInput: {
@@ -112,16 +118,24 @@ const styles = StyleSheet.create({
   },
 
   imageButton: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
     padding: 16,
+
     borderRadius: 12,
+
     alignItems: "center",
+
     marginBottom: 16,
+
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
   },
 
   imageButtonText: {
     fontWeight: "600",
-    color: Colors.light.text,
+    color: "#1ca349",
   },
 
   previewImage: {
@@ -132,15 +146,19 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
+
     padding: 18,
+
     borderRadius: 12,
+
     alignItems: "center",
+
     marginTop: 12,
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },

@@ -1,6 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { Colors } from "@/constants/theme";
 import { useFocusEffect } from "@react-navigation/native";
 
 import { useCallback, useState } from "react";
@@ -54,7 +53,7 @@ export default function MyProfileScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     padding: 24,
     alignItems: "center",
     justifyContent: "center",
@@ -64,12 +63,22 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 60,
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
 
     justifyContent: "center",
     alignItems: "center",
 
     marginBottom: 24,
+
+    shadowColor: "#1ca349",
+    shadowOpacity: 0.15,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowRadius: 8,
+
+    elevation: 3,
   },
 
   avatarText: {
@@ -81,33 +90,40 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 30,
     fontWeight: "bold",
-    color: Colors.light.text,
+    color: "#0f1720",
     marginBottom: 8,
   },
 
   email: {
     fontSize: 16,
-    color: "#777",
+    color: "#54707f",
     marginBottom: 32,
   },
 
   infoBox: {
     width: "100%",
-    backgroundColor: "#f5f5f5",
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
     borderRadius: 16,
+
     padding: 20,
+
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   infoTitle: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 16,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   infoText: {
     fontSize: 16,
     marginBottom: 12,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 });

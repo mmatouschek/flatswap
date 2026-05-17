@@ -1,4 +1,3 @@
-import { Colors } from "@/constants/theme";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useEffect, useState } from "react";
 
@@ -118,7 +117,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 24,
     paddingBottom: 60,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     flexGrow: 1,
   },
 
@@ -128,24 +127,25 @@ const styles = StyleSheet.create({
     marginBottom: 32,
     marginTop: 40,
     textAlign: "center",
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "rgba(28, 163, 73, 0.1)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 14,
     marginBottom: 16,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+    color: "#0f1720",
     fontSize: 16,
   },
 
   disabledInput: {
-    backgroundColor: "#f2f2f2",
-    color: "#888",
+    backgroundColor: "rgba(173, 216, 230, 0.3)",
+    color: "#54707f",
+    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   aboutInput: {
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
     padding: 18,
     borderRadius: 12,
     alignItems: "center",
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },

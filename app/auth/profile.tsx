@@ -2,7 +2,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import { isUserLoggedIn, logoutUser } from "@/backend/services/AuthStorage";
 
-import { Colors } from "@/constants/theme";
 
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 
@@ -126,7 +125,7 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     padding: 24,
     justifyContent: "center",
     alignItems: "center",
@@ -139,7 +138,7 @@ const styles = StyleSheet.create({
   },
 
   editText: {
-    color: Colors.light.tint,
+    color: "#1ca349",
     fontSize: 16,
     fontWeight: "600",
   },
@@ -148,12 +147,23 @@ const styles = StyleSheet.create({
     width: 110,
     height: 110,
     borderRadius: 55,
-    backgroundColor: Colors.light.tint,
+
+    backgroundColor: "#1ca349",
 
     justifyContent: "center",
     alignItems: "center",
 
     marginBottom: 24,
+
+    shadowColor: "#1ca349",
+    shadowOpacity: 0.15,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowRadius: 8,
+
+    elevation: 3,
   },
 
   avatarText: {
@@ -165,28 +175,36 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "bold",
-    color: Colors.light.text,
+    color: "#0f1720",
     marginBottom: 12,
     textAlign: "center",
   },
 
   subtitle: {
     fontSize: 16,
-    color: "#777",
+    color: "#54707f",
     marginBottom: 32,
     textAlign: "center",
   },
 
   infoBox: {
     width: "100%",
-    backgroundColor: "#f5f5f5",
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
     borderRadius: 16,
+
     padding: 20,
+
     marginBottom: 24,
+
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   infoLabel: {
-    color: "#777",
+    color: "#54707f",
     fontSize: 13,
     marginBottom: 4,
     marginTop: 12,
@@ -194,17 +212,25 @@ const styles = StyleSheet.create({
 
   infoText: {
     fontSize: 16,
-    color: Colors.light.text,
+    color: "#0f1720",
     fontWeight: "500",
   },
 
   button: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "rgba(173, 216, 230, 0.4)",
+
     paddingVertical: 16,
     paddingHorizontal: 32,
+
     borderRadius: 12,
+
     width: "100%",
+
     alignItems: "center",
+
+    borderWidth: 1,
+
+    borderColor: "rgba(217, 83, 79, 0.1)",
   },
 
   buttonText: {
@@ -214,38 +240,51 @@ const styles = StyleSheet.create({
   },
 
   loginButton: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
+
     paddingVertical: 16,
     paddingHorizontal: 32,
+
     borderRadius: 12,
+
     width: "100%",
+
     alignItems: "center",
+
     marginBottom: 16,
   },
 
   loginButtonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },
 
   secondaryButton: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "rgba(173, 216, 230, 0.4)",
+
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   secondaryButtonText: {
-    color: Colors.light.text,
+    color: "#0f1720",
     fontWeight: "bold",
     fontSize: 16,
   },
+
   editProfileButton: {
     position: "absolute",
+
     top: 60,
     right: 24,
 
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
+
     paddingHorizontal: 16,
     paddingVertical: 10,
+
     borderRadius: 10,
   },
 

@@ -1,4 +1,3 @@
-import { Colors } from "@/constants/theme";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import {
@@ -99,7 +98,7 @@ export default function ReviewGuestScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -109,12 +108,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   subtitle: {
     textAlign: "center",
-    color: Colors.light.text,
+    color: "#54707f",
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 12,
     marginTop: 8,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   ratingRow: {
@@ -138,31 +137,33 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
     borderRadius: 12,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
     justifyContent: "center",
     alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
   selectedRating: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
   },
 
   ratingText: {
     fontWeight: "bold",
     fontSize: 16,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "rgba(28, 163, 73, 0.1)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 14,
     fontSize: 16,
     marginTop: 12,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+    color: "#0f1720",
   },
 
   reviewInput: {
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
     padding: 18,
     borderRadius: 12,
     alignItems: "center",
@@ -179,7 +180,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },

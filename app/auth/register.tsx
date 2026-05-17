@@ -1,4 +1,3 @@
-import { Colors } from "@/constants/theme";
 import { useNavigation } from "@react-navigation/native";
 import { useRef, useState } from "react";
 
@@ -8,7 +7,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 
 import { loginUser, registerUser } from "@/backend/services/AuthStorage";
@@ -152,7 +151,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 24,
     paddingBottom: 60,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
   },
 
   title: {
@@ -160,19 +159,19 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 32,
     textAlign: "center",
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   input: {
     minHeight: 50,
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "rgba(28, 163, 73, 0.1)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 14,
     marginBottom: 16,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+    color: "#0f1720",
     fontSize: 16,
   },
 
@@ -182,7 +181,7 @@ const styles = StyleSheet.create({
   },
 
   registerButton: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
     padding: 16,
     borderRadius: 12,
     alignItems: "center",
@@ -190,7 +189,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },

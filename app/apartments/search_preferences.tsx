@@ -1,5 +1,4 @@
 import { saveTrip } from "@/backend/services/UserStorage";
-import { Colors } from "@/constants/theme";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
@@ -193,7 +192,7 @@ export default function SearchPreferencesScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 24,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     flexGrow: 1,
     paddingBottom: 80,
   },
@@ -203,12 +202,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 40,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   subtitle: {
     textAlign: "center",
-    color: Colors.light.text,
+    color: "#54707f",
     marginTop: 8,
     marginBottom: 32,
     fontSize: 14,
@@ -218,19 +217,26 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginBottom: 8,
     fontSize: 16,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
+
     borderRadius: 12,
+
     paddingHorizontal: 16,
     paddingVertical: 14,
+
     marginBottom: 16,
+
     fontSize: 16,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
+    color: "#0f1720",
   },
 
   locationRow: {
@@ -241,39 +247,58 @@ const styles = StyleSheet.create({
 
   locationInput: {
     flex: 1,
+
     borderWidth: 1,
-    borderColor: "#ddd",
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
+
     borderRadius: 12,
+
     paddingHorizontal: 16,
     paddingVertical: 14,
+
     fontSize: 16,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
+    color: "#0f1720",
   },
 
   addButton: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
+
     paddingHorizontal: 20,
+
     borderRadius: 12,
+
     justifyContent: "center",
     alignItems: "center",
   },
 
   addButtonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },
 
   locationTag: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+
     paddingVertical: 14,
     paddingHorizontal: 16,
+
     borderRadius: 12,
+
     marginBottom: 12,
 
+    borderWidth: 1,
+
+    borderColor: "rgba(28, 163, 73, 0.08)",
+
     flexDirection: "row",
+
     justifyContent: "space-between",
+
     alignItems: "center",
   },
 
@@ -286,24 +311,31 @@ const styles = StyleSheet.create({
   checkbox: {
     width: 24,
     height: 24,
+
     borderRadius: 6,
+
     borderWidth: 2,
-    borderColor: Colors.light.tint,
+
+    borderColor: "#1ca349",
+
     alignItems: "center",
     justifyContent: "center",
+
     marginRight: 12,
   },
 
   checkboxInner: {
     width: 12,
     height: 12,
+
     borderRadius: 3,
-    backgroundColor: Colors.light.tint,
+
+    backgroundColor: "#1ca349",
   },
 
   checkboxText: {
     fontSize: 16,
-    color: Colors.light.text,
+    color: "#0f1720",
     fontWeight: "500",
   },
 
@@ -315,37 +347,48 @@ const styles = StyleSheet.create({
 
   dateInput: {
     flex: 1,
+
     borderWidth: 1,
-    borderColor: "#ddd",
+
+    borderColor: "rgba(28, 163, 73, 0.1)",
+
     borderRadius: 12,
+
     paddingVertical: 16,
     paddingHorizontal: 16,
+
     justifyContent: "center",
-    backgroundColor: Colors.light.background,
+
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
   },
 
   dateText: {
-    color: Colors.light.text,
+    color: "#0f1720",
     fontWeight: "500",
     textAlign: "center",
   },
 
   button: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
+
     padding: 18,
+
     borderRadius: 12,
+
     alignItems: "center",
+
     marginTop: 12,
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },
+
   locationText: {
     fontSize: 16,
-    color: Colors.light.text,
+    color: "#0f1720",
     fontWeight: "500",
   },
 

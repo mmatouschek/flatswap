@@ -1,6 +1,5 @@
 import { loginUser, validateUser } from "@/backend/services/AuthStorage";
 
-import { Colors } from "@/constants/theme";
 import { useNavigation } from "@react-navigation/native";
 import { useRef, useState } from "react";
 
@@ -85,7 +84,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 24,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
   },
 
   title: {
@@ -93,22 +92,22 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 32,
     textAlign: "center",
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   input: {
     height: 50,
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "rgba(28, 163, 73, 0.1)",
     borderRadius: 12,
     paddingHorizontal: 16,
     marginBottom: 16,
-    backgroundColor: Colors.light.background,
-    color: Colors.light.text,
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
+    color: "#0f1720",
   },
 
   loginButton: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
     padding: 16,
     borderRadius: 12,
     alignItems: "center",
@@ -116,7 +115,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },
@@ -127,7 +126,7 @@ const styles = StyleSheet.create({
   },
 
   registerText: {
-    color: Colors.light.tint,
+    color: "#1ca349",
     fontSize: 16,
     fontWeight: "600",
   },

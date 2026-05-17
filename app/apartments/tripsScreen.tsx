@@ -1,14 +1,14 @@
 import { isUserLoggedIn } from "@/backend/services/AuthStorage";
 import { deleteTrip, getTrips } from "@/backend/services/UserStorage";
-import { Colors } from "@/constants/theme";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { useCallback, useState } from "react";
 import {
-  Alert, ScrollView,
+  Alert,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from "react-native";
 
 export default function TripsScreen() {
@@ -111,14 +111,14 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingTop: 60,
     paddingBottom: 80,
-    backgroundColor: Colors.light.background,
+    backgroundColor: "#f3f8fb",
     flexGrow: 1,
   },
 
   title: {
     fontSize: 30,
     fontWeight: "bold",
-    color: Colors.light.text,
+    color: "#0f1720",
     marginBottom: 32,
     textAlign: "center",
   },
@@ -128,27 +128,27 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 12,
-    color: Colors.light.text,
+    color: "#0f1720",
   },
 
   emptySubtitle: {
     textAlign: "center",
-    color: "#777",
+    color: "#54707f",
     fontSize: 16,
     marginBottom: 32,
     lineHeight: 22,
   },
 
   tripCard: {
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(173, 216, 230, 0.55)",
     borderRadius: 18,
     padding: 18,
     marginBottom: 18,
-
-    shadowColor: "#000",
+    borderWidth: 1,
+    borderColor: "rgba(28, 163, 73, 0.08)",
+    shadowColor: "#1ca349",
     shadowOpacity: 0.06,
     shadowRadius: 8,
-
     elevation: 2,
   },
 
@@ -162,19 +162,19 @@ const styles = StyleSheet.create({
   tripTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: Colors.light.text,
+    color: "#0f1720",
     flex: 1,
     marginRight: 12,
   },
 
   tripGuests: {
-    color: "#777",
+    color: "#54707f",
     fontWeight: "600",
     fontSize: 15,
   },
 
   tripDates: {
-    color: "#666",
+    color: "#54707f",
     marginTop: 4,
     fontSize: 14,
   },
@@ -185,16 +185,20 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 12,
     alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(217, 83, 79, 0.15)",
   },
 
   deleteButtonText: {
     color: "#d9534f",
+
     fontWeight: "700",
+
     fontSize: 15,
   },
 
   button: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: "#1ca349",
     padding: 18,
     borderRadius: 14,
     alignItems: "center",
@@ -202,7 +206,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: Colors.light.background,
+    color: "white",
     fontWeight: "bold",
     fontSize: 16,
   },
