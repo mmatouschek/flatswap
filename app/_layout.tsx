@@ -64,6 +64,7 @@ function TabLayout() {
         name="AddApartment"
         component={AddApartmentScreen} // hidden Button
         options={{
+          title: "Add Apartment",
           tabBarButton: () => null,
           tabBarItemStyle: { display: "none" },
         }}
@@ -74,7 +75,7 @@ function TabLayout() {
         component={AddApartment2Screen} // hidden Button
         options={{
           tabBarButton: () => null,
-
+          title: "Add Apartment",
           tabBarItemStyle: { display: "none" },
         }}
       />
@@ -86,26 +87,9 @@ function TabLayout() {
           tabBarItemStyle: { display: "none" },
         }}
       />
-      <Tab.Screen
-        name="ReviewHost"
-        component={ReviewHostScreen}
-        options={{
-          tabBarButton: () => null,
-          tabBarItemStyle: { display: "none" },
-        }}
-      />
 
       <Tab.Screen
-        name="ReviewGuest"
-        component={ReviewGuestScreen}
-        options={{
-          tabBarButton: () => null,
-          tabBarItemStyle: { display: "none" },
-        }}
-      />
-
-      <Tab.Screen
-        name="CreateAccount"
+        name="Create Account"
         component={CreateAccountScreen}
         options={{
           tabBarButton: () => null,
@@ -123,7 +107,7 @@ function TabLayout() {
       />
 
       <Tab.Screen
-        name="SelectLocation"
+        name="Select Location"
         component={SelectLocationScreen}
         options={{
           tabBarButton: () => null,
@@ -145,6 +129,8 @@ export default function RootStack() {
       />
       <Stack.Screen name="DetailView" component={DetailView} />
       <Stack.Screen name="EditProfile" component={EditProfile} />
+      <Stack.Screen name="ReviewHost" component={ReviewHostScreen} />
+      <Stack.Screen name="ReviewGuest" component={ReviewGuestScreen} />
     </Stack.Navigator>
   );
 }

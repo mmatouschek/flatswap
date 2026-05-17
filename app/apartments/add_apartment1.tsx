@@ -85,15 +85,10 @@ export default function AddApartmentScreen() {
 
       tripData: {
         ...tripData,
-
         title,
-
         locations: [location],
-
         guests,
-
         startDate,
-
         endDate,
       },
     });
@@ -263,11 +258,8 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     marginBottom: 16,
     fontSize: 16,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
-
     backgroundColor: "rgba(173, 216, 230, 0.55)",
-
     color: "#0f1720",
   },
 
@@ -278,9 +270,7 @@ const styles = StyleSheet.create({
 
     marginTop: -8,
     marginBottom: 16,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.08)",
   },
 
