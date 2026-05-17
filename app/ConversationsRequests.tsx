@@ -1,4 +1,4 @@
-import { useRouter } from 'expo-router';
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -11,6 +11,7 @@ type ChatMessage = {
 
 type ChatItem = {
   id: number;
+  userId: number;
   name: string;
   lastMessage: string;
   timestamp: string;
@@ -24,7 +25,7 @@ type ConversationsRequestsProps = {
 };
 
 export default function ConversationsRequests({ chats, setChats }: ConversationsRequestsProps) {
-  const router = useRouter();
+  const navigation = useNavigation<any>();
   const [requestStatuses, setRequestStatuses] = useState<{ [key: number]: string }>({
     1: 'accepted',
     2: 'pending',
@@ -34,29 +35,32 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
   const mockRequests = [
     {
       id: 1,
-      userId: 2,
-      name: 'Emma Mueller',
-      startDate: '2026-06-01',
-      endDate: '2026-06-15',
-      message: 'Hi! I would love to swap my Vienna flat with yours in June.',
+      userId: 42,
+      name: 'Mateo Silva',
+      startDate: '2026-06-10',
+      endDate: '2026-07-01',
+      message: 'Hi! I would love to swap my Paris flat with yours in June.',
     },
     {
       id: 2,
-      userId: 5,
-      name: 'Marco Rossi',
-      startDate: '2026-06-20',
-      endDate: '2026-07-05',
-      message: 'Hey! Interested in a summer swap? I have a beautiful flat in Paris.',
+      userId: 43,
+      name: 'Yuki Tanaka',
+      startDate: '2026-06-15',
+      endDate: '2026-07-06',
+      message: 'Hey! Interested in a summer swap? I have a beautiful flat in London.',
     },
     {
       id: 3,
-      userId: 8,
-      name: 'Sophie Dupont',
-      startDate: '2026-07-01',
-      endDate: '2026-07-31',
-      message: 'Would love to do a month-long swap in July!',
+      userId: 44,
+      name: 'Amélie Dubois',
+      startDate: '2026-06-20',
+      endDate: '2026-07-11',
+      message: 'Would love to do a month-long swap in Vienna!',
     },
   ];
+
+  const getLastMessageText = (messages: ChatMessage[]) =>
+    messages.length > 0 ? messages[messages.length - 1].text : '';
 
   const getStatusColor = (status: string) => {
     if (status === 'accepted') return '#1ca349';
@@ -79,17 +83,24 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
     const request = mockRequests.find((r) => r.id === requestId);
     if (!request) return;
 
-    const existing = chats.find((c) => c.name === request.name);
+    const existing = chats.find((c) => c.userId === request.userId);
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const time = `${hours}:${minutes}`;
 
     if (existing) {
+      const updatedMessages = existing.messages;
       setChats((prev) =>
-        prev.map((c) =>
-          c.id === existing.id ? { ...c, lastMessage: 'Request accepted', timestamp: time, unread: 0 } : c
-        )
+        [
+          {
+            ...existing,
+            lastMessage: getLastMessageText(updatedMessages),
+            timestamp: time,
+            unread: 0,
+          },
+          ...prev.filter((c) => c.id !== existing.id),
+        ]
       );
       return;
     }
@@ -97,8 +108,9 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
     const newId = Math.max(0, ...chats.map((c) => c.id)) + 1;
     const newChat: ChatItem = {
       id: newId,
+      userId: request.userId,
       name: request.name,
-      lastMessage: 'Request accepted',
+      lastMessage: request.message,
       timestamp: time,
       unread: 0,
       messages: [{ id: 1, sender: 'other', text: request.message, time }],
@@ -114,8 +126,7 @@ export default function ConversationsRequests({ chats, setChats }: Conversations
   };
 
   const handleViewProfile = (userId: number) => {
-    console.log('View profile for user:', userId);
-    void router;
+    navigation.navigate('DetailView', { id: userId });
   };
 
   const currentStatus = (requestId: number) => requestStatuses[requestId] || 'pending';
