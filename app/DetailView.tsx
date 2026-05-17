@@ -2,14 +2,15 @@ import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-fre
 import { useRoute } from "@react-navigation/native";
 import { useState } from "react";
 import {
-  Image,
+  DeviceEventEmitter,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
-import { getUser, getApartmentPictures } from "../backend/FlatSwapAPI";
+
+import { getApartmentPictures, getUser } from "../backend/FlatSwapAPI";
 //import userData from "../backend/user_images.json";
 
 export default function DetailView() {
@@ -18,6 +19,8 @@ export default function DetailView() {
   const user = getUser(id);
 
   const [currentImage, setCurrentImage] = useState(1);
+  const [requestSent, setRequestSent] = useState(false);
+  const [buttonText, setButtonText] = useState("Request a swap with ");
 
   /*
   let imageSource;
@@ -39,6 +42,20 @@ export default function DetailView() {
     setCurrentImage((prev) => (prev == 1 ? 2 : 1));
   };
 
+  const handleButtonPress = () => {
+    DeviceEventEmitter.emit("ADD_OUTGOING_REQUEST", {
+      id: Date.now(),
+      userId: id,
+      name: user.name,
+      startDate: user.startDate,
+      endDate: user.endDate,
+      message: "Would love to do a month-long swap in Vienna!",
+      outgoing: 1,
+    });
+    setRequestSent(true);
+    setButtonText("Request sent to ");
+  };
+
   return (
     <View>
       <View
@@ -49,7 +66,7 @@ export default function DetailView() {
           backgroundColor: "#eee",
         }}
       >
-        {getApartmentPictures(id)[currentImage-1]}
+        {getApartmentPictures(id)[currentImage - 1]}
         <TouchableOpacity
           style={[styles.arrow, { left: 10 }]}
           onPress={toggleImage}
@@ -57,7 +74,6 @@ export default function DetailView() {
           <FontAwesomeFreeSolid name={"angle-left"} size={12} color={"white"} />
         </TouchableOpacity>
 
-        {/* Right Arrow */}
         <TouchableOpacity
           style={[styles.arrow, { right: 10 }]}
           onPress={toggleImage}
@@ -118,9 +134,14 @@ export default function DetailView() {
               {user.latitude}, {user.longitude}
             </Text>*/}
           </View>
-          <TouchableOpacity style={styles.button} onPress={async () => {}}>
+          <TouchableOpacity
+            style={[styles.button, requestSent && styles.buttonDisabled]}
+            disabled={requestSent}
+            onPress={handleButtonPress}
+          >
             <Text style={styles.buttonText}>
-              Request a swap with {user.name}!
+              {buttonText}
+              {user.name}!
             </Text>
           </TouchableOpacity>
         </ScrollView>
@@ -144,6 +165,10 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     alignItems: "center",
     marginTop: 12,
+  },
+
+  buttonDisabled: {
+    backgroundColor: "#999",
   },
 
   buttonText: {

@@ -1,5 +1,7 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { getApartmentPictureSource } from '../backend/FlatSwapAPI';
 
 type ChatMessage = {
   id: number;
@@ -10,6 +12,7 @@ type ChatMessage = {
 
 type ChatItem = {
   id: number;
+  userId: number;
   name: string;
   lastMessage: string;
   timestamp: string;
@@ -23,8 +26,16 @@ type ConversationsChatsProps = {
 };
 
 export default function ConversationsChats({ chats, setChats }: ConversationsChatsProps) {
+  const navigation = useNavigation<any>();
   const [selectedChat, setSelectedChat] = useState<ChatItem | null>(null);
   const [messageInput, setMessageInput] = useState('');
+
+  const getLastMessageText = (messages: ChatMessage[]) =>
+    messages.length > 0 ? messages[messages.length - 1].text : '';
+
+  const openProfile = (userId: number) => {
+    navigation.navigate('DetailView', { id: userId });
+  };
 
   const handleSendMessage = () => {
     if (messageInput.trim() && selectedChat) {
@@ -43,23 +54,19 @@ export default function ConversationsChats({ chats, setChats }: ConversationsCha
       const updatedSelected: ChatItem = {
         ...selectedChat,
         messages: [...selectedChat.messages, newMessage],
-        lastMessage: messageInput,
+        lastMessage: getLastMessageText([...selectedChat.messages, newMessage]),
         timestamp: time,
       };
 
       setSelectedChat(updatedSelected);
       setChats((prev) =>
-        prev.map((c) =>
-          c.id === updatedSelected.id
-            ? {
-                ...c,
-                messages: updatedSelected.messages,
-                lastMessage: updatedSelected.lastMessage,
-                timestamp: updatedSelected.timestamp,
-                unread: 0,
-              }
-            : c
-        )
+        [
+          {
+            ...updatedSelected,
+            unread: 0,
+          },
+          ...prev.filter((c) => c.id !== updatedSelected.id),
+        ]
       );
 
       setMessageInput('');
@@ -69,17 +76,13 @@ export default function ConversationsChats({ chats, setChats }: ConversationsCha
   const handleBack = () => {
     if (selectedChat) {
       setChats((prev) =>
-        prev.map((c) =>
-          c.id === selectedChat.id
-            ? {
-                ...c,
-                unread: 0,
-                messages: selectedChat.messages,
-                lastMessage: selectedChat.lastMessage,
-                timestamp: selectedChat.timestamp,
-              }
-            : c
-        )
+        [
+          {
+            ...selectedChat,
+            unread: 0,
+          },
+          ...prev.filter((c) => c.id !== selectedChat.id),
+        ]
       );
     }
     setSelectedChat(null);
@@ -92,10 +95,10 @@ export default function ConversationsChats({ chats, setChats }: ConversationsCha
           <Pressable onPress={handleBack} style={styles.backButton}>
             <Text style={styles.backButtonText}>Back</Text>
           </Pressable>
-          <View style={styles.detailHeaderTitleWrap}>
-            <Text style={styles.detailTitle}>{selectedChat.name}</Text>
+          <Pressable style={styles.detailHeaderTitleWrap} onPress={() => openProfile(selectedChat.userId)}>
+            <Text style={styles.detailTitleLink}>{selectedChat.name}</Text>
             <Text style={styles.detailSubtitle}>FlatSwap chat</Text>
-          </View>
+          </Pressable>
           <View style={styles.detailHeaderSpacer} />
         </View>
 
@@ -156,14 +159,25 @@ export default function ConversationsChats({ chats, setChats }: ConversationsCha
           }}
           style={styles.chatItem}
         >
-          <View style={styles.avatar}>
-            <Text style={styles.avatarText}>{chat.name[0]}</Text>
-          </View>
+          <Pressable style={styles.avatar} onPress={() => openProfile(chat.userId)}>
+            {
+              (() => {
+                try {
+                  const src = getApartmentPictureSource(chat.userId);
+                  return <Image source={src} style={styles.avatarImage} />;
+                } catch (e) {
+                  return <Text style={styles.avatarText}>{chat.name[0]}</Text>;
+                }
+              })()
+            }
+          </Pressable>
 
           <View style={styles.chatContent}>
-            <Text style={styles.chatName}>{chat.name}</Text>
+            <Pressable onPress={() => openProfile(chat.userId)}>
+              <Text style={styles.chatNameLink}>{chat.name}</Text>
+            </Pressable>
             <Text numberOfLines={1} style={styles.chatMessage}>
-              {chat.lastMessage}
+              {getLastMessageText(chat.messages) || chat.lastMessage}
             </Text>
           </View>
 
@@ -227,10 +241,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-  detailTitle: {
+  detailTitleLink: {
     fontSize: 18,
     fontWeight: '800',
-    color: '#0f1720',
+    color: '#1ca349',
+    textDecorationLine: 'underline',
   },
   detailSubtitle: {
     fontSize: 12,
@@ -297,11 +312,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#1ca349',
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden',
     shadowColor: '#1ca349',
     shadowOpacity: 0.18,
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 6,
     elevation: 2,
+  },
+  avatarImage: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
   },
   avatarText: {
     color: 'white',
@@ -312,11 +333,12 @@ const styles = StyleSheet.create({
     flex: 1,
     minWidth: 0,
   },
-  chatName: {
+  chatNameLink: {
     fontSize: 16,
     fontWeight: '700',
-    color: '#0f1720',
+    color: '#1ca349',
     marginBottom: 4,
+    textDecorationLine: 'underline',
   },
   chatMessage: {
     fontSize: 14,

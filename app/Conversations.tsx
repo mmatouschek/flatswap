@@ -1,6 +1,5 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
 import ConversationsChats from './ConversationsChats';
 import ConversationsRequests from './ConversationsRequests';
 
@@ -13,6 +12,7 @@ type ChatMessage = {
 
 type ChatItem = {
 	id: number;
+	userId: number;
 	name: string;
 	lastMessage: string;
 	timestamp: string;
@@ -26,23 +26,36 @@ export default function Conversations() {
 	const [chats, setChats] = useState<ChatItem[]>([
 		{
 			id: 1,
-			name: 'Emma Mueller',
+			userId: 21,
+			name: 'Emma Fischer',
 			lastMessage: 'See you then!',
 			timestamp: '09:12',
 			unread: 0,
 			messages: [
 				{ id: 1, sender: 'other', text: 'Hi! Are we set for June?', time: '09:00' },
-				{ id: 2, sender: 'me', text: "Yes — looking forward to it.", time: '09:12' },
+				{ id: 2, sender: 'me', text: "Yes, looking forward to it.", time: '09:12' },
 			],
 		},
 		{
 			id: 2,
-			name: 'Marco Rossi',
+			userId: 41,
+			name: 'Aisha Khan',
 			lastMessage: 'I can send photos later',
 			timestamp: '08:05',
-			unread: 2,
+			unread: 1,
 			messages: [
 				{ id: 1, sender: 'other', text: 'Interested in a summer swap?', time: '07:55' },
+			],
+		},
+		{
+			id: 3,
+			userId: 24,
+			name: 'Sophie Klein',
+			lastMessage: 'I can send photos later',
+			timestamp: 'Yesterday',
+			unread: 1,
+			messages: [
+				{ id: 1, sender: 'other', text: 'Would love to chat about a swap.', time: '18:40' },
 			],
 		},
 	]);
@@ -64,5 +77,3 @@ export default function Conversations() {
 		</TopTab.Navigator>
 	);
 }
-
-const styles = StyleSheet.create({});
