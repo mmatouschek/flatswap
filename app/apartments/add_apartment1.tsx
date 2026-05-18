@@ -1,6 +1,5 @@
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { useNavigation, useRoute } from "@react-navigation/native";
-
 import { useEffect, useRef, useState } from "react";
 
 import {
@@ -16,16 +15,11 @@ import {
 export default function AddApartmentScreen() {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
-
   const tripData = route.params?.tripData;
   const editIndex = route.params?.editIndex;
-
   const [title, setTitle] = useState(tripData?.title || "");
-
   const [location, setLocation] = useState(tripData?.locations?.[0] || "");
-
   const [guests, setGuests] = useState(tripData?.guests?.toString() || "");
-
   const [startDate, setStartDate] = useState(
     tripData?.startDate ? new Date(tripData.startDate) : new Date(),
   );
@@ -35,11 +29,8 @@ export default function AddApartmentScreen() {
   );
 
   const [showStartPicker, setShowStartPicker] = useState(false);
-
   const [showEndPicker, setShowEndPicker] = useState(false);
-
   const [suggestions, setSuggestions] = useState<string[]>([]);
-
   const locationRef = useRef<TextInput>(null);
   const guestsRef = useRef<TextInput>(null);
 
@@ -64,7 +55,6 @@ export default function AddApartmentScreen() {
       );
 
       const data = await response.json();
-
       const formatted = data.map((item: any) => item.display_name);
 
       setSuggestions(formatted.slice(0, 5));
@@ -76,13 +66,11 @@ export default function AddApartmentScreen() {
   const goNext = () => {
     if (!title || !guests || !location) {
       Alert.alert("Missing fields", "Please fill in all required fields.");
-
       return;
     }
 
     navigation.navigate("AddApartment2", {
       editIndex,
-
       tripData: {
         ...tripData,
         title,
@@ -110,6 +98,7 @@ export default function AddApartmentScreen() {
 
       <Text style={styles.subtitle}>Step 1: Basic Information</Text>
 
+      <Text style={styles.sectionTitle}>Title</Text>
       <TextInput
         placeholder="Title"
         value={title}
@@ -120,7 +109,6 @@ export default function AddApartmentScreen() {
       />
 
       <Text style={styles.sectionTitle}>Location</Text>
-
       <TextInput
         ref={locationRef}
         placeholder="Search district or city"
@@ -139,7 +127,6 @@ export default function AddApartmentScreen() {
               style={styles.suggestionItem}
               onPress={() => {
                 setLocation(item);
-
                 setSuggestions([]);
               }}
             >
@@ -153,11 +140,12 @@ export default function AddApartmentScreen() {
 
       <TouchableOpacity
         style={styles.mapButton}
-        onPress={() => navigation.navigate("SelectLocation")}
+        onPress={() => navigation.navigate("Select Location")}
       >
         <Text style={styles.mapButtonText}>📍 Choose location on Map</Text>
       </TouchableOpacity>
 
+      <Text style={styles.sectionTitle}>Apartments are aviable:</Text>
       <View style={styles.dateRow}>
         <TouchableOpacity
           style={styles.dateInput}
@@ -202,6 +190,7 @@ export default function AddApartmentScreen() {
         />
       )}
 
+      <Text style={styles.sectionTitle}>Number of Guests</Text>
       <TextInput
         ref={guestsRef}
         placeholder="Max number of Guests"
@@ -291,17 +280,12 @@ const styles = StyleSheet.create({
 
   mapButton: {
     backgroundColor: "rgba(173, 216, 230, 0.55)",
-
     padding: 16,
     borderRadius: 12,
-
     alignItems: "center",
     justifyContent: "center",
-
     marginBottom: 16,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
   },
 
@@ -318,18 +302,12 @@ const styles = StyleSheet.create({
 
   dateInput: {
     flex: 1,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.1)",
-
     borderRadius: 12,
-
     paddingVertical: 16,
     paddingHorizontal: 16,
-
     justifyContent: "center",
-
     backgroundColor: "rgba(173, 216, 230, 0.55)",
   },
 

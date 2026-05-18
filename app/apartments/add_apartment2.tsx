@@ -15,10 +15,9 @@ import {
 export default function AddApartmentDetailsScreen() {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
-
   const tripData = route.params?.tripData;
   const editIndex = route.params?.editIndex;
-
+  const [size, setSize] = useState(tripData?.size || "");
   const [description, setDescription] = useState(tripData?.description || "");
 
   const [image, setImage] = useState<string | null>(tripData?.image || null);
@@ -46,14 +45,7 @@ export default function AddApartmentDetailsScreen() {
 
     navigation.navigate("Preferences", {
       editIndex,
-
-      tripData: {
-        ...tripData,
-
-        description,
-
-        image,
-      },
+      tripData: { ...tripData, description, size, image },
     });
   };
 
@@ -62,17 +54,21 @@ export default function AddApartmentDetailsScreen() {
       <Text style={styles.title}>
         {editIndex !== undefined ? "Edit Apartment" : "Apartment Details"}
       </Text>
-
       <Text style={styles.subtitle}>Step 2: Add photos & description</Text>
 
-      <TouchableOpacity style={styles.imageButton} onPress={pickImage}>
-        <Text style={styles.imageButtonText}>
-          {image ? "Change Apartment Photo" : "Upload Apartment Photo"}
-        </Text>
-      </TouchableOpacity>
+      <Text style={styles.sectionTitle}>Apartments size(m²)</Text>
+      <TextInput
+        placeholder="Apartments size"
+        keyboardType="numeric"
+        value={size}
+        onChangeText={setSize}
+        style={styles.input}
+        returnKeyType="done"
+      />
 
       {image && <Image source={{ uri: image }} style={styles.previewImage} />}
 
+      <Text style={styles.sectionTitle}>Some words about yout apartment</Text>
       <TextInput
         placeholder="Description (min. 50 characters)"
         multiline
@@ -81,6 +77,12 @@ export default function AddApartmentDetailsScreen() {
         onChangeText={setDescription}
         style={[styles.input, styles.descriptionInput]}
       />
+
+      <TouchableOpacity style={styles.imageButton} onPress={pickImage}>
+        <Text style={styles.imageButtonText}>
+          {image ? "Change Apartment Photo" : "Upload Apartment Photo"}
+        </Text>
+      </TouchableOpacity>
 
       <TouchableOpacity style={styles.button} onPress={publishApartment}>
         <Text style={styles.buttonText}>Go to Preferences</Text>
@@ -164,5 +166,11 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     fontSize: 16,
+  },
+  sectionTitle: {
+    fontWeight: "600",
+    marginBottom: 8,
+    fontSize: 16,
+    color: "#0f1720",
   },
 });
