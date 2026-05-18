@@ -17,7 +17,7 @@ Externe Libraries und Frameworks:
 [...]
 
 Dauer der Entwicklung:
-80-100
+80-100h
 
 Anmerkungen:
 - derzeit gibt es als Standorte nur London, Paris und Vienna (+ case-sensitive)
