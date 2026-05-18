@@ -102,15 +102,10 @@ const styles = StyleSheet.create({
 
   infoBox: {
     width: "100%",
-
     backgroundColor: "rgba(173, 216, 230, 0.55)",
-
     borderRadius: 16,
-
     padding: 20,
-
     borderWidth: 1,
-
     borderColor: "rgba(28, 163, 73, 0.08)",
   },
 

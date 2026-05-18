@@ -106,7 +106,7 @@ export default function SearchPreferencesScreen() {
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Search Preferences</Text>
       <Text style={styles.subtitle}>Step 3: What are you looking for?</Text>
-      <Text style={styles.sectionTitle}>Preferred Locations</Text>
+      <Text style={styles.sectionTitle}>My Preferred Locations</Text>
       <View style={styles.locationRow}>
         <TextInput
           placeholder="City or district"
@@ -136,8 +136,9 @@ export default function SearchPreferencesScreen() {
         </View>
       ))}
 
+      <Text style={styles.sectionTitle}>How many people?</Text>
       <TextInput
-        placeholder="Number of guests"
+        placeholder="Enter Number of travellers"
         keyboardType="numeric"
         value={guests}
         onChangeText={setGuests}
