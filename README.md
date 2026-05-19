@@ -1,32 +1,24 @@
-#About app:
-FlatSwap is mobile application which gives an opportunity to swap apartments for travellers in Europe.
-Users can create apartment offers, search for preferred destinations, communicate with other users and rate each other after completed swaps.
+## Readme - M3
 
-#Features:
+- Gruppe: 2
+- Team-Nr.: 208
+- Projektthema: FlatSwap
 
-- User registration and login
-- Create and edit apartment offers
-- Upload apartment photos
-- Choose apartment location manually or via map
-- Search preferences for future swaps
-- Chat system between users
-- Host and guest review system
-- Trust Score system
-- Multiple travel destinations support
+### Implementierung
 
-#Technologies
+Framework: React Native Android
 
-- React native
-- Expo
-- TypeScript
-- React Navigation
-- OpenStreetMap API
-- Expo Image Picker
+API-Version: Android API-Level 36
 
-#AI Usage
-AI tools (GPT-5.5) were used for:
+Gerät, auf dem getestet wurde:
+Google Pixel 6
 
-- Logo generation
-- Understanding React Native concepts
-- Generating example/test data
-- Helping with code explanations during development.
+Externe Libraries und Frameworks:
+[...]
+
+Dauer der Entwicklung:
+80-100h
+
+Anmerkungen:
+
+- derzeit gibt es als Standorte nur London, Paris und Vienna (+ case-sensitive)

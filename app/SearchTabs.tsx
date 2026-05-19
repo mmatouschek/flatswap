@@ -6,11 +6,11 @@ import ListSearch from "./ListSearch";
 import MapSearch from "./MapSearch";
 
 export default function SearchTabs() {
-  const [page, setPage] = useState(true);
+  const [page, setPage] = useState(false);
 
   if (page) {
     return (
-      <View style={{ flex: 1}}>
+      <View style={{ flex: 1 }}>
         <View
           style={{
             flex: 1,
@@ -22,7 +22,11 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              {flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,0.3)" },
+              {
+                flex: 1,
+                height: 50,
+                backgroundColor: "rgba(173, 216, 230,0.3)",
+              },
             ]}
             title="List"
             onPress={() => {
@@ -32,7 +36,7 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
+              { flex: 1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
             ]}
             title="Map"
             onPress={() => {
@@ -59,7 +63,7 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              {flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
+              { flex: 1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
             ]}
             title="List"
             onPress={() => {
@@ -69,7 +73,11 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex:1, height: 50, backgroundColor: "rgba(173, 216, 230,0.3)" },
+              {
+                flex: 1,
+                height: 50,
+                backgroundColor: "rgba(173, 216, 230,0.3)",
+              },
             ]}
             title="Map"
             onPress={() => {
