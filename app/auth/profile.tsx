@@ -99,7 +99,7 @@ export default function ProfileScreen() {
 
           <TouchableOpacity
             style={[styles.loginButton, styles.secondaryButton]}
-            onPress={() => navigation.navigate("CreateAccount")}
+            onPress={() => navigation.navigate("Create Account")}
           >
             <Text style={styles.secondaryButtonText}>Register</Text>
           </TouchableOpacity>

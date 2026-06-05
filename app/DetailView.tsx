@@ -3,6 +3,7 @@ import { useRoute } from "@react-navigation/native";
 import { useState } from "react";
 import {
   DeviceEventEmitter,
+  Modal,
   ScrollView,
   StyleSheet,
   Text,
@@ -22,6 +23,7 @@ export default function DetailView() {
   const [requestSent, setRequestSent] = useState(false);
   const [buttonText, setButtonText] = useState("Request a swap with ");
 
+  const [modalVisible, setModalVisible] = useState(false);
   /*
   let imageSource;
   if (id <= 20) {
@@ -33,11 +35,11 @@ export default function DetailView() {
   } else {
     imageSource = "";
   }*/
-
   const imageSource = "";
   console.log(
     "ID " + id + " currentImage " + currentImage + "imageSource " + imageSource,
   );
+
   const toggleImage = () => {
     setCurrentImage((prev) => (prev == 1 ? 2 : 1));
   };
@@ -57,11 +59,11 @@ export default function DetailView() {
   };
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <View
         style={{
           width: "100%",
-          height: "300",
+          height: 300,
           top: -50,
           backgroundColor: "#eee",
         }}
@@ -85,9 +87,10 @@ export default function DetailView() {
           />
         </TouchableOpacity>
       </View>
+
       <View style={styles.detailWrapper}>
-        <ScrollView>
-          <View styles={styles.detailHeader}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View>
             <Text style={styles.headline}>
               <Text style={styles.username}>{user.name}'s</Text> Accomodation
             </Text>
@@ -108,18 +111,25 @@ export default function DetailView() {
               Available from {user.startDate.split("-").reverse().join(".")} to{" "}
               {user.endDate.split("-").reverse().join(".")}
             </Text>
-            <Text style={styles.location}>
-              <FontAwesomeFreeSolid
-                name={"handshake"}
-                size={12}
-                color={"#1ca349"}
-              />{" "}
-              {user.trustscore}/1000 Trust
-            </Text>
+
+            <View style={styles.trustscoreRow}>
+              <Text style={styles.location}>
+                <FontAwesomeFreeSolid
+                  name={"handshake"}
+                  size={12}
+                  color={"#1ca349"}
+                />{" "}
+                {user.trustscore}/1000 Trust
+              </Text>
+              <TouchableOpacity onPress={() => setModalVisible(true)}>
+                <Text style={styles.detailsLink}>Details</Text>
+              </TouchableOpacity>
+            </View>
           </View>
+
           <View style={styles.divider} />
 
-          <View style={{}}>
+          <View>
             <Text style={styles.labelText}>About this accomodation</Text>
             <Text style={styles.text}>{user.description}</Text>
 
@@ -128,12 +138,12 @@ export default function DetailView() {
 
             <Text style={styles.labelText}>Beds</Text>
             <Text style={styles.text}>{user.beds}</Text>
-
             {/*<Text style={styles.labelText}>Coordinates</Text>
             <Text style={styles.text}>
               {user.latitude}, {user.longitude}
             </Text>*/}
           </View>
+
           <TouchableOpacity
             style={[styles.button, requestSent && styles.buttonDisabled]}
             disabled={requestSent}
@@ -146,19 +156,103 @@ export default function DetailView() {
           </TouchableOpacity>
         </ScrollView>
       </View>
+
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(false)} // Handles Android hardware back button
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <TouchableOpacity
+              style={styles.closeModalButton}
+              onPress={() => setModalVisible(false)}
+            >
+              <FontAwesomeFreeSolid name="times" size={20} color="#999" />
+            </TouchableOpacity>
+
+            <Text style={styles.modalTitle}>
+              <Text style={{ color: "#1ca349" }}>{user.name}'s</Text> Trustscore
+            </Text>
+            <Text style={styles.modalSubtitle}>{user.trustscore}/1000</Text>
+
+            <Text style={styles.metricsHeader}>Guest Ratings</Text>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Respect</Text>
+              <Text style={styles.metricValue}>
+                {user.guest?.respectRating}
+              </Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Cleanliness</Text>
+              <Text style={styles.metricValue}>
+                {user.guest?.cleanlinessRating}
+              </Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Rules</Text>
+              <Text style={styles.metricValue}>{user.guest?.rulesRating}</Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Punctuality</Text>
+              <Text style={styles.metricValue}>
+                {user.guest?.punctualityRating}
+              </Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Host Again</Text>
+              <Text style={styles.metricValue}>
+                {user.guest?.hostAgainRating}
+              </Text>
+            </View>
+
+            <Text style={styles.metricsHeader}>Host Ratings</Text>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Photos vs Reality</Text>
+              <Text style={styles.metricValue}>{user.host?.photosRating}</Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Cleanliness</Text>
+              <Text style={styles.metricValue}>
+                {user.host?.cleanlinessRating}
+              </Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Communication</Text>
+              <Text style={styles.metricValue}>
+                {user.host?.communicationRating}
+              </Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Location Accuracy</Text>
+              <Text style={styles.metricValue}>
+                {user.host?.locationRating}
+              </Text>
+            </View>
+            <View style={styles.metricRow}>
+              <Text style={styles.metricLabel}>Would Recommend</Text>
+              <Text style={styles.metricValue}>
+                {user.host?.recommendRating}
+              </Text>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   detailWrapper: {
+    flex: 1,
     position: "relative",
     top: -100,
     padding: 15,
     backgroundColor: "white",
     borderRadius: 10,
+    paddingBottom: 20,
   },
-
   button: {
     backgroundColor: "#1ca349",
     padding: 18,
@@ -166,34 +260,33 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 12,
   },
-
   buttonDisabled: {
     backgroundColor: "#999",
   },
-
   buttonText: {
     color: "white",
+    fontWeight: "bold",
   },
-
   location: {
     fontSize: 16,
     color: "#555",
+    marginBottom: 4,
   },
   headline: {
     fontSize: 22,
     fontWeight: "bold",
     color: "#555",
+    marginBottom: 5,
   },
   text: { fontSize: 16, paddingBottom: 15 },
-  labelText: { fontWeight: "bold", fontSize: 16 },
+  labelText: { fontWeight: "bold", fontSize: 16, marginTop: 5 },
   username: {
     color: "#1ca349",
   },
-  detailHeader: { borderWidth: 3, borderColor: "black" },
   divider: {
     height: 1,
     backgroundColor: "#eee",
-    marginVertical: 10,
+    marginVertical: 15,
   },
   arrow: {
     position: "absolute",
@@ -202,5 +295,77 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: "center",
     alignItems: "center",
+  },
+  trustscoreRow: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  detailsLink: {
+    fontSize: 14,
+    color: "#1ca349",
+    textDecorationLine: "underline",
+    marginLeft: 10,
+    marginBottom: 4,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalContent: {
+    width: "85%",
+    backgroundColor: "white",
+    borderRadius: 12,
+    padding: 24,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  closeModalButton: {
+    position: "absolute",
+    top: 15,
+    right: 15,
+    padding: 5,
+    zIndex: 10,
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#333",
+    textAlign: "center",
+  },
+  modalSubtitle: {
+    fontSize: 14,
+    color: "#666",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  metricsHeader: {
+    fontWeight: "bold",
+    fontSize: 16,
+    color: "#333",
+    marginTop: 8,
+  },
+  metricRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 2,
+  },
+  metricLabel: {
+    fontSize: 14,
+    color: "#555",
+  },
+  metricValue: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#1ca349",
+  },
+  innerDivider: {
+    height: 1,
+    backgroundColor: "#eee",
+    marginVertical: 15,
   },
 });

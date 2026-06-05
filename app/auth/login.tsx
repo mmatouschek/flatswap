@@ -71,7 +71,7 @@ export default function ProfileScreen() {
 
       <TouchableOpacity
         style={styles.registerContainer}
-        onPress={() => navigation.navigate("CreateAccount")}
+        onPress={() => navigation.navigate("Create Account")}
       >
         <Text style={styles.registerText}>Create Account</Text>
       </TouchableOpacity>

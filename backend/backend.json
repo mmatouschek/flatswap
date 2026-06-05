@@ -11,7 +11,21 @@
       "size": 78,
       "beds": 2,
       "startDate": "2026-09-14",
-      "endDate": "2026-10-05"
+      "endDate": "2026-10-05",
+      "guest": {
+        "respectRating": 81,
+        "cleanlinessRating": 82,
+        "rulesRating": 68,
+        "punctualityRating": 58,
+        "hostAgainRating": 76
+      },
+      "host": {
+        "photosRating": 68,
+        "cleanlinessRating": 85,
+        "communicationRating": 77,
+        "locationRating": 60,
+        "recommendRating": 87
+      }
     },
     {
       "id": 2,
@@ -24,7 +38,21 @@
       "size": 42,
       "beds": 1,
       "startDate": "2026-10-02",
-      "endDate": "2026-10-24"
+      "endDate": "2026-10-24",
+      "guest": {
+        "respectRating": 67,
+        "cleanlinessRating": 9,
+        "rulesRating": 45,
+        "punctualityRating": 27,
+        "hostAgainRating": 19
+      },
+      "host": {
+        "photosRating": 43,
+        "cleanlinessRating": 37,
+        "communicationRating": 26,
+        "locationRating": 41,
+        "recommendRating": 4
+      }
     },
     {
       "id": 3,
@@ -37,7 +65,21 @@
       "size": 112,
       "beds": 3,
       "startDate": "2026-08-27",
-      "endDate": "2026-09-18"
+      "endDate": "2026-09-18",
+      "guest": {
+        "respectRating": 95,
+        "cleanlinessRating": 100,
+        "rulesRating": 87,
+        "punctualityRating": 99,
+        "hostAgainRating": 68
+      },
+      "host": {
+        "photosRating": 91,
+        "cleanlinessRating": 87,
+        "communicationRating": 88,
+        "locationRating": 90,
+        "recommendRating": 100
+      }
     },
     {
       "id": 4,
@@ -50,7 +92,21 @@
       "size": 58,
       "beds": 1,
       "startDate": "2026-07-19",
-      "endDate": "2026-08-13"
+      "endDate": "2026-08-13",
+      "guest": {
+        "respectRating": 61,
+        "cleanlinessRating": 70,
+        "rulesRating": 71,
+        "punctualityRating": 58,
+        "hostAgainRating": 71
+      },
+      "host": {
+        "photosRating": 46,
+        "cleanlinessRating": 45,
+        "communicationRating": 80,
+        "locationRating": 51,
+        "recommendRating": 59
+      }
     },
     {
       "id": 5,
@@ -63,7 +119,21 @@
       "size": 101,
       "beds": 3,
       "startDate": "2026-10-08",
-      "endDate": "2026-11-04"
+      "endDate": "2026-11-04",
+      "guest": {
+        "respectRating": 82,
+        "cleanlinessRating": 86,
+        "rulesRating": 79,
+        "punctualityRating": 92,
+        "hostAgainRating": 90
+      },
+      "host": {
+        "photosRating": 100,
+        "cleanlinessRating": 87,
+        "communicationRating": 81,
+        "locationRating": 93,
+        "recommendRating": 94
+      }
     },
     {
       "id": 6,
@@ -76,7 +146,21 @@
       "size": 74,
       "beds": 2,
       "startDate": "2026-09-30",
-      "endDate": "2026-10-21"
+      "endDate": "2026-10-21",
+      "guest": {
+        "respectRating": 51,
+        "cleanlinessRating": 28,
+        "rulesRating": 26,
+        "punctualityRating": 64,
+        "hostAgainRating": 62
+      },
+      "host": {
+        "photosRating": 38,
+        "cleanlinessRating": 41,
+        "communicationRating": 40,
+        "locationRating": 52,
+        "recommendRating": 45
+      }
     },
     {
       "id": 7,
@@ -89,7 +173,21 @@
       "size": 118,
       "beds": 3,
       "startDate": "2026-08-12",
-      "endDate": "2026-09-03"
+      "endDate": "2026-09-03",
+      "guest": {
+        "respectRating": 100,
+        "cleanlinessRating": 94,
+        "rulesRating": 97,
+        "punctualityRating": 100,
+        "hostAgainRating": 100
+      },
+      "host": {
+        "photosRating": 100,
+        "cleanlinessRating": 100,
+        "communicationRating": 100,
+        "locationRating": 100,
+        "recommendRating": 100
+      }
     },
     {
       "id": 8,
@@ -102,7 +200,21 @@
       "size": 66,
       "beds": 2,
       "startDate": "2026-10-25",
-      "endDate": "2026-11-18"
+      "endDate": "2026-11-18",
+      "guest": {
+        "respectRating": 50,
+        "cleanlinessRating": 26,
+        "rulesRating": 63,
+        "punctualityRating": 49,
+        "hostAgainRating": 79
+      },
+      "host": {
+        "photosRating": 68,
+        "cleanlinessRating": 40,
+        "communicationRating": 34,
+        "locationRating": 86,
+        "recommendRating": 35
+      }
     },
     {
       "id": 9,
@@ -115,7 +227,21 @@
       "size": 39,
       "beds": 1,
       "startDate": "2026-09-06",
-      "endDate": "2026-09-30"
+      "endDate": "2026-09-30",
+      "guest": {
+        "respectRating": 48,
+        "cleanlinessRating": 20,
+        "rulesRating": 63,
+        "punctualityRating": 25,
+        "hostAgainRating": 38
+      },
+      "host": {
+        "photosRating": 39,
+        "cleanlinessRating": 18,
+        "communicationRating": 0,
+        "locationRating": 22,
+        "recommendRating": 3
+      }
     },
     {
       "id": 10,
@@ -128,7 +254,21 @@
       "size": 87,
       "beds": 2,
       "startDate": "2026-10-17",
-      "endDate": "2026-11-08"
+      "endDate": "2026-11-08",
+      "guest": {
+        "respectRating": 56,
+        "cleanlinessRating": 81,
+        "rulesRating": 99,
+        "punctualityRating": 71,
+        "hostAgainRating": 77
+      },
+      "host": {
+        "photosRating": 91,
+        "cleanlinessRating": 72,
+        "communicationRating": 84,
+        "locationRating": 83,
+        "recommendRating": 89
+      }
     },
     {
       "id": 11,
@@ -141,7 +281,21 @@
       "size": 109,
       "beds": 3,
       "startDate": "2026-11-01",
-      "endDate": "2026-11-26"
+      "endDate": "2026-11-26",
+      "guest": {
+        "respectRating": 60,
+        "cleanlinessRating": 48,
+        "rulesRating": 76,
+        "punctualityRating": 64,
+        "hostAgainRating": 74
+      },
+      "host": {
+        "photosRating": 90,
+        "cleanlinessRating": 63,
+        "communicationRating": 56,
+        "locationRating": 73,
+        "recommendRating": 55
+      }
     },
     {
       "id": 12,
@@ -154,7 +308,21 @@
       "size": 47,
       "beds": 1,
       "startDate": "2026-08-22",
-      "endDate": "2026-09-14"
+      "endDate": "2026-09-14",
+      "guest": {
+        "respectRating": 42,
+        "cleanlinessRating": 37,
+        "rulesRating": 58,
+        "punctualityRating": 54,
+        "hostAgainRating": 35
+      },
+      "host": {
+        "photosRating": 40,
+        "cleanlinessRating": 46,
+        "communicationRating": 35,
+        "locationRating": 36,
+        "recommendRating": 29
+      }
     },
     {
       "id": 13,
@@ -167,7 +335,21 @@
       "size": 95,
       "beds": 2,
       "startDate": "2026-09-11",
-      "endDate": "2026-10-05"
+      "endDate": "2026-10-05",
+      "guest": {
+        "respectRating": 97,
+        "cleanlinessRating": 100,
+        "rulesRating": 100,
+        "punctualityRating": 96,
+        "hostAgainRating": 92
+      },
+      "host": {
+        "photosRating": 100,
+        "cleanlinessRating": 96,
+        "communicationRating": 100,
+        "locationRating": 100,
+        "recommendRating": 87
+      }
     },
     {
       "id": 14,
@@ -180,7 +362,21 @@
       "size": 61,
       "beds": 2,
       "startDate": "2026-08-04",
-      "endDate": "2026-08-26"
+      "endDate": "2026-08-26",
+      "guest": {
+        "respectRating": 29,
+        "cleanlinessRating": 35,
+        "rulesRating": 43,
+        "punctualityRating": 58,
+        "hostAgainRating": 36
+      },
+      "host": {
+        "photosRating": 29,
+        "cleanlinessRating": 26,
+        "communicationRating": 48,
+        "locationRating": 22,
+        "recommendRating": 49
+      }
     },
     {
       "id": 15,
@@ -193,7 +389,21 @@
       "size": 84,
       "beds": 2,
       "startDate": "2026-10-28",
-      "endDate": "2026-11-24"
+      "endDate": "2026-11-24",
+      "guest": {
+        "respectRating": 80,
+        "cleanlinessRating": 73,
+        "rulesRating": 50,
+        "punctualityRating": 84,
+        "hostAgainRating": 60
+      },
+      "host": {
+        "photosRating": 97,
+        "cleanlinessRating": 62,
+        "communicationRating": 92,
+        "locationRating": 67,
+        "recommendRating": 56
+      }
     },
     {
       "id": 16,
@@ -206,7 +416,21 @@
       "size": 53,
       "beds": 1,
       "startDate": "2026-08-15",
-      "endDate": "2026-08-31"
+      "endDate": "2026-08-31",
+      "guest": {
+        "respectRating": 31,
+        "cleanlinessRating": 49,
+        "rulesRating": 56,
+        "punctualityRating": 56,
+        "hostAgainRating": 49
+      },
+      "host": {
+        "photosRating": 76,
+        "cleanlinessRating": 66,
+        "communicationRating": 100,
+        "locationRating": 57,
+        "recommendRating": 49
+      }
     },
     {
       "id": 17,
@@ -219,7 +443,21 @@
       "size": 116,
       "beds": 3,
       "startDate": "2026-09-09",
-      "endDate": "2026-10-02"
+      "endDate": "2026-10-02",
+      "guest": {
+        "respectRating": 93,
+        "cleanlinessRating": 91,
+        "rulesRating": 94,
+        "punctualityRating": 67,
+        "hostAgainRating": 84
+      },
+      "host": {
+        "photosRating": 86,
+        "cleanlinessRating": 90,
+        "communicationRating": 85,
+        "locationRating": 85,
+        "recommendRating": 70
+      }
     },
     {
       "id": 18,
@@ -232,7 +470,21 @@
       "size": 57,
       "beds": 1,
       "startDate": "2026-10-03",
-      "endDate": "2026-10-19"
+      "endDate": "2026-10-19",
+      "guest": {
+        "respectRating": 20,
+        "cleanlinessRating": 24,
+        "rulesRating": 22,
+        "punctualityRating": 10,
+        "hostAgainRating": 27
+      },
+      "host": {
+        "photosRating": 41,
+        "cleanlinessRating": 15,
+        "communicationRating": 45,
+        "locationRating": 25,
+        "recommendRating": 4
+      }
     },
     {
       "id": 19,
@@ -245,7 +497,21 @@
       "size": 103,
       "beds": 3,
       "startDate": "2026-08-18",
-      "endDate": "2026-09-15"
+      "endDate": "2026-09-15",
+      "guest": {
+        "respectRating": 100,
+        "cleanlinessRating": 83,
+        "rulesRating": 98,
+        "punctualityRating": 92,
+        "hostAgainRating": 98
+      },
+      "host": {
+        "photosRating": 93,
+        "cleanlinessRating": 86,
+        "communicationRating": 100,
+        "locationRating": 92,
+        "recommendRating": 98
+      }
     },
     {
       "id": 20,
@@ -258,1055 +524,2181 @@
       "size": 90,
       "beds": 2,
       "startDate": "2026-09-26",
-      "endDate": "2026-10-20"
+      "endDate": "2026-10-20",
+      "guest": {
+        "respectRating": 84,
+        "cleanlinessRating": 69,
+        "rulesRating": 67,
+        "punctualityRating": 62,
+        "hostAgainRating": 59
+      },
+      "host": {
+        "photosRating": 44,
+        "cleanlinessRating": 67,
+        "communicationRating": 68,
+        "locationRating": 57,
+        "recommendRating": 90
+      }
     },
-	
-  {
-    "id": 21,
-    "name": "Emma Fischer",
-    "city": "Vienna",
-    "latitude": 48.21984,
-    "longitude": 16.37391,
-    "description": "Hi there, I’m offering my apartment in Vienna. It’s in a calm neighborhood with a tiny bakery downstairs, plenty of natural light, and a coffee machine that sounds more professional than it really is.",
-    "trustscore": 684,
-    "size": 74,
-    "beds": 2,
-    "startDate": "2026-07-12",
-    "endDate": "2026-08-01"
-  },
-  {
-    "id": 22,
-    "name": "Louis Bernard",
-    "city": "Paris",
-    "latitude": 48.87251,
-    "longitude": 2.32184,
-    "description": "Hey, I am offering my apartment in Paris. The area is lively but somehow still quiet at night, there’s a balcony with questionable plants, and the kitchen comes with a very loyal coffee machine.",
-    "trustscore": 531,
-    "size": 46,
-    "beds": 1,
-    "startDate": "2026-08-03",
-    "endDate": "2026-08-29"
-  },
-  {
-    "id": 23,
-    "name": "Daniel Cooper",
-    "city": "London",
-    "latitude": 51.51847,
-    "longitude": -0.14392,
-    "description": "Good news for anyone who likes wooden floors and strong espresso: I’m offering my apartment in London. It’s in a vibrant neighborhood, close to parks, and the sofa has seen many excellent naps.",
-    "trustscore": 902,
-    "size": 95,
-    "beds": 3,
-    "startDate": "2026-09-05",
-    "endDate": "2026-09-30"
-  },
-  {
-    "id": 24,
-    "name": "Sophie Klein",
-    "city": "Vienna",
-    "latitude": 48.20127,
-    "longitude": 16.41832,
-    "description": "Hello, I’m offering my apartment in Vienna. The neighborhood is peaceful, the balcony gets afternoon sun, and there’s a coffee machine that behaves differently every morning.",
-    "trustscore": 418,
-    "size": 52,
-    "beds": 2,
-    "startDate": "2026-06-18",
-    "endDate": "2026-07-11"
-  },
-  {
-    "id": 25,
-    "name": "Claire Moreau",
-    "city": "Paris",
-    "latitude": 48.84563,
-    "longitude": 2.37244,
-    "description": "Just putting my apartment in Paris out there. It’s in a friendly neighborhood with lots of cafés nearby, good sunlight in the kitchen, and a coffee machine that takes its job seriously.",
-    "trustscore": 773,
-    "size": 81,
-    "beds": 2,
-    "startDate": "2026-10-02",
-    "endDate": "2026-10-28"
-  },
-  {
-    "id": 26,
-    "name": "Oliver Hayes",
-    "city": "London",
-    "latitude": 51.49233,
-    "longitude": -0.09571,
-    "description": "Hey everyone, I’m offering my apartment in London. It’s tucked into a quieter street, has a surprisingly sunny living room, and includes a coffee machine with more buttons than necessary.",
-    "trustscore": 256,
-    "size": 44,
-    "beds": 1,
-    "startDate": "2026-07-25",
-    "endDate": "2026-08-15"
-  },
-  {
-    "id": 27,
-    "name": "Mila Wagner",
-    "city": "Vienna",
-    "latitude": 48.18754,
-    "longitude": 16.35682,
-    "description": "A quick note: I’m offering my apartment in Vienna. The area is relaxed and green, there’s a comfortable balcony for morning coffee, and the apartment has exactly the right amount of squeaky floorboards.",
-    "trustscore": 614,
-    "size": 91,
-    "beds": 3,
-    "startDate": "2026-08-14",
-    "endDate": "2026-09-06"
-  },
-  {
-    "id": 28,
-    "name": "Theo Lambert",
-    "city": "Paris",
-    "latitude": 48.89021,
-    "longitude": 2.34455,
-    "description": "Hi, I’m offering my apartment in Paris. It’s near a busy neighborhood full of little restaurants, but the apartment itself stays quiet, especially once the coffee machine stops growling.",
-    "trustscore": 845,
-    "size": 63,
-    "beds": 2,
-    "startDate": "2026-06-09",
-    "endDate": "2026-07-01"
-  },
-  {
-    "id": 29,
-    "name": "Hannah Brooks",
-    "city": "London",
-    "latitude": 51.53584,
-    "longitude": -0.18274,
-    "description": "Thought I’d share my apartment in London. It’s bright, comfortable, in a nice neighborhood with good bus connections, and there’s a coffee machine that deserves at least partial credit for the atmosphere.",
-    "trustscore": 389,
-    "size": 58,
-    "beds": 2,
-    "startDate": "2026-09-19",
-    "endDate": "2026-10-12"
-  },
-  {
-    "id": 30,
-    "name": "Julien Petit",
-    "city": "Paris",
-    "latitude": 48.86175,
-    "longitude": 2.28791,
-    "description": "Hello there, I’m offering my apartment in Paris. It’s in a quieter part of the city, has a small reading corner by the window, and a coffee machine that operates with confidence.",
-    "trustscore": 967,
-    "size": 109,
-    "beds": 3,
-    "startDate": "2026-07-07",
-    "endDate": "2026-07-29"
-  },
-  {
-    "id": 31,
-    "name": "Lena Hartmann",
-    "city": "Vienna",
-    "latitude": 48.24018,
-    "longitude": 16.41266,
-    "description": "Hey, I’m offering my apartment in Vienna. The neighborhood is calm and leafy, there’s a decent kitchen setup, and the coffee machine is responsible for most of the apartment’s personality.",
-    "trustscore": 741,
-    "size": 38,
-    "beds": 1,
-    "startDate": "2026-10-11",
-    "endDate": "2026-11-05"
-  },
-  {
-    "id": 32,
-    "name": "Nathan Reed",
-    "city": "London",
-    "latitude": 51.50147,
-    "longitude": -0.16825,
-    "description": "I’m offering my apartment in London. It’s close to cafés and parks, the living room gets great evening light, and there’s a coffee machine that sounds like it’s preparing for launch.",
-    "trustscore": 592,
-    "size": 88,
-    "beds": 2,
-    "startDate": "2026-06-22",
-    "endDate": "2026-07-18"
-  },
-  {
-    "id": 33,
-    "name": "Camille Rousseau",
-    "city": "Paris",
-    "latitude": 48.82844,
-    "longitude": 2.35613,
-    "description": "Hi everyone, I’m offering my apartment in Paris. It’s in a friendly neighborhood with a weekend market nearby, lots of sunlight in the mornings, and a very committed coffee machine.",
-    "trustscore": 477,
-    "size": 72,
-    "beds": 2,
-    "startDate": "2026-08-28",
-    "endDate": "2026-09-18"
-  },
-  {
-    "id": 34,
-    "name": "Felix Bauer",
-    "city": "Vienna",
-    "latitude": 48.20894,
-    "longitude": 16.33872,
-    "description": "Offering my apartment in Vienna. The area is peaceful, the balcony is ideal for pretending to read books outside, and the coffee machine has survived many early mornings.",
-    "trustscore": 198,
-    "size": 49,
-    "beds": 1,
-    "startDate": "2026-07-30",
-    "endDate": "2026-08-21"
-  },
-  {
-    "id": 35,
-    "name": "Eva Sinclair",
-    "city": "London",
-    "latitude": 51.47621,
-    "longitude": -0.12153,
-    "description": "Hello, I’m offering my apartment in London. It’s in a vibrant neighborhood with good food nearby, the place stays cozy even on rainy days, and there’s a coffee machine ready for duty.",
-    "trustscore": 828,
-    "size": 102,
-    "beds": 3,
-    "startDate": "2026-09-01",
-    "endDate": "2026-09-27"
-  },
-  {
-    "id": 36,
-    "name": "Antoine Girard",
-    "city": "Paris",
-    "latitude": 48.85328,
-    "longitude": 2.40187,
-    "description": "Hey there, I’m offering my apartment in Paris. It’s in a quieter residential area, there’s a comfortable couch near the window, and the coffee machine works harder than I do.",
-    "trustscore": 649,
-    "size": 67,
-    "beds": 2,
-    "startDate": "2026-06-14",
-    "endDate": "2026-07-05"
-  },
-  {
-    "id": 37,
-    "name": "Julia Neumann",
-    "city": "Vienna",
-    "latitude": 48.22763,
-    "longitude": 16.44781,
-    "description": "A little apartment listing from Vienna: the neighborhood is quiet, there’s plenty of light in the afternoons, and the coffee machine occasionally sounds offended but always delivers.",
-    "trustscore": 315,
-    "size": 55,
-    "beds": 2,
-    "startDate": "2026-08-09",
-    "endDate": "2026-08-30"
-  },
-  {
-    "id": 38,
-    "name": "George Whitaker",
-    "city": "London",
-    "latitude": 51.54792,
-    "longitude": -0.07411,
-    "description": "Hi, I’m offering my apartment in London. It’s close to a lively neighborhood with good transit connections, has a sunny kitchen, and includes a coffee machine with strong opinions.",
-    "trustscore": 721,
-    "size": 84,
-    "beds": 2,
-    "startDate": "2026-10-05",
-    "endDate": "2026-10-31"
-  },
-  {
-    "id": 39,
-    "name": "Lucie Fontaine",
-    "city": "Paris",
-    "latitude": 48.87648,
-    "longitude": 2.29514,
-    "description": "Just sharing my apartment in Paris. The area has a nice mix of quiet streets and busy cafés, the apartment gets lovely morning light, and there’s an excellent coffee machine in the kitchen.",
-    "trustscore": 554,
-    "size": 40,
-    "beds": 1,
-    "startDate": "2026-07-18",
-    "endDate": "2026-08-08"
-  },
-  {
-    "id": 40,
-    "name": "Sebastian Clark",
-    "city": "London",
-    "latitude": 51.50964,
-    "longitude": -0.20877,
-    "description": "Hey, I’m offering my apartment in London. It’s in a relaxed neighborhood with good grocery stores nearby, there’s a comfortable balcony setup, and the coffee machine is surprisingly dramatic for such a small appliance.",
-    "trustscore": 883,
-    "size": 117,
-    "beds": 3,
-    "startDate": "2026-06-03",
-    "endDate": "2026-06-26"
-  }
-	,
-  {
-    "id": 41,
-    "name": "Aisha Khan",
-    "city": "Vienna",
-    "latitude": 48.2200,
-    "longitude": 16.3900,
-    "description": "Quick note: I’m offering my apartment in Vienna. It’s in a calm area with soft morning light, a small but determined coffee machine, and windows that politely let the sun in.",
-    "trustscore": 612,
-    "size": 60,
-    "beds": 2,
-    "startDate": "2026-06-05",
-    "endDate": "2026-06-26"
-  },
-  {
-    "id": 42,
-    "name": "Mateo Silva",
-    "city": "Paris",
-    "latitude": 48.8600,
-    "longitude": 2.3400,
-    "description": "Hello from Paris: I’m offering my apartment. It sits in a lively neighborhood, has a cozy kitchen corner, and a coffee machine that behaves like it has opinions.",
-    "trustscore": 447,
-    "size": 45,
-    "beds": 1,
-    "startDate": "2026-06-10",
-    "endDate": "2026-07-01"
-  },
-  {
-    "id": 43,
-    "name": "Yuki Tanaka",
-    "city": "London",
-    "latitude": 51.5150,
-    "longitude": -0.1300,
-    "description": "Just sharing my apartment in London. It’s located in a vibrant neighborhood, has decent natural light, and a coffee machine that sounds more powerful than it is.",
-    "trustscore": 803,
-    "size": 92,
-    "beds": 3,
-    "startDate": "2026-06-15",
-    "endDate": "2026-07-06"
-  },
-  {
-    "id": 44,
-    "name": "Amélie Dubois",
-    "city": "Vienna",
-    "latitude": 48.1980,
-    "longitude": 16.3600,
-    "description": "A brief note: I’m offering my apartment in Vienna. The area is quiet, the balcony is suitable for overthinking coffee, and the coffee machine is reliably enthusiastic.",
-    "trustscore": 299,
-    "size": 38,
-    "beds": 1,
-    "startDate": "2026-06-20",
-    "endDate": "2026-07-11"
-  },
-  {
-    "id": 45,
-    "name": "Omar El-Sayed",
-    "city": "Paris",
-    "latitude": 48.8450,
-    "longitude": 2.3700,
-    "description": "Hey there, I’m offering my apartment in Paris. It’s in a friendly district with cafés nearby, has warm afternoon light, and a coffee machine that never judges your timing.",
-    "trustscore": 910,
-    "size": 110,
-    "beds": 3,
-    "startDate": "2026-07-02",
-    "endDate": "2026-07-30"
-  },
-  {
-    "id": 46,
-    "name": "Sofia Petrova",
-    "city": "London",
-    "latitude": 51.5000,
-    "longitude": -0.1100,
-    "description": "Hi there, I’m offering my apartment in London. It’s in a well-connected area, has a bright living room, and a coffee machine that takes its morning duties very seriously.",
-    "trustscore": 522,
-    "size": 70,
-    "beds": 2,
-    "startDate": "2026-07-08",
-    "endDate": "2026-07-29"
-  },
-  {
-    "id": 47,
-    "name": "Luca Rossi",
-    "city": "Vienna",
-    "latitude": 48.2120,
-    "longitude": 16.4100,
-    "description": "Good day: I’m offering my apartment in Vienna. It’s in a peaceful neighborhood, has a comfortable layout, and a coffee machine that occasionally sounds philosophical.",
-    "trustscore": 684,
-    "size": 88,
-    "beds": 2,
-    "startDate": "2026-07-12",
-    "endDate": "2026-08-02"
-  },
-  {
-    "id": 48,
-    "name": "Priya Nair",
-    "city": "Paris",
-    "latitude": 48.8700,
-    "longitude": 2.3200,
-    "description": "Well hello, I’m offering my apartment in Paris. It’s in a vibrant area with plenty of cafés, gets nice daylight, and includes a coffee machine with surprising confidence.",
-    "trustscore": 571,
-    "size": 52,
-    "beds": 2,
-    "startDate": "2026-07-18",
-    "endDate": "2026-08-08"
-  },
-  {
-    "id": 49,
-    "name": "Chen Wei",
-    "city": "London",
-    "latitude": 51.5200,
-    "longitude": -0.1400,
-    "description": "Surprise listing: I’m offering my apartment in London. It’s in a quiet pocket of a lively city, has decent sunlight, and a coffee machine that refuses to be subtle.",
-    "trustscore": 366,
-    "size": 49,
-    "beds": 1,
-    "startDate": "2026-07-22",
-    "endDate": "2026-08-12"
-  },
-  {
-    "id": 50,
-    "name": "Noah Johnson",
-    "city": "Vienna",
-    "latitude": 48.2300,
-    "longitude": 16.3450,
-    "description": "A quick hello: I’m offering my apartment in Vienna. The neighborhood is calm, the space is roomy, and the coffee machine has an unnecessarily strong personality.",
-    "trustscore": 740,
-    "size": 101,
-    "beds": 3,
-    "startDate": "2026-07-25",
-    "endDate": "2026-08-20"
-  },
-  {
-    "id": 51,
-    "name": "Elena García",
-    "city": "Paris",
-    "latitude": 48.8520,
-    "longitude": 2.3600,
-    "description": "Just a small note: I’m offering my apartment in Paris. It’s in a charming neighborhood, has soft natural light, and a coffee machine that behaves like a morning ritual guardian.",
-    "trustscore": 623,
-    "size": 83,
-    "beds": 2,
-    "startDate": "2026-08-01",
-    "endDate": "2026-08-25"
-  },
-  {
-    "id": 52,
-    "name": "Kwame Mensah",
-    "city": "London",
-    "latitude": 51.4950,
-    "longitude": -0.1500,
-    "description": "Hey, I’m offering my apartment in London. It’s in a convenient area, has a relaxed atmosphere, and a coffee machine that sounds slightly overconfident.",
-    "trustscore": 458,
-    "size": 65,
-    "beds": 2,
-    "startDate": "2026-08-05",
-    "endDate": "2026-08-29"
-  },
-  {
-    "id": 53,
-    "name": "Hiroshi Sato",
-    "city": "Vienna",
-    "latitude": 48.2050,
-    "longitude": 16.3950,
-    "description": "Friendly update: I’m offering my apartment in Vienna. It’s in a quiet street, has soft lighting throughout the day, and a coffee machine that behaves consistently enough.",
-    "trustscore": 319,
-    "size": 44,
-    "beds": 1,
-    "startDate": "2026-08-10",
-    "endDate": "2026-08-31"
-  },
-  {
-    "id": 54,
-    "name": "Zara Ahmed",
-    "city": "Paris",
-    "latitude": 48.8400,
-    "longitude": 2.3900,
-    "description": "Hey there, I’m offering my apartment in Paris. It’s in a lively district, has a cozy interior, and a coffee machine that quietly insists on being part of your morning.",
-    "trustscore": 792,
-    "size": 95,
-    "beds": 3,
-    "startDate": "2026-08-15",
-    "endDate": "2026-09-10"
-  },
-  {
-    "id": 55,
-    "name": "Isabella Thompson",
-    "city": "London",
-    "latitude": 51.5100,
-    "longitude": -0.1000,
-    "description": "Hello from London: I’m offering my apartment. It’s bright, spacious, in a good neighborhood, and features a coffee machine that sounds like it’s negotiating every brew.",
-    "trustscore": 885,
-    "size": 120,
-    "beds": 3,
-    "startDate": "2026-08-20",
-    "endDate": "2026-09-15"
-  },
-  {
-    "id": 56,
-    "name": "Milan Kovács",
-    "city": "Vienna",
-    "latitude": 48.2155,
-    "longitude": 16.3300,
-    "description": "A quick hello from Vienna: I’m offering my apartment. It’s in a relaxed neighborhood, has plenty of daylight, and a coffee machine that occasionally surprises me.",
-    "trustscore": 533,
-    "size": 57,
-    "beds": 2,
-    "startDate": "2026-08-25",
-    "endDate": "2026-09-15"
-  },
-  {
-    "id": 57,
-    "name": "Fatou Ndiaye",
-    "city": "Paris",
-    "latitude": 48.8650,
-    "longitude": 2.3000,
-    "description": "Well met: I’m offering my apartment in Paris. It’s in a calm residential area, has soft lighting in the evenings, and a coffee machine that takes itself quite seriously.",
-    "trustscore": 412,
-    "size": 39,
-    "beds": 1,
-    "startDate": "2026-09-01",
-    "endDate": "2026-09-22"
-  },
-  {
-    "id": 58,
-    "name": "Diego Martinez",
-    "city": "London",
-    "latitude": 51.5300,
-    "longitude": -0.1200,
-    "description": "Hi there: I’m offering my apartment in London. It’s in a lively area, has comfortable furniture, and a coffee machine that sounds slightly too proud of itself.",
-    "trustscore": 677,
-    "size": 77,
-    "beds": 2,
-    "startDate": "2026-09-05",
-    "endDate": "2026-09-28"
-  },
-  {
-    "id": 59,
-    "name": "Anika Schmidt",
-    "city": "Vienna",
-    "latitude": 48.1950,
-    "longitude": 16.3850,
-    "description": "Just a note: I’m offering my apartment in Vienna. The neighborhood is peaceful, the space feels balanced, and the coffee machine is surprisingly expressive.",
-    "trustscore": 734,
-    "size": 90,
-    "beds": 2,
-    "startDate": "2026-09-10",
-    "endDate": "2026-10-01"
-  },
-  {
-    "id": 60,
-    "name": "Liam O'Connor",
-    "city": "Paris",
-    "latitude": 48.8550,
-    "longitude": 2.4100,
-    "description": "Hello there, I’m offering my apartment in Paris. It’s in a friendly neighborhood, has good natural light, and a coffee machine that behaves like it’s part of the family.",
-    "trustscore": 566,
-    "size": 68,
-    "beds": 2,
-    "startDate": "2026-09-15",
-    "endDate": "2026-10-06"
-  },
-  {
-    "id": 61,
-    "name": "Nadia Petrović",
-    "city": "Vienna",
-    "latitude": 48.2142,
-    "longitude": 16.3621,
-    "description": "Starting off simply: I’m offering my apartment in Vienna. It’s in a quiet street with leafy views, has a cozy kitchen setup, and a coffee machine that occasionally sounds like it’s thinking out loud.",
-    "trustscore": 488,
-    "size": 73,
-    "beds": 2,
-    "startDate": "2026-06-03",
-    "endDate": "2026-06-25"
-  },
-  {
-    "id": 62,
-    "name": "Ethan Walker",
-    "city": "London",
-    "latitude": 51.5123,
-    "longitude": -0.1184,
-    "description": "Jumping right in: I’m offering my apartment in London. It’s in a vibrant area, gets solid daylight, and includes a coffee machine that sounds more ambitious than it needs to be.",
-    "trustscore": 617,
-    "size": 84,
-    "beds": 2,
-    "startDate": "2026-06-08",
-    "endDate": "2026-06-30"
-  },
-  {
-    "id": 63,
-    "name": "Chloé Bernard",
-    "city": "Paris",
-    "latitude": 48.8609,
-    "longitude": 2.3412,
-    "description": "Out of nowhere: I’m offering my apartment in Paris. It sits in a lively neighborhood, has soft morning light, and a coffee machine that behaves like it has opinions about timing.",
-    "trustscore": 739,
-    "size": 91,
-    "beds": 3,
-    "startDate": "2026-06-12",
-    "endDate": "2026-07-05"
-  },
-  {
-    "id": 64,
-    "name": "Jonas Richter",
-    "city": "Vienna",
-    "latitude": 48.2071,
-    "longitude": 16.3905,
-    "description": "Here we go: I’m offering my apartment in Vienna. The area is calm, the interior is simple and bright, and the coffee machine produces exactly the right amount of morning optimism.",
-    "trustscore": 352,
-    "size": 46,
-    "beds": 1,
-    "startDate": "2026-06-15",
-    "endDate": "2026-07-07"
-  },
-  {
-    "id": 65,
-    "name": "Maya Singh",
-    "city": "London",
-    "latitude": 51.5058,
-    "longitude": -0.1416,
-    "description": "Straight to it: I’m offering my apartment in London. It’s in a convenient neighborhood, has a bright living space, and a coffee machine that sounds like it’s preparing for a mission.",
-    "trustscore": 804,
-    "size": 112,
-    "beds": 3,
-    "startDate": "2026-06-18",
-    "endDate": "2026-07-10"
-  },
-  {
-    "id": 66,
-    "name": "Pierre Laurent",
-    "city": "Paris",
-    "latitude": 48.8513,
-    "longitude": 2.3658,
-    "description": "Well then: I’m offering my apartment in Paris. It’s in a friendly district, has a compact sunny balcony, and a coffee machine that insists on participating in your routine.",
-    "trustscore": 563,
-    "size": 58,
-    "beds": 2,
-    "startDate": "2026-06-20",
-    "endDate": "2026-07-13"
-  },
-  {
-    "id": 67,
-    "name": "Elif Demir",
-    "city": "Vienna",
-    "latitude": 48.2006,
-    "longitude": 16.3759,
-    "description": "Quick update: I’m offering my apartment in Vienna. It’s in a peaceful area, has warm natural lighting, and a coffee machine that behaves like a well-trained but slightly dramatic assistant.",
-    "trustscore": 691,
-    "size": 96,
-    "beds": 3,
-    "startDate": "2026-06-25",
-    "endDate": "2026-07-18"
-  },
-  {
-    "id": 68,
-    "name": "Oliver Bennett",
-    "city": "London",
-    "latitude": 51.5189,
-    "longitude": -0.1321,
-    "description": "Hello there: I’m offering my apartment in London. It’s in a lively but comfortable neighborhood, has good window light, and a coffee machine that sounds overly confident before every brew.",
-    "trustscore": 279,
-    "size": 41,
-    "beds": 1,
-    "startDate": "2026-06-28",
-    "endDate": "2026-07-20"
-  },
-  {
-    "id": 69,
-    "name": "Sofia Alvarez",
-    "city": "Paris",
-    "latitude": 48.8662,
-    "longitude": 2.3470,
-    "description": "To put it simply: I’m offering my apartment in Paris. It’s in a charming neighborhood, has soft afternoon light, and a coffee machine that quietly dominates the kitchen.",
-    "trustscore": 842,
-    "size": 79,
-    "beds": 2,
-    "startDate": "2026-07-01",
-    "endDate": "2026-07-25"
-  },
-  {
-    "id": 70,
-    "name": "Lukas Weber",
-    "city": "Vienna",
-    "latitude": 48.2119,
-    "longitude": 16.3512,
-    "description": "Starting here: I’m offering my apartment in Vienna. The neighborhood is relaxed, the apartment is airy, and the coffee machine behaves like it’s part of the morning weather system.",
-    "trustscore": 415,
-    "size": 52,
-    "beds": 2,
-    "startDate": "2026-07-03",
-    "endDate": "2026-07-27"
-  },
-  {
-    "id": 71,
-    "name": "Amira Hassan",
-    "city": "London",
-    "latitude": 51.5091,
-    "longitude": -0.1098,
-    "description": "Right away: I’m offering my apartment in London. It’s in a central but calm area, has warm lighting, and a coffee machine that sounds like it’s negotiating every cup.",
-    "trustscore": 903,
-    "size": 118,
-    "beds": 3,
-    "startDate": "2026-07-06",
-    "endDate": "2026-07-30"
-  },
-  {
-    "id": 72,
-    "name": "Luc Morel",
-    "city": "Paris",
-    "latitude": 48.8579,
-    "longitude": 2.3294,
-    "description": "Let’s go: I’m offering my apartment in Paris. It’s in a lively neighborhood, has a bright kitchen corner, and a coffee machine that takes its role extremely seriously.",
-    "trustscore": 338,
-    "size": 44,
-    "beds": 1,
-    "startDate": "2026-07-09",
-    "endDate": "2026-08-01"
-  },
-  {
-    "id": 73,
-    "name": "Emilia Novak",
-    "city": "Vienna",
-    "latitude": 48.2033,
-    "longitude": 16.3987,
-    "description": "Here’s the situation: I’m offering my apartment in Vienna. It’s in a quiet residential area, has gentle daylight, and a coffee machine that insists on being part of conversations.",
-    "trustscore": 756,
-    "size": 87,
-    "beds": 2,
-    "startDate": "2026-07-12",
-    "endDate": "2026-08-05"
-  },
-  {
-    "id": 74,
-    "name": "Thomas Reid",
-    "city": "London",
-    "latitude": 51.4965,
-    "longitude": -0.1379,
-    "description": "Quick note: I’m offering my apartment in London. It’s in a well-connected neighborhood, has a comfortable layout, and a coffee machine that sounds slightly theatrical.",
-    "trustscore": 466,
-    "size": 67,
-    "beds": 2,
-    "startDate": "2026-07-15",
-    "endDate": "2026-08-07"
-  },
-  {
-    "id": 75,
-    "name": "Inès Charpentier",
-    "city": "Paris",
-    "latitude": 48.8446,
-    "longitude": 2.3589,
-    "description": "Hi there: I’m offering my apartment in Paris. It’s in a pleasant neighborhood, has soft natural light, and a coffee machine that behaves like it’s mildly proud of itself.",
-    "trustscore": 611,
-    "size": 92,
-    "beds": 3,
-    "startDate": "2026-07-18",
-    "endDate": "2026-08-10"
-  },
-  {
-    "id": 76,
-    "name": "Ben Carter",
-    "city": "Vienna",
-    "latitude": 48.2185,
-    "longitude": 16.3829,
-    "description": "Just saying: I’m offering my apartment in Vienna. It’s in a calm area, has a practical layout, and a coffee machine that occasionally sounds like it’s planning something.",
-    "trustscore": 523,
-    "size": 60,
-    "beds": 2,
-    "startDate": "2026-07-21",
-    "endDate": "2026-08-14"
-  },
-  {
-    "id": 77,
-    "name": "Noor Al-Mansouri",
-    "city": "London",
-    "latitude": 51.5227,
-    "longitude": -0.1256,
-    "description": "To begin: I’m offering my apartment in London. It’s in a vibrant district, has good sunlight exposure, and a coffee machine that sounds more confident than necessary.",
-    "trustscore": 742,
-    "size": 83,
-    "beds": 2,
-    "startDate": "2026-07-24",
-    "endDate": "2026-08-16"
-  },
-  {
-    "id": 78,
-    "name": "Clara Dupont",
-    "city": "Paris",
-    "latitude": 48.8627,
-    "longitude": 2.3781,
-    "description": "Here it is: I’m offering my apartment in Paris. It’s in a lively neighborhood, has a comfortable interior, and a coffee machine that treats mornings like a performance.",
-    "trustscore": 888,
-    "size": 104,
-    "beds": 3,
-    "startDate": "2026-07-27",
-    "endDate": "2026-08-20"
-  },
-  {
-    "id": 79,
-    "name": "Henry Collins",
-    "city": "Vienna",
-    "latitude": 48.2096,
-    "longitude": 16.3408,
-    "description": "Right away: I’m offering my apartment in Vienna. It’s in a quiet neighborhood, has steady natural light, and a coffee machine that behaves like a reliable morning companion.",
-    "trustscore": 377,
-    "size": 48,
-    "beds": 1,
-    "startDate": "2026-07-30",
-    "endDate": "2026-08-22"
-  },
-  {
-    "id": 80,
-    "name": "Amina Rahman",
-    "city": "London",
-    "latitude": 51.5032,
-    "longitude": -0.1487,
-    "description": "Last but not least: I’m offering my apartment in London. It’s in a calm yet central area, has warm interiors, and a coffee machine that seems emotionally invested in your mornings.",
-    "trustscore": 650,
-    "size": 75,
-    "beds": 2,
-    "startDate": "2026-08-02",
-    "endDate": "2026-08-26"
-  },
-  {
-    "id": 81,
-    "name": "Jonas Koller",
-    "city": "Vienna",
-    "latitude": 48.2105,
-    "longitude": 16.3650,
-    "description": "Kicking things off: I’m offering my apartment in Vienna. It’s in a quiet residential pocket, has soft natural light, and a coffee machine that behaves like it’s slightly opinionated.",
-    "trustscore": 540,
-    "size": 66,
-    "beds": 2,
-    "startDate": "2026-08-04",
-    "endDate": "2026-08-25"
-  },
-  {
-    "id": 82,
-    "name": "Leïla Benali",
-    "city": "Paris",
-    "latitude": 48.8600,
-    "longitude": 2.3300,
-    "description": "Out of nowhere: I’m offering my apartment in Paris. It’s in a lively area with cafés nearby, has warm morning light, and a coffee machine that insists on being part of the routine.",
-    "trustscore": 418,
-    "size": 49,
-    "beds": 1,
-    "startDate": "2026-06-11",
-    "endDate": "2026-06-29"
-  },
-  {
-    "id": 83,
-    "name": "Raj Patel",
-    "city": "London",
-    "latitude": 51.5090,
-    "longitude": -0.1350,
-    "description": "Straight in: I’m offering my apartment in London. It’s in a well-connected neighborhood, gets decent daylight, and includes a coffee machine that sounds more ambitious than necessary.",
-    "trustscore": 777,
-    "size": 91,
-    "beds": 3,
-    "startDate": "2026-09-02",
-    "endDate": "2026-09-26"
-  },
-  {
-    "id": 84,
-    "name": "Marta Novak",
-    "city": "Vienna",
-    "latitude": 48.1988,
-    "longitude": 16.3802,
-    "description": "To begin: I’m offering my apartment in Vienna. It’s spacious, sits in a calm area, and has a coffee machine that occasionally sounds like it’s making life decisions.",
-    "trustscore": 301,
-    "size": 120,
-    "beds": 3,
-    "startDate": "2026-10-01",
-    "endDate": "2026-10-28"
-  },
-  {
-    "id": 85,
-    "name": "Hugo Martin",
-    "city": "Paris",
-    "latitude": 48.8530,
-    "longitude": 2.3620,
-    "description": "Well then: I’m offering my apartment in Paris. It’s in a friendly neighborhood, has nice afternoon light, and a coffee machine that behaves like a small household celebrity.",
-    "trustscore": 612,
-    "size": 72,
-    "beds": 2,
-    "startDate": "2026-07-05",
-    "endDate": "2026-07-25"
-  },
-  {
-    "id": 86,
-    "name": "Sienna Clarke",
-    "city": "London",
-    "latitude": 51.5030,
-    "longitude": -0.1200,
-    "description": "Here we go: I’m offering my apartment in London. It’s in a lively but comfortable area, has a bright kitchen, and a coffee machine that sounds slightly too confident.",
-    "trustscore": 455,
-    "size": 58,
-    "beds": 2,
-    "startDate": "2026-06-20",
-    "endDate": "2026-07-12"
-  },
-  {
-    "id": 87,
-    "name": "Arman Yilmaz",
-    "city": "Vienna",
-    "latitude": 48.2050,
-    "longitude": 16.3900,
-    "description": "A quick note: I’m offering my apartment in Vienna. It’s in a quiet street, has gentle daylight, and a coffee machine that treats mornings like a performance.",
-    "trustscore": 688,
-    "size": 44,
-    "beds": 1,
-    "startDate": "2026-07-15",
-    "endDate": "2026-08-03"
-  },
-  {
-    "id": 88,
-    "name": "Camille Zhao",
-    "city": "Paris",
-    "latitude": 48.8660,
-    "longitude": 2.3450,
-    "description": "Jumping in: I’m offering my apartment in Paris. It’s in a vibrant district, has soft lighting in the evenings, and a coffee machine that behaves like it has a schedule of its own.",
-    "trustscore": 834,
-    "size": 88,
-    "beds": 2,
-    "startDate": "2026-08-18",
-    "endDate": "2026-09-10"
-  },
-  {
-    "id": 89,
-    "name": "Tomás O'Brien",
-    "city": "London",
-    "latitude": 51.5155,
-    "longitude": -0.1105,
-    "description": "Just putting this out there: I’m offering my apartment in London. It’s centrally located, has warm interiors, and a coffee machine that sounds like it’s negotiating every brew.",
-    "trustscore": 690,
-    "size": 102,
-    "beds": 3,
-    "startDate": "2026-07-01",
-    "endDate": "2026-07-27"
-  },
-  {
-    "id": 90,
-    "name": "Elisabeth Gruber",
-    "city": "Vienna",
-    "latitude": 48.2140,
-    "longitude": 16.3700,
-    "description": "Starting simple: I’m offering my apartment in Vienna. It’s in a peaceful neighborhood, gets steady daylight, and a coffee machine that is reliably dramatic in the mornings.",
-    "trustscore": 220,
-    "size": 37,
-    "beds": 1,
-    "startDate": "2026-06-06",
-    "endDate": "2026-06-23"
-  },
-  {
-    "id": 91,
-    "name": "Noémie Laurent",
-    "city": "Paris",
-    "latitude": 48.8580,
-    "longitude": 2.3480,
-    "description": "Right away: I’m offering my apartment in Paris. It’s in a lively area with good cafés, has pleasant natural light, and a coffee machine that insists on being part of every morning.",
-    "trustscore": 905,
-    "size": 95,
-    "beds": 3,
-    "startDate": "2026-09-10",
-    "endDate": "2026-10-01"
-  },
-  {
-    "id": 92,
-    "name": "Kofi Mensah",
-    "city": "London",
-    "latitude": 51.4970,
-    "longitude": -0.1420,
-    "description": "Hello there: I’m offering my apartment in London. It’s in a well-connected area, has a cozy layout, and a coffee machine that sounds like it has strong opinions about timing.",
-    "trustscore": 512,
-    "size": 83,
-    "beds": 2,
-    "startDate": "2026-08-09",
-    "endDate": "2026-09-06"
-  },
-  {
-    "id": 93,
-    "name": "Selin Kaya",
-    "city": "Vienna",
-    "latitude": 48.2110,
-    "longitude": 16.3520,
-    "description": "To begin with: I’m offering my apartment in Vienna. It’s in a calm residential zone, has soft morning light, and a coffee machine that behaves like a very committed assistant.",
-    "trustscore": 640,
-    "size": 79,
-    "beds": 2,
-    "startDate": "2026-07-28",
-    "endDate": "2026-08-15"
-  },
-  {
-    "id": 94,
-    "name": "Adrien Roche",
-    "city": "Paris",
-    "latitude": 48.8500,
-    "longitude": 2.3400,
-    "description": "Well hello: I’m offering my apartment in Paris. It’s in a pleasant neighborhood, has a bright kitchen corner, and a coffee machine that behaves like it’s slightly proud of itself.",
-    "trustscore": 433,
-    "size": 55,
-    "beds": 2,
-    "startDate": "2026-06-25",
-    "endDate": "2026-07-20"
-  },
-  {
-    "id": 95,
-    "name": "Emily Nguyen",
-    "city": "London",
-    "latitude": 51.5200,
-    "longitude": -0.1250,
-    "description": "Kicking off here: I’m offering my apartment in London. It’s in a lively neighborhood, has comfortable natural light, and a coffee machine that sounds slightly too enthusiastic.",
-    "trustscore": 781,
-    "size": 70,
-    "beds": 2,
-    "startDate": "2026-09-15",
-    "endDate": "2026-10-05"
-  },
-  {
-    "id": 96,
-    "name": "David Kim",
-    "city": "Vienna",
-    "latitude": 48.2060,
-    "longitude": 16.4010,
-    "description": "Just saying: I’m offering my apartment in Vienna. It’s in a quiet area, has a balanced layout, and a coffee machine that occasionally sounds like it’s thinking deeply.",
-    "trustscore": 359,
-    "size": 101,
-    "beds": 3,
-    "startDate": "2026-08-22",
-    "endDate": "2026-09-15"
-  },
-  {
-    "id": 97,
-    "name": "Fatima Zahra",
-    "city": "Paris",
-    "latitude": 48.8630,
-    "longitude": 2.3560,
-    "description": "Here goes: I’m offering my apartment in Paris. It’s in a vibrant district, has warm evening light, and a coffee machine that treats mornings like a ritual.",
-    "trustscore": 668,
-    "size": 62,
-    "beds": 2,
-    "startDate": "2026-07-11",
-    "endDate": "2026-08-02"
-  },
-  {
-    "id": 98,
-    "name": "George Ivanov",
-    "city": "London",
-    "latitude": 51.5110,
-    "longitude": -0.1310,
-    "description": "Straight in: I’m offering my apartment in London. It’s in a convenient area, has decent sunlight, and a coffee machine that sounds like it’s preparing for something important.",
-    "trustscore": 299,
-    "size": 46,
-    "beds": 1,
-    "startDate": "2026-06-14",
-    "endDate": "2026-06-30"
-  },
-  {
-    "id": 99,
-    "name": "Anna Rossi",
-    "city": "Vienna",
-    "latitude": 48.2000,
-    "longitude": 16.3600,
-    "description": "Quick update: I’m offering my apartment in Vienna. It’s in a calm neighborhood, has soft natural lighting, and a coffee machine that behaves like a loyal but slightly noisy companion.",
-    "trustscore": 844,
-    "size": 89,
-    "beds": 2,
-    "startDate": "2026-10-05",
-    "endDate": "2026-10-26"
-  },
-  {
-    "id": 100,
-    "name": "Lucas Pereira",
-    "city": "Paris",
-    "latitude": 48.8590,
-    "longitude": 2.3700,
-    "description": "Last one: I’m offering my apartment in Paris. It’s in a lively yet comfortable neighborhood, has good natural light, and a coffee machine that insists on being part of the experience.",
-    "trustscore": 570,
-    "size": 118,
-    "beds": 3,
-    "startDate": "2026-09-20",
-    "endDate": "2026-10-17"
-  }
-
-
-
-	
-	
-	
+    {
+      "id": 21,
+      "name": "Emma Fischer",
+      "city": "Vienna",
+      "latitude": 48.21984,
+      "longitude": 16.37391,
+      "description": "Hi there, I’m offering my apartment in Vienna. It’s in a calm neighborhood with a tiny bakery downstairs, plenty of natural light, and a coffee machine that sounds more professional than it really is.",
+      "trustscore": 684,
+      "size": 74,
+      "beds": 2,
+      "startDate": "2026-07-12",
+      "endDate": "2026-08-01",
+      "guest": {
+        "respectRating": 64,
+        "cleanlinessRating": 78,
+        "rulesRating": 80,
+        "punctualityRating": 50,
+        "hostAgainRating": 60
+      },
+      "host": {
+        "photosRating": 54,
+        "cleanlinessRating": 86,
+        "communicationRating": 69,
+        "locationRating": 60,
+        "recommendRating": 83
+      }
+    },
+    {
+      "id": 22,
+      "name": "Louis Bernard",
+      "city": "Paris",
+      "latitude": 48.87251,
+      "longitude": 2.32184,
+      "description": "Hey, I am offering my apartment in Paris. The area is lively but somehow still quiet at night, there’s a balcony with questionable plants, and the kitchen comes with a very loyal coffee machine.",
+      "trustscore": 531,
+      "size": 46,
+      "beds": 1,
+      "startDate": "2026-08-03",
+      "endDate": "2026-08-29",
+      "guest": {
+        "respectRating": 33,
+        "cleanlinessRating": 55,
+        "rulesRating": 46,
+        "punctualityRating": 57,
+        "hostAgainRating": 63
+      },
+      "host": {
+        "photosRating": 58,
+        "cleanlinessRating": 73,
+        "communicationRating": 35,
+        "locationRating": 57,
+        "recommendRating": 54
+      }
+    },
+    {
+      "id": 23,
+      "name": "Daniel Cooper",
+      "city": "London",
+      "latitude": 51.51847,
+      "longitude": -0.14392,
+      "description": "Good news for anyone who likes wooden floors and strong espresso: I’m offering my apartment in London. It’s in a vibrant neighborhood, close to parks, and the sofa has seen many excellent naps.",
+      "trustscore": 902,
+      "size": 95,
+      "beds": 3,
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-30",
+      "guest": {
+        "respectRating": 88,
+        "cleanlinessRating": 100,
+        "rulesRating": 100,
+        "punctualityRating": 93,
+        "hostAgainRating": 90
+      },
+      "host": {
+        "photosRating": 90,
+        "cleanlinessRating": 74,
+        "communicationRating": 71,
+        "locationRating": 97,
+        "recommendRating": 99
+      }
+    },
+    {
+      "id": 24,
+      "name": "Sophie Klein",
+      "city": "Vienna",
+      "latitude": 48.20127,
+      "longitude": 16.41832,
+      "description": "Hello, I’m offering my apartment in Vienna. The neighborhood is peaceful, the balcony gets afternoon sun, and there’s a coffee machine that behaves differently every morning.",
+      "trustscore": 418,
+      "size": 52,
+      "beds": 2,
+      "startDate": "2026-06-18",
+      "endDate": "2026-07-11",
+      "guest": {
+        "respectRating": 33,
+        "cleanlinessRating": 47,
+        "rulesRating": 63,
+        "punctualityRating": 51,
+        "hostAgainRating": 45
+      },
+      "host": {
+        "photosRating": 37,
+        "cleanlinessRating": 38,
+        "communicationRating": 16,
+        "locationRating": 56,
+        "recommendRating": 32
+      }
+    },
+    {
+      "id": 25,
+      "name": "Claire Moreau",
+      "city": "Paris",
+      "latitude": 48.84563,
+      "longitude": 2.37244,
+      "description": "Just putting my apartment in Paris out there. It’s in a friendly neighborhood with lots of cafés nearby, good sunlight in the kitchen, and a coffee machine that takes its job seriously.",
+      "trustscore": 773,
+      "size": 81,
+      "beds": 2,
+      "startDate": "2026-10-02",
+      "endDate": "2026-10-28",
+      "guest": {
+        "respectRating": 66,
+        "cleanlinessRating": 84,
+        "rulesRating": 63,
+        "punctualityRating": 87,
+        "hostAgainRating": 83
+      },
+      "host": {
+        "photosRating": 66,
+        "cleanlinessRating": 83,
+        "communicationRating": 76,
+        "locationRating": 73,
+        "recommendRating": 92
+      }
+    },
+    {
+      "id": 26,
+      "name": "Oliver Hayes",
+      "city": "London",
+      "latitude": 51.49233,
+      "longitude": -0.09571,
+      "description": "Hey everyone, I’m offering my apartment in London. It’s tucked into a quieter street, has a surprisingly sunny living room, and includes a coffee machine with more buttons than necessary.",
+      "trustscore": 256,
+      "size": 44,
+      "beds": 1,
+      "startDate": "2026-07-25",
+      "endDate": "2026-08-15",
+      "guest": {
+        "respectRating": 9,
+        "cleanlinessRating": 19,
+        "rulesRating": 39,
+        "punctualityRating": 38,
+        "hostAgainRating": 28
+      },
+      "host": {
+        "photosRating": 33,
+        "cleanlinessRating": 6,
+        "communicationRating": 40,
+        "locationRating": 35,
+        "recommendRating": 9
+      }
+    },
+    {
+      "id": 27,
+      "name": "Mila Wagner",
+      "city": "Vienna",
+      "latitude": 48.18754,
+      "longitude": 16.35682,
+      "description": "A quick note: I’m offering my apartment in Vienna. The area is relaxed and green, there’s a comfortable balcony for morning coffee, and the apartment has exactly the right amount of squeaky floorboards.",
+      "trustscore": 614,
+      "size": 91,
+      "beds": 3,
+      "startDate": "2026-08-14",
+      "endDate": "2026-09-06",
+      "guest": {
+        "respectRating": 58,
+        "cleanlinessRating": 62,
+        "rulesRating": 52,
+        "punctualityRating": 56,
+        "hostAgainRating": 78
+      },
+      "host": {
+        "photosRating": 81,
+        "cleanlinessRating": 58,
+        "communicationRating": 65,
+        "locationRating": 61,
+        "recommendRating": 43
+      }
+    },
+    {
+      "id": 28,
+      "name": "Theo Lambert",
+      "city": "Paris",
+      "latitude": 48.89021,
+      "longitude": 2.34455,
+      "description": "Hi, I’m offering my apartment in Paris. It’s near a busy neighborhood full of little restaurants, but the apartment itself stays quiet, especially once the coffee machine stops growling.",
+      "trustscore": 845,
+      "size": 63,
+      "beds": 2,
+      "startDate": "2026-06-09",
+      "endDate": "2026-07-01",
+      "guest": {
+        "respectRating": 79,
+        "cleanlinessRating": 71,
+        "rulesRating": 92,
+        "punctualityRating": 97,
+        "hostAgainRating": 86
+      },
+      "host": {
+        "photosRating": 81,
+        "cleanlinessRating": 93,
+        "communicationRating": 70,
+        "locationRating": 91,
+        "recommendRating": 85
+      }
+    },
+    {
+      "id": 29,
+      "name": "Hannah Brooks",
+      "city": "London",
+      "latitude": 51.53584,
+      "longitude": -0.18274,
+      "description": "Thought I’d share my apartment in London. It’s bright, comfortable, in a nice neighborhood with good bus connections, and there’s a coffee machine that deserves at least partial credit for the atmosphere.",
+      "trustscore": 389,
+      "size": 58,
+      "beds": 2,
+      "startDate": "2026-09-19",
+      "endDate": "2026-10-12",
+      "guest": {
+        "respectRating": 40,
+        "cleanlinessRating": 44,
+        "rulesRating": 27,
+        "punctualityRating": 48,
+        "hostAgainRating": 43
+      },
+      "host": {
+        "photosRating": 51,
+        "cleanlinessRating": 43,
+        "communicationRating": 38,
+        "locationRating": 22,
+        "recommendRating": 33
+      }
+    },
+    {
+      "id": 30,
+      "name": "Julien Petit",
+      "city": "Paris",
+      "latitude": 48.86175,
+      "longitude": 2.28791,
+      "description": "Hello there, I’m offering my apartment in Paris. It’s in a quieter part of the city, has a small reading corner by the window, and a coffee machine that operates with confidence.",
+      "trustscore": 967,
+      "size": 109,
+      "beds": 3,
+      "startDate": "2026-07-07",
+      "endDate": "2026-07-29",
+      "guest": {
+        "respectRating": 81,
+        "cleanlinessRating": 94,
+        "rulesRating": 98,
+        "punctualityRating": 99,
+        "hostAgainRating": 100
+      },
+      "host": {
+        "photosRating": 100,
+        "cleanlinessRating": 100,
+        "communicationRating": 98,
+        "locationRating": 97,
+        "recommendRating": 100
+      }
+    },
+    {
+      "id": 31,
+      "name": "Lena Hartmann",
+      "city": "Vienna",
+      "latitude": 48.24018,
+      "longitude": 16.41266,
+      "description": "Hey, I’m offering my apartment in Vienna. The neighborhood is calm and leafy, there’s a decent kitchen setup, and the coffee machine is responsible for most of the apartment’s personality.",
+      "trustscore": 741,
+      "size": 38,
+      "beds": 1,
+      "startDate": "2026-10-11",
+      "endDate": "2026-11-05",
+      "guest": {
+        "respectRating": 62,
+        "cleanlinessRating": 85,
+        "rulesRating": 76,
+        "punctualityRating": 77,
+        "hostAgainRating": 70
+      },
+      "host": {
+        "photosRating": 79,
+        "cleanlinessRating": 63,
+        "communicationRating": 81,
+        "locationRating": 77,
+        "recommendRating": 71
+      }
+    },
+    {
+      "id": 32,
+      "name": "Nathan Reed",
+      "city": "London",
+      "latitude": 51.50147,
+      "longitude": -0.16825,
+      "description": "I’m offering my apartment in London. It’s close to cafés and parks, the living room gets great evening light, and there’s a coffee machine that sounds like it’s preparing for launch.",
+      "trustscore": 592,
+      "size": 88,
+      "beds": 2,
+      "startDate": "2026-06-22",
+      "endDate": "2026-07-18",
+      "guest": {
+        "respectRating": 64,
+        "cleanlinessRating": 52,
+        "rulesRating": 52,
+        "punctualityRating": 83,
+        "hostAgainRating": 72
+      },
+      "host": {
+        "photosRating": 64,
+        "cleanlinessRating": 64,
+        "communicationRating": 39,
+        "locationRating": 42,
+        "recommendRating": 60
+      }
+    },
+    {
+      "id": 33,
+      "name": "Camille Rousseau",
+      "city": "Paris",
+      "latitude": 48.82844,
+      "longitude": 2.35613,
+      "description": "Hi everyone, I’m offering my apartment in Paris. It’s in a friendly neighborhood with a weekend market nearby, lots of sunlight in the mornings, and a very committed coffee machine.",
+      "trustscore": 477,
+      "size": 72,
+      "beds": 2,
+      "startDate": "2026-08-28",
+      "endDate": "2026-09-18",
+      "guest": {
+        "respectRating": 40,
+        "cleanlinessRating": 43,
+        "rulesRating": 52,
+        "punctualityRating": 55,
+        "hostAgainRating": 41
+      },
+      "host": {
+        "photosRating": 39,
+        "cleanlinessRating": 63,
+        "communicationRating": 45,
+        "locationRating": 61,
+        "recommendRating": 38
+      }
+    },
+    {
+      "id": 34,
+      "name": "Felix Bauer",
+      "city": "Vienna",
+      "latitude": 48.20894,
+      "longitude": 16.33872,
+      "description": "Offering my apartment in Vienna. The area is peaceful, the balcony is ideal for pretending to read books outside, and the coffee machine has survived many early mornings.",
+      "trustscore": 198,
+      "size": 49,
+      "beds": 1,
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-21",
+      "guest": {
+        "respectRating": 10,
+        "cleanlinessRating": 9,
+        "rulesRating": 29,
+        "punctualityRating": 29,
+        "hostAgainRating": 5
+      },
+      "host": {
+        "photosRating": 8,
+        "cleanlinessRating": 35,
+        "communicationRating": 46,
+        "locationRating": 21,
+        "recommendRating": 6
+      }
+    },
+    {
+      "id": 35,
+      "name": "Eva Sinclair",
+      "city": "London",
+      "latitude": 51.47621,
+      "longitude": -0.12153,
+      "description": "Hello, I’m offering my apartment in London. It’s in a vibrant neighborhood with good food nearby, the place stays cozy even on rainy days, and there’s a coffee machine ready for duty.",
+      "trustscore": 828,
+      "size": 102,
+      "beds": 3,
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-27",
+      "guest": {
+        "respectRating": 51,
+        "cleanlinessRating": 90,
+        "rulesRating": 95,
+        "punctualityRating": 76,
+        "hostAgainRating": 81
+      },
+      "host": {
+        "photosRating": 100,
+        "cleanlinessRating": 95,
+        "communicationRating": 62,
+        "locationRating": 78,
+        "recommendRating": 100
+      }
+    },
+    {
+      "id": 36,
+      "name": "Antoine Girard",
+      "city": "Paris",
+      "latitude": 48.85328,
+      "longitude": 2.40187,
+      "description": "Hey there, I’m offering my apartment in Paris. It’s in a quieter residential area, there’s a comfortable couch near the window, and the coffee machine works harder than I do.",
+      "trustscore": 649,
+      "size": 67,
+      "beds": 2,
+      "startDate": "2026-06-14",
+      "endDate": "2026-07-05",
+      "guest": {
+        "respectRating": 78,
+        "cleanlinessRating": 74,
+        "rulesRating": 47,
+        "punctualityRating": 77,
+        "hostAgainRating": 64
+      },
+      "host": {
+        "photosRating": 88,
+        "cleanlinessRating": 47,
+        "communicationRating": 64,
+        "locationRating": 53,
+        "recommendRating": 57
+      }
+    },
+    {
+      "id": 37,
+      "name": "Julia Neumann",
+      "city": "Vienna",
+      "latitude": 48.22763,
+      "longitude": 16.44781,
+      "description": "A little apartment listing from Vienna: the neighborhood is quiet, there’s plenty of light in the afternoons, and the coffee machine occasionally sounds offended but always delivers.",
+      "trustscore": 315,
+      "size": 55,
+      "beds": 2,
+      "startDate": "2026-08-09",
+      "endDate": "2026-08-30",
+      "guest": {
+        "respectRating": 19,
+        "cleanlinessRating": 45,
+        "rulesRating": 22,
+        "punctualityRating": 44,
+        "hostAgainRating": 74
+      },
+      "host": {
+        "photosRating": 31,
+        "cleanlinessRating": 21,
+        "communicationRating": 32,
+        "locationRating": 8,
+        "recommendRating": 19
+      }
+    },
+    {
+      "id": 38,
+      "name": "George Whitaker",
+      "city": "London",
+      "latitude": 51.54792,
+      "longitude": -0.07411,
+      "description": "Hi, I’m offering my apartment in London. It’s close to a lively neighborhood with good transit connections, has a sunny kitchen, and includes a coffee machine with strong opinions.",
+      "trustscore": 721,
+      "size": 84,
+      "beds": 2,
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-31",
+      "guest": {
+        "respectRating": 64,
+        "cleanlinessRating": 78,
+        "rulesRating": 81,
+        "punctualityRating": 69,
+        "hostAgainRating": 51
+      },
+      "host": {
+        "photosRating": 68,
+        "cleanlinessRating": 93,
+        "communicationRating": 88,
+        "locationRating": 51,
+        "recommendRating": 78
+      }
+    },
+    {
+      "id": 39,
+      "name": "Lucie Fontaine",
+      "city": "Paris",
+      "latitude": 48.87648,
+      "longitude": 2.29514,
+      "description": "Just sharing my apartment in Paris. The area has a nice mix of quiet streets and busy cafés, the apartment gets lovely morning light, and there’s an excellent coffee machine in the kitchen.",
+      "trustscore": 554,
+      "size": 40,
+      "beds": 1,
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-08",
+      "guest": {
+        "respectRating": 59,
+        "cleanlinessRating": 53,
+        "rulesRating": 58,
+        "punctualityRating": 51,
+        "hostAgainRating": 63
+      },
+      "host": {
+        "photosRating": 40,
+        "cleanlinessRating": 58,
+        "communicationRating": 52,
+        "locationRating": 49,
+        "recommendRating": 71
+      }
+    },
+    {
+      "id": 40,
+      "name": "Sebastian Clark",
+      "city": "London",
+      "latitude": 51.50964,
+      "longitude": -0.20877,
+      "description": "Hey, I’m offering my apartment in London. It’s in a relaxed neighborhood with good grocery stores nearby, there’s a comfortable balcony setup, and the coffee machine is surprisingly dramatic for such a small appliance.",
+      "trustscore": 883,
+      "size": 117,
+      "beds": 3,
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-26",
+      "guest": {
+        "respectRating": 73,
+        "cleanlinessRating": 78,
+        "rulesRating": 76,
+        "punctualityRating": 100,
+        "hostAgainRating": 98
+      },
+      "host": {
+        "photosRating": 94,
+        "cleanlinessRating": 90,
+        "communicationRating": 96,
+        "locationRating": 100,
+        "recommendRating": 78
+      }
+    },
+    {
+      "id": 41,
+      "name": "Aisha Khan",
+      "city": "Vienna",
+      "latitude": 48.22,
+      "longitude": 16.39,
+      "description": "Quick note: I’m offering my apartment in Vienna. It’s in a calm area with soft morning light, a small but determined coffee machine, and windows that politely let the sun in.",
+      "trustscore": 612,
+      "size": 60,
+      "beds": 2,
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-26",
+      "guest": {
+        "respectRating": 54,
+        "cleanlinessRating": 70,
+        "rulesRating": 51,
+        "punctualityRating": 61,
+        "hostAgainRating": 43
+      },
+      "host": {
+        "photosRating": 61,
+        "cleanlinessRating": 74,
+        "communicationRating": 58,
+        "locationRating": 68,
+        "recommendRating": 72
+      }
+    },
+    {
+      "id": 42,
+      "name": "Mateo Silva",
+      "city": "Paris",
+      "latitude": 48.86,
+      "longitude": 2.34,
+      "description": "Hello from Paris: I’m offering my apartment. It sits in a lively neighborhood, has a cozy kitchen corner, and a coffee machine that behaves like it has opinions.",
+      "trustscore": 447,
+      "size": 45,
+      "beds": 1,
+      "startDate": "2026-06-10",
+      "endDate": "2026-07-01",
+      "guest": {
+        "respectRating": 44,
+        "cleanlinessRating": 59,
+        "rulesRating": 9,
+        "punctualityRating": 52,
+        "hostAgainRating": 50
+      },
+      "host": {
+        "photosRating": 40,
+        "cleanlinessRating": 62,
+        "communicationRating": 22,
+        "locationRating": 47,
+        "recommendRating": 62
+      }
+    },
+    {
+      "id": 43,
+      "name": "Yuki Tanaka",
+      "city": "London",
+      "latitude": 51.515,
+      "longitude": -0.13,
+      "description": "Just sharing my apartment in London. It’s located in a vibrant neighborhood, has decent natural light, and a coffee machine that sounds more powerful than it is.",
+      "trustscore": 803,
+      "size": 92,
+      "beds": 3,
+      "startDate": "2026-06-15",
+      "endDate": "2026-07-06",
+      "guest": {
+        "respectRating": 98,
+        "cleanlinessRating": 69,
+        "rulesRating": 62,
+        "punctualityRating": 82,
+        "hostAgainRating": 76
+      },
+      "host": {
+        "photosRating": 75,
+        "cleanlinessRating": 81,
+        "communicationRating": 84,
+        "locationRating": 97,
+        "recommendRating": 79
+      }
+    },
+    {
+      "id": 44,
+      "name": "Amélie Dubois",
+      "city": "Vienna",
+      "latitude": 48.198,
+      "longitude": 16.36,
+      "description": "A brief note: I’m offering my apartment in Vienna. The area is quiet, the balcony is suitable for overthinking coffee, and the coffee machine is reliably enthusiastic.",
+      "trustscore": 299,
+      "size": 38,
+      "beds": 1,
+      "startDate": "2026-06-20",
+      "endDate": "2026-07-11",
+      "guest": {
+        "respectRating": 24,
+        "cleanlinessRating": 35,
+        "rulesRating": 23,
+        "punctualityRating": 13,
+        "hostAgainRating": 38
+      },
+      "host": {
+        "photosRating": 40,
+        "cleanlinessRating": 5,
+        "communicationRating": 53,
+        "locationRating": 22,
+        "recommendRating": 46
+      }
+    },
+    {
+      "id": 45,
+      "name": "Omar El-Sayed",
+      "city": "Paris",
+      "latitude": 48.845,
+      "longitude": 2.37,
+      "description": "Hey there, I’m offering my apartment in Paris. It’s in a friendly district with cafés nearby, has warm afternoon light, and a coffee machine that never judges your timing.",
+      "trustscore": 910,
+      "size": 110,
+      "beds": 3,
+      "startDate": "2026-07-02",
+      "endDate": "2026-07-30",
+      "guest": {
+        "respectRating": 100,
+        "cleanlinessRating": 88,
+        "rulesRating": 95,
+        "punctualityRating": 99,
+        "hostAgainRating": 91
+      },
+      "host": {
+        "photosRating": 91,
+        "cleanlinessRating": 77,
+        "communicationRating": 87,
+        "locationRating": 82,
+        "recommendRating": 100
+      }
+    },
+    {
+      "id": 46,
+      "name": "Sofia Petrova",
+      "city": "London",
+      "latitude": 51.5,
+      "longitude": -0.11,
+      "description": "Hi there, I’m offering my apartment in London. It’s in a well-connected area, has a bright living room, and a coffee machine that takes its morning duties very seriously.",
+      "trustscore": 522,
+      "size": 70,
+      "beds": 2,
+      "startDate": "2026-07-08",
+      "endDate": "2026-07-29",
+      "guest": {
+        "respectRating": 58,
+        "cleanlinessRating": 47,
+        "rulesRating": 50,
+        "punctualityRating": 33,
+        "hostAgainRating": 54
+      },
+      "host": {
+        "photosRating": 64,
+        "cleanlinessRating": 53,
+        "communicationRating": 64,
+        "locationRating": 53,
+        "recommendRating": 46
+      }
+    },
+    {
+      "id": 47,
+      "name": "Luca Rossi",
+      "city": "Vienna",
+      "latitude": 48.212,
+      "longitude": 16.41,
+      "description": "Good day: I’m offering my apartment in Vienna. It’s in a peaceful neighborhood, has a comfortable layout, and a coffee machine that occasionally sounds philosophical.",
+      "trustscore": 684,
+      "size": 88,
+      "beds": 2,
+      "startDate": "2026-07-12",
+      "endDate": "2026-08-02",
+      "guest": {
+        "respectRating": 80,
+        "cleanlinessRating": 60,
+        "rulesRating": 79,
+        "punctualityRating": 59,
+        "hostAgainRating": 73
+      },
+      "host": {
+        "photosRating": 86,
+        "cleanlinessRating": 61,
+        "communicationRating": 46,
+        "locationRating": 61,
+        "recommendRating": 79
+      }
+    },
+    {
+      "id": 48,
+      "name": "Priya Nair",
+      "city": "Paris",
+      "latitude": 48.87,
+      "longitude": 2.32,
+      "description": "Well hello, I’m offering my apartment in Paris. It’s in a vibrant area with plenty of cafés, gets nice daylight, and includes a coffee machine with surprising confidence.",
+      "trustscore": 571,
+      "size": 52,
+      "beds": 2,
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-08",
+      "guest": {
+        "respectRating": 82,
+        "cleanlinessRating": 66,
+        "rulesRating": 50,
+        "punctualityRating": 75,
+        "hostAgainRating": 34
+      },
+      "host": {
+        "photosRating": 40,
+        "cleanlinessRating": 44,
+        "communicationRating": 58,
+        "locationRating": 61,
+        "recommendRating": 61
+      }
+    },
+    {
+      "id": 49,
+      "name": "Chen Wei",
+      "city": "London",
+      "latitude": 51.52,
+      "longitude": -0.14,
+      "description": "Surprise listing: I’m offering my apartment in London. It’s in a quiet pocket of a lively city, has decent sunlight, and a coffee machine that refuses to be subtle.",
+      "trustscore": 366,
+      "size": 49,
+      "beds": 1,
+      "startDate": "2026-07-22",
+      "endDate": "2026-08-12",
+      "guest": {
+        "respectRating": 46,
+        "cleanlinessRating": 26,
+        "rulesRating": 34,
+        "punctualityRating": 15,
+        "hostAgainRating": 41
+      },
+      "host": {
+        "photosRating": 42,
+        "cleanlinessRating": 53,
+        "communicationRating": 36,
+        "locationRating": 17,
+        "recommendRating": 56
+      }
+    },
+    {
+      "id": 50,
+      "name": "Noah Johnson",
+      "city": "Vienna",
+      "latitude": 48.23,
+      "longitude": 16.345,
+      "description": "A quick hello: I’m offering my apartment in Vienna. The neighborhood is calm, the space is roomy, and the coffee machine has an unnecessarily strong personality.",
+      "trustscore": 740,
+      "size": 101,
+      "beds": 3,
+      "startDate": "2026-07-25",
+      "endDate": "2026-08-20",
+      "guest": {
+        "respectRating": 61,
+        "cleanlinessRating": 85,
+        "rulesRating": 50,
+        "punctualityRating": 66,
+        "hostAgainRating": 82
+      },
+      "host": {
+        "photosRating": 67,
+        "cleanlinessRating": 83,
+        "communicationRating": 67,
+        "locationRating": 86,
+        "recommendRating": 93
+      }
+    },
+    {
+      "id": 51,
+      "name": "Elena García",
+      "city": "Paris",
+      "latitude": 48.852,
+      "longitude": 2.36,
+      "description": "Just a small note: I’m offering my apartment in Paris. It’s in a charming neighborhood, has soft natural light, and a coffee machine that behaves like a morning ritual guardian.",
+      "trustscore": 623,
+      "size": 83,
+      "beds": 2,
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-25",
+      "guest": {
+        "respectRating": 65,
+        "cleanlinessRating": 71,
+        "rulesRating": 84,
+        "punctualityRating": 39,
+        "hostAgainRating": 67
+      },
+      "host": {
+        "photosRating": 70,
+        "cleanlinessRating": 51,
+        "communicationRating": 50,
+        "locationRating": 61,
+        "recommendRating": 65
+      }
+    },
+    {
+      "id": 52,
+      "name": "Kwame Mensah",
+      "city": "London",
+      "latitude": 51.495,
+      "longitude": -0.15,
+      "description": "Hey, I’m offering my apartment in London. It’s in a convenient area, has a relaxed atmosphere, and a coffee machine that sounds slightly overconfident.",
+      "trustscore": 458,
+      "size": 65,
+      "beds": 2,
+      "startDate": "2026-08-05",
+      "endDate": "2026-08-29",
+      "guest": {
+        "respectRating": 49,
+        "cleanlinessRating": 10,
+        "rulesRating": 56,
+        "punctualityRating": 36,
+        "hostAgainRating": 45
+      },
+      "host": {
+        "photosRating": 45,
+        "cleanlinessRating": 58,
+        "communicationRating": 43,
+        "locationRating": 56,
+        "recommendRating": 60
+      }
+    },
+    {
+      "id": 53,
+      "name": "Hiroshi Sato",
+      "city": "Vienna",
+      "latitude": 48.205,
+      "longitude": 16.395,
+      "description": "Friendly update: I’m offering my apartment in Vienna. It’s in a quiet street, has soft lighting throughout the day, and a coffee machine that behaves consistently enough.",
+      "trustscore": 319,
+      "size": 44,
+      "beds": 1,
+      "startDate": "2026-08-10",
+      "endDate": "2026-08-31",
+      "guest": {
+        "respectRating": 25,
+        "cleanlinessRating": 38,
+        "rulesRating": 42,
+        "punctualityRating": 42,
+        "hostAgainRating": 20
+      },
+      "host": {
+        "photosRating": 30,
+        "cleanlinessRating": 50,
+        "communicationRating": 20,
+        "locationRating": 25,
+        "recommendRating": 27
+      }
+    },
+    {
+      "id": 54,
+      "name": "Zara Ahmed",
+      "city": "Paris",
+      "latitude": 48.84,
+      "longitude": 2.39,
+      "description": "Hey there, I’m offering my apartment in Paris. It’s in a lively district, has a cozy interior, and a coffee machine that quietly insists on being part of your morning.",
+      "trustscore": 792,
+      "size": 95,
+      "beds": 3,
+      "startDate": "2026-08-15",
+      "endDate": "2026-09-10",
+      "guest": {
+        "respectRating": 95,
+        "cleanlinessRating": 83,
+        "rulesRating": 91,
+        "punctualityRating": 93,
+        "hostAgainRating": 80
+      },
+      "host": {
+        "photosRating": 68,
+        "cleanlinessRating": 79,
+        "communicationRating": 55,
+        "locationRating": 75,
+        "recommendRating": 73
+      }
+    },
+    {
+      "id": 55,
+      "name": "Isabella Thompson",
+      "city": "London",
+      "latitude": 51.51,
+      "longitude": -0.1,
+      "description": "Hello from London: I’m offering my apartment. It’s bright, spacious, in a good neighborhood, and features a coffee machine that sounds like it’s negotiating every brew.",
+      "trustscore": 885,
+      "size": 120,
+      "beds": 3,
+      "startDate": "2026-08-20",
+      "endDate": "2026-09-15",
+      "guest": {
+        "respectRating": 86,
+        "cleanlinessRating": 100,
+        "rulesRating": 85,
+        "punctualityRating": 99,
+        "hostAgainRating": 100
+      },
+      "host": {
+        "photosRating": 85,
+        "cleanlinessRating": 73,
+        "communicationRating": 89,
+        "locationRating": 71,
+        "recommendRating": 97
+      }
+    },
+    {
+      "id": 56,
+      "name": "Milan Kovács",
+      "city": "Vienna",
+      "latitude": 48.2155,
+      "longitude": 16.33,
+      "description": "A quick hello from Vienna: I’m offering my apartment. It’s in a relaxed neighborhood, has plenty of daylight, and a coffee machine that occasionally surprises me.",
+      "trustscore": 533,
+      "size": 57,
+      "beds": 2,
+      "startDate": "2026-08-25",
+      "endDate": "2026-09-15",
+      "guest": {
+        "respectRating": 50,
+        "cleanlinessRating": 29,
+        "rulesRating": 59,
+        "punctualityRating": 66,
+        "hostAgainRating": 51
+      },
+      "host": {
+        "photosRating": 50,
+        "cleanlinessRating": 46,
+        "communicationRating": 65,
+        "locationRating": 65,
+        "recommendRating": 52
+      }
+    },
+    {
+      "id": 57,
+      "name": "Fatou Ndiaye",
+      "city": "Paris",
+      "latitude": 48.865,
+      "longitude": 2.3,
+      "description": "Well met: I’m offering my apartment in Paris. It’s in a calm residential area, has soft lighting in the evenings, and a coffee machine that takes itself quite seriously.",
+      "trustscore": 412,
+      "size": 39,
+      "beds": 1,
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-22",
+      "guest": {
+        "respectRating": 50,
+        "cleanlinessRating": 42,
+        "rulesRating": 29,
+        "punctualityRating": 60,
+        "hostAgainRating": 28
+      },
+      "host": {
+        "photosRating": 41,
+        "cleanlinessRating": 37,
+        "communicationRating": 27,
+        "locationRating": 66,
+        "recommendRating": 32
+      }
+    },
+    {
+      "id": 58,
+      "name": "Diego Martinez",
+      "city": "London",
+      "latitude": 51.53,
+      "longitude": -0.12,
+      "description": "Hi there: I’m offering my apartment in London. It’s in a lively area, has comfortable furniture, and a coffee machine that sounds slightly too proud of itself.",
+      "trustscore": 677,
+      "size": 77,
+      "beds": 2,
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-28",
+      "guest": {
+        "respectRating": 65,
+        "cleanlinessRating": 93,
+        "rulesRating": 62,
+        "punctualityRating": 70,
+        "hostAgainRating": 59
+      },
+      "host": {
+        "photosRating": 58,
+        "cleanlinessRating": 77,
+        "communicationRating": 74,
+        "locationRating": 57,
+        "recommendRating": 62
+      }
+    },
+    {
+      "id": 59,
+      "name": "Anika Schmidt",
+      "city": "Vienna",
+      "latitude": 48.195,
+      "longitude": 16.385,
+      "description": "Just a note: I’m offering my apartment in Vienna. The neighborhood is peaceful, the space feels balanced, and the coffee machine is surprisingly expressive.",
+      "trustscore": 734,
+      "size": 90,
+      "beds": 2,
+      "startDate": "2026-09-10",
+      "endDate": "2026-10-01",
+      "guest": {
+        "respectRating": 88,
+        "cleanlinessRating": 70,
+        "rulesRating": 100,
+        "punctualityRating": 98,
+        "hostAgainRating": 66
+      },
+      "host": {
+        "photosRating": 59,
+        "cleanlinessRating": 37,
+        "communicationRating": 82,
+        "locationRating": 62,
+        "recommendRating": 72
+      }
+    },
+    {
+      "id": 60,
+      "name": "Liam O'Connor",
+      "city": "Paris",
+      "latitude": 48.855,
+      "longitude": 2.41,
+      "description": "Hello there, I’m offering my apartment in Paris. It’s in a friendly neighborhood, has good natural light, and a coffee machine that behaves like it’s part of the family.",
+      "trustscore": 566,
+      "size": 68,
+      "beds": 2,
+      "startDate": "2026-09-15",
+      "endDate": "2026-10-06",
+      "guest": {
+        "respectRating": 72,
+        "cleanlinessRating": 47,
+        "rulesRating": 36,
+        "punctualityRating": 66,
+        "hostAgainRating": 29
+      },
+      "host": {
+        "photosRating": 73,
+        "cleanlinessRating": 71,
+        "communicationRating": 51,
+        "locationRating": 60,
+        "recommendRating": 61
+      }
+    },
+    {
+      "id": 61,
+      "name": "Nadia Petrović",
+      "city": "Vienna",
+      "latitude": 48.2142,
+      "longitude": 16.3621,
+      "description": "Starting off simply: I’m offering my apartment in Vienna. It’s in a quiet street with leafy views, has a cozy kitchen setup, and a coffee machine that occasionally sounds like it’s thinking out loud.",
+      "trustscore": 488,
+      "size": 73,
+      "beds": 2,
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-25",
+      "guest": {
+        "respectRating": 37,
+        "cleanlinessRating": 64,
+        "rulesRating": 37,
+        "punctualityRating": 78,
+        "hostAgainRating": 58
+      },
+      "host": {
+        "photosRating": 42,
+        "cleanlinessRating": 41,
+        "communicationRating": 56,
+        "locationRating": 43,
+        "recommendRating": 32
+      }
+    },
+    {
+      "id": 62,
+      "name": "Ethan Walker",
+      "city": "London",
+      "latitude": 51.5123,
+      "longitude": -0.1184,
+      "description": "Jumping right in: I’m offering my apartment in London. It’s in a vibrant area, gets solid daylight, and includes a coffee machine that sounds more ambitious than it needs to be.",
+      "trustscore": 617,
+      "size": 84,
+      "beds": 2,
+      "startDate": "2026-06-08",
+      "endDate": "2026-06-30",
+      "guest": {
+        "respectRating": 38,
+        "cleanlinessRating": 77,
+        "rulesRating": 83,
+        "punctualityRating": 69,
+        "hostAgainRating": 82
+      },
+      "host": {
+        "photosRating": 40,
+        "cleanlinessRating": 68,
+        "communicationRating": 76,
+        "locationRating": 38,
+        "recommendRating": 46
+      }
+    },
+    {
+      "id": 63,
+      "name": "Chloé Bernard",
+      "city": "Paris",
+      "latitude": 48.8609,
+      "longitude": 2.3412,
+      "description": "Out of nowhere: I’m offering my apartment in Paris. It sits in a lively neighborhood, has soft morning light, and a coffee machine that behaves like it has opinions about timing.",
+      "trustscore": 739,
+      "size": 91,
+      "beds": 3,
+      "startDate": "2026-06-12",
+      "endDate": "2026-07-05",
+      "guest": {
+        "respectRating": 75,
+        "cleanlinessRating": 79,
+        "rulesRating": 72,
+        "punctualityRating": 62,
+        "hostAgainRating": 76
+      },
+      "host": {
+        "photosRating": 78,
+        "cleanlinessRating": 64,
+        "communicationRating": 100,
+        "locationRating": 72,
+        "recommendRating": 61
+      }
+    },
+    {
+      "id": 64,
+      "name": "Jonas Richter",
+      "city": "Vienna",
+      "latitude": 48.2071,
+      "longitude": 16.3905,
+      "description": "Here we go: I’m offering my apartment in Vienna. The area is calm, the interior is simple and bright, and the coffee machine produces exactly the right amount of morning optimism.",
+      "trustscore": 352,
+      "size": 46,
+      "beds": 1,
+      "startDate": "2026-06-15",
+      "endDate": "2026-07-07",
+      "guest": {
+        "respectRating": 31,
+        "cleanlinessRating": 33,
+        "rulesRating": 31,
+        "punctualityRating": 50,
+        "hostAgainRating": 46
+      },
+      "host": {
+        "photosRating": 28,
+        "cleanlinessRating": 46,
+        "communicationRating": 32,
+        "locationRating": 35,
+        "recommendRating": 20
+      }
+    },
+    {
+      "id": 65,
+      "name": "Maya Singh",
+      "city": "London",
+      "latitude": 51.5058,
+      "longitude": -0.1416,
+      "description": "Straight to it: I’m offering my apartment in London. It’s in a convenient neighborhood, has a bright living space, and a coffee machine that sounds like it’s preparing for a mission.",
+      "trustscore": 804,
+      "size": 112,
+      "beds": 3,
+      "startDate": "2026-06-18",
+      "endDate": "2026-07-10",
+      "guest": {
+        "respectRating": 81,
+        "cleanlinessRating": 77,
+        "rulesRating": 85,
+        "punctualityRating": 81,
+        "hostAgainRating": 91
+      },
+      "host": {
+        "photosRating": 64,
+        "cleanlinessRating": 73,
+        "communicationRating": 94,
+        "locationRating": 60,
+        "recommendRating": 98
+      }
+    },
+    {
+      "id": 66,
+      "name": "Pierre Laurent",
+      "city": "Paris",
+      "latitude": 48.8513,
+      "longitude": 2.3658,
+      "description": "Well then: I’m offering my apartment in Paris. It’s in a friendly district, has a compact sunny balcony, and a coffee machine that insists on participating in your routine.",
+      "trustscore": 563,
+      "size": 58,
+      "beds": 2,
+      "startDate": "2026-06-20",
+      "endDate": "2026-07-13",
+      "guest": {
+        "respectRating": 68,
+        "cleanlinessRating": 50,
+        "rulesRating": 49,
+        "punctualityRating": 74,
+        "hostAgainRating": 54
+      },
+      "host": {
+        "photosRating": 67,
+        "cleanlinessRating": 41,
+        "communicationRating": 45,
+        "locationRating": 52,
+        "recommendRating": 63
+      }
+    },
+    {
+      "id": 67,
+      "name": "Elif Demir",
+      "city": "Vienna",
+      "latitude": 48.2006,
+      "longitude": 16.3759,
+      "description": "Quick update: I’m offering my apartment in Vienna. It’s in a peaceful area, has warm natural lighting, and a coffee machine that behaves like a well-trained but slightly dramatic assistant.",
+      "trustscore": 691,
+      "size": 96,
+      "beds": 3,
+      "startDate": "2026-06-25",
+      "endDate": "2026-07-18",
+      "guest": {
+        "respectRating": 68,
+        "cleanlinessRating": 69,
+        "rulesRating": 59,
+        "punctualityRating": 75,
+        "hostAgainRating": 59
+      },
+      "host": {
+        "photosRating": 68,
+        "cleanlinessRating": 61,
+        "communicationRating": 71,
+        "locationRating": 83,
+        "recommendRating": 78
+      }
+    },
+    {
+      "id": 68,
+      "name": "Oliver Bennett",
+      "city": "London",
+      "latitude": 51.5189,
+      "longitude": -0.1321,
+      "description": "Hello there: I’m offering my apartment in London. It’s in a lively but comfortable neighborhood, has good window light, and a coffee machine that sounds overly confident before every brew.",
+      "trustscore": 279,
+      "size": 41,
+      "beds": 1,
+      "startDate": "2026-06-28",
+      "endDate": "2026-07-20",
+      "guest": {
+        "respectRating": 30,
+        "cleanlinessRating": 27,
+        "rulesRating": 10,
+        "punctualityRating": 45,
+        "hostAgainRating": 31
+      },
+      "host": {
+        "photosRating": 27,
+        "cleanlinessRating": 41,
+        "communicationRating": 0,
+        "locationRating": 37,
+        "recommendRating": 31
+      }
+    },
+    {
+      "id": 69,
+      "name": "Sofia Alvarez",
+      "city": "Paris",
+      "latitude": 48.8662,
+      "longitude": 2.347,
+      "description": "To put it simply: I’m offering my apartment in Paris. It’s in a charming neighborhood, has soft afternoon light, and a coffee machine that quietly dominates the kitchen.",
+      "trustscore": 842,
+      "size": 79,
+      "beds": 2,
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-25",
+      "guest": {
+        "respectRating": 90,
+        "cleanlinessRating": 100,
+        "rulesRating": 99,
+        "punctualityRating": 74,
+        "hostAgainRating": 56
+      },
+      "host": {
+        "photosRating": 83,
+        "cleanlinessRating": 84,
+        "communicationRating": 66,
+        "locationRating": 93,
+        "recommendRating": 97
+      }
+    },
+    {
+      "id": 70,
+      "name": "Lukas Weber",
+      "city": "Vienna",
+      "latitude": 48.2119,
+      "longitude": 16.3512,
+      "description": "Starting here: I’m offering my apartment in Vienna. The neighborhood is relaxed, the apartment is airy, and the coffee machine behaves like it’s part of the morning weather system.",
+      "trustscore": 415,
+      "size": 52,
+      "beds": 2,
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-27",
+      "guest": {
+        "respectRating": 54,
+        "cleanlinessRating": 51,
+        "rulesRating": 31,
+        "punctualityRating": 35,
+        "hostAgainRating": 45
+      },
+      "host": {
+        "photosRating": 29,
+        "cleanlinessRating": 47,
+        "communicationRating": 34,
+        "locationRating": 47,
+        "recommendRating": 42
+      }
+    },
+    {
+      "id": 71,
+      "name": "Amira Hassan",
+      "city": "London",
+      "latitude": 51.5091,
+      "longitude": -0.1098,
+      "description": "Right away: I’m offering my apartment in London. It’s in a central but calm area, has warm lighting, and a coffee machine that sounds like it’s negotiating every cup.",
+      "trustscore": 903,
+      "size": 118,
+      "beds": 3,
+      "startDate": "2026-07-06",
+      "endDate": "2026-07-30",
+      "guest": {
+        "respectRating": 85,
+        "cleanlinessRating": 99,
+        "rulesRating": 91,
+        "punctualityRating": 85,
+        "hostAgainRating": 91
+      },
+      "host": {
+        "photosRating": 88,
+        "cleanlinessRating": 87,
+        "communicationRating": 91,
+        "locationRating": 94,
+        "recommendRating": 92
+      }
+    },
+    {
+      "id": 72,
+      "name": "Luc Morel",
+      "city": "Paris",
+      "latitude": 48.8579,
+      "longitude": 2.3294,
+      "description": "Let’s go: I’m offering my apartment in Paris. It’s in a lively neighborhood, has a bright kitchen corner, and a coffee machine that takes its role extremely seriously.",
+      "trustscore": 338,
+      "size": 44,
+      "beds": 1,
+      "startDate": "2026-07-09",
+      "endDate": "2026-08-01",
+      "guest": {
+        "respectRating": 37,
+        "cleanlinessRating": 56,
+        "rulesRating": 23,
+        "punctualityRating": 49,
+        "hostAgainRating": 33
+      },
+      "host": {
+        "photosRating": 42,
+        "cleanlinessRating": 16,
+        "communicationRating": 33,
+        "locationRating": 38,
+        "recommendRating": 11
+      }
+    },
+    {
+      "id": 73,
+      "name": "Emilia Novak",
+      "city": "Vienna",
+      "latitude": 48.2033,
+      "longitude": 16.3987,
+      "description": "Here’s the situation: I’m offering my apartment in Vienna. It’s in a quiet residential area, has gentle daylight, and a coffee machine that insists on being part of conversations.",
+      "trustscore": 756,
+      "size": 87,
+      "beds": 2,
+      "startDate": "2026-07-12",
+      "endDate": "2026-08-05",
+      "guest": {
+        "respectRating": 86,
+        "cleanlinessRating": 72,
+        "rulesRating": 73,
+        "punctualityRating": 57,
+        "hostAgainRating": 75
+      },
+      "host": {
+        "photosRating": 87,
+        "cleanlinessRating": 79,
+        "communicationRating": 71,
+        "locationRating": 85,
+        "recommendRating": 71
+      }
+    },
+    {
+      "id": 74,
+      "name": "Thomas Reid",
+      "city": "London",
+      "latitude": 51.4965,
+      "longitude": -0.1379,
+      "description": "Quick note: I’m offering my apartment in London. It’s in a well-connected neighborhood, has a comfortable layout, and a coffee machine that sounds slightly theatrical.",
+      "trustscore": 466,
+      "size": 67,
+      "beds": 2,
+      "startDate": "2026-07-15",
+      "endDate": "2026-08-07",
+      "guest": {
+        "respectRating": 91,
+        "cleanlinessRating": 55,
+        "rulesRating": 50,
+        "punctualityRating": 30,
+        "hostAgainRating": 39
+      },
+      "host": {
+        "photosRating": 39,
+        "cleanlinessRating": 43,
+        "communicationRating": 49,
+        "locationRating": 38,
+        "recommendRating": 32
+      }
+    },
+    {
+      "id": 75,
+      "name": "Inès Charpentier",
+      "city": "Paris",
+      "latitude": 48.8446,
+      "longitude": 2.3589,
+      "description": "Hi there: I’m offering my apartment in Paris. It’s in a pleasant neighborhood, has soft natural light, and a coffee machine that behaves like it’s mildly proud of itself.",
+      "trustscore": 611,
+      "size": 92,
+      "beds": 3,
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-10",
+      "guest": {
+        "respectRating": 59,
+        "cleanlinessRating": 83,
+        "rulesRating": 72,
+        "punctualityRating": 49,
+        "hostAgainRating": 62
+      },
+      "host": {
+        "photosRating": 56,
+        "cleanlinessRating": 62,
+        "communicationRating": 72,
+        "locationRating": 45,
+        "recommendRating": 51
+      }
+    },
+    {
+      "id": 76,
+      "name": "Ben Carter",
+      "city": "Vienna",
+      "latitude": 48.2185,
+      "longitude": 16.3829,
+      "description": "Just saying: I’m offering my apartment in Vienna. It’s in a calm area, has a practical layout, and a coffee machine that occasionally sounds like it’s planning something.",
+      "trustscore": 523,
+      "size": 60,
+      "beds": 2,
+      "startDate": "2026-07-21",
+      "endDate": "2026-08-14",
+      "guest": {
+        "respectRating": 66,
+        "cleanlinessRating": 57,
+        "rulesRating": 61,
+        "punctualityRating": 65,
+        "hostAgainRating": 54
+      },
+      "host": {
+        "photosRating": 69,
+        "cleanlinessRating": 13,
+        "communicationRating": 47,
+        "locationRating": 42,
+        "recommendRating": 49
+      }
+    },
+    {
+      "id": 77,
+      "name": "Noor Al-Mansouri",
+      "city": "London",
+      "latitude": 51.5227,
+      "longitude": -0.1256,
+      "description": "To begin: I’m offering my apartment in London. It’s in a vibrant district, has good sunlight exposure, and a coffee machine that sounds more confident than necessary.",
+      "trustscore": 742,
+      "size": 83,
+      "beds": 2,
+      "startDate": "2026-07-24",
+      "endDate": "2026-08-16",
+      "guest": {
+        "respectRating": 81,
+        "cleanlinessRating": 90,
+        "rulesRating": 81,
+        "punctualityRating": 72,
+        "hostAgainRating": 70
+      },
+      "host": {
+        "photosRating": 42,
+        "cleanlinessRating": 90,
+        "communicationRating": 71,
+        "locationRating": 73,
+        "recommendRating": 72
+      }
+    },
+    {
+      "id": 78,
+      "name": "Clara Dupont",
+      "city": "Paris",
+      "latitude": 48.8627,
+      "longitude": 2.3781,
+      "description": "Here it is: I’m offering my apartment in Paris. It’s in a lively neighborhood, has a comfortable interior, and a coffee machine that treats mornings like a performance.",
+      "trustscore": 888,
+      "size": 104,
+      "beds": 3,
+      "startDate": "2026-07-27",
+      "endDate": "2026-08-20",
+      "guest": {
+        "respectRating": 86,
+        "cleanlinessRating": 80,
+        "rulesRating": 93,
+        "punctualityRating": 84,
+        "hostAgainRating": 70
+      },
+      "host": {
+        "photosRating": 89,
+        "cleanlinessRating": 97,
+        "communicationRating": 100,
+        "locationRating": 100,
+        "recommendRating": 89
+      }
+    },
+    {
+      "id": 79,
+      "name": "Henry Collins",
+      "city": "Vienna",
+      "latitude": 48.2096,
+      "longitude": 16.3408,
+      "description": "Right away: I’m offering my apartment in Vienna. It’s in a quiet neighborhood, has steady natural light, and a coffee machine that behaves like a reliable morning companion.",
+      "trustscore": 377,
+      "size": 48,
+      "beds": 1,
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-22",
+      "guest": {
+        "respectRating": 18,
+        "cleanlinessRating": 29,
+        "rulesRating": 56,
+        "punctualityRating": 41,
+        "hostAgainRating": 46
+      },
+      "host": {
+        "photosRating": 57,
+        "cleanlinessRating": 31,
+        "communicationRating": 17,
+        "locationRating": 49,
+        "recommendRating": 33
+      }
+    },
+    {
+      "id": 80,
+      "name": "Amina Rahman",
+      "city": "London",
+      "latitude": 51.5032,
+      "longitude": -0.1487,
+      "description": "Last but not least: I’m offering my apartment in London. It’s in a calm yet central area, has warm interiors, and a coffee machine that seems emotionally invested in your mornings.",
+      "trustscore": 650,
+      "size": 75,
+      "beds": 2,
+      "startDate": "2026-08-02",
+      "endDate": "2026-08-26",
+      "guest": {
+        "respectRating": 69,
+        "cleanlinessRating": 60,
+        "rulesRating": 67,
+        "punctualityRating": 75,
+        "hostAgainRating": 72
+      },
+      "host": {
+        "photosRating": 65,
+        "cleanlinessRating": 64,
+        "communicationRating": 48,
+        "locationRating": 64,
+        "recommendRating": 66
+      }
+    },
+    {
+      "id": 81,
+      "name": "Jonas Koller",
+      "city": "Vienna",
+      "latitude": 48.2105,
+      "longitude": 16.365,
+      "description": "Kicking things off: I’m offering my apartment in Vienna. It’s in a quiet residential pocket, has soft natural light, and a coffee machine that behaves like it’s slightly opinionated.",
+      "trustscore": 540,
+      "size": 66,
+      "beds": 2,
+      "startDate": "2026-08-04",
+      "endDate": "2026-08-25",
+      "guest": {
+        "respectRating": 66,
+        "cleanlinessRating": 23,
+        "rulesRating": 84,
+        "punctualityRating": 57,
+        "hostAgainRating": 67
+      },
+      "host": {
+        "photosRating": 16,
+        "cleanlinessRating": 77,
+        "communicationRating": 45,
+        "locationRating": 61,
+        "recommendRating": 44
+      }
+    },
+    {
+      "id": 82,
+      "name": "Leïla Benali",
+      "city": "Paris",
+      "latitude": 48.86,
+      "longitude": 2.33,
+      "description": "Out of nowhere: I’m offering my apartment in Paris. It’s in a lively area with cafés nearby, has warm morning light, and a coffee machine that insists on being part of the routine.",
+      "trustscore": 418,
+      "size": 49,
+      "beds": 1,
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-29",
+      "guest": {
+        "respectRating": 51,
+        "cleanlinessRating": 39,
+        "rulesRating": 33,
+        "punctualityRating": 37,
+        "hostAgainRating": 60
+      },
+      "host": {
+        "photosRating": 16,
+        "cleanlinessRating": 40,
+        "communicationRating": 64,
+        "locationRating": 39,
+        "recommendRating": 39
+      }
+    },
+    {
+      "id": 83,
+      "name": "Raj Patel",
+      "city": "London",
+      "latitude": 51.509,
+      "longitude": -0.135,
+      "description": "Straight in: I’m offering my apartment in London. It’s in a well-connected neighborhood, gets decent daylight, and includes a coffee machine that sounds more ambitious than necessary.",
+      "trustscore": 777,
+      "size": 91,
+      "beds": 3,
+      "startDate": "2026-09-02",
+      "endDate": "2026-09-26",
+      "guest": {
+        "respectRating": 47,
+        "cleanlinessRating": 71,
+        "rulesRating": 86,
+        "punctualityRating": 90,
+        "hostAgainRating": 86
+      },
+      "host": {
+        "photosRating": 75,
+        "cleanlinessRating": 80,
+        "communicationRating": 87,
+        "locationRating": 66,
+        "recommendRating": 89
+      }
+    },
+    {
+      "id": 84,
+      "name": "Marta Novak",
+      "city": "Vienna",
+      "latitude": 48.1988,
+      "longitude": 16.3802,
+      "description": "To begin: I’m offering my apartment in Vienna. It’s spacious, sits in a calm area, and has a coffee machine that occasionally sounds like it’s making life decisions.",
+      "trustscore": 301,
+      "size": 120,
+      "beds": 3,
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-28",
+      "guest": {
+        "respectRating": 14,
+        "cleanlinessRating": 39,
+        "rulesRating": 9,
+        "punctualityRating": 26,
+        "hostAgainRating": 22
+      },
+      "host": {
+        "photosRating": 33,
+        "cleanlinessRating": 33,
+        "communicationRating": 46,
+        "locationRating": 62,
+        "recommendRating": 17
+      }
+    },
+    {
+      "id": 85,
+      "name": "Hugo Martin",
+      "city": "Paris",
+      "latitude": 48.853,
+      "longitude": 2.362,
+      "description": "Well then: I’m offering my apartment in Paris. It’s in a friendly neighborhood, has nice afternoon light, and a coffee machine that behaves like a small household celebrity.",
+      "trustscore": 612,
+      "size": 72,
+      "beds": 2,
+      "startDate": "2026-07-05",
+      "endDate": "2026-07-25",
+      "guest": {
+        "respectRating": 54,
+        "cleanlinessRating": 77,
+        "rulesRating": 53,
+        "punctualityRating": 67,
+        "hostAgainRating": 57
+      },
+      "host": {
+        "photosRating": 85,
+        "cleanlinessRating": 45,
+        "communicationRating": 58,
+        "locationRating": 70,
+        "recommendRating": 46
+      }
+    },
+    {
+      "id": 86,
+      "name": "Sienna Clarke",
+      "city": "London",
+      "latitude": 51.503,
+      "longitude": -0.12,
+      "description": "Here we go: I’m offering my apartment in London. It’s in a lively but comfortable area, has a bright kitchen, and a coffee machine that sounds slightly too confident.",
+      "trustscore": 455,
+      "size": 58,
+      "beds": 2,
+      "startDate": "2026-06-20",
+      "endDate": "2026-07-12",
+      "guest": {
+        "respectRating": 31,
+        "cleanlinessRating": 30,
+        "rulesRating": 44,
+        "punctualityRating": 48,
+        "hostAgainRating": 24
+      },
+      "host": {
+        "photosRating": 64,
+        "cleanlinessRating": 45,
+        "communicationRating": 63,
+        "locationRating": 51,
+        "recommendRating": 55
+      }
+    },
+    {
+      "id": 87,
+      "name": "Arman Yilmaz",
+      "city": "Vienna",
+      "latitude": 48.205,
+      "longitude": 16.39,
+      "description": "A quick note: I’m offering my apartment in Vienna. It’s in a quiet street, has gentle daylight, and a coffee machine that treats mornings like a performance.",
+      "trustscore": 688,
+      "size": 44,
+      "beds": 1,
+      "startDate": "2026-07-15",
+      "endDate": "2026-08-03",
+      "guest": {
+        "respectRating": 59,
+        "cleanlinessRating": 64,
+        "rulesRating": 84,
+        "punctualityRating": 51,
+        "hostAgainRating": 83
+      },
+      "host": {
+        "photosRating": 76,
+        "cleanlinessRating": 68,
+        "communicationRating": 70,
+        "locationRating": 64,
+        "recommendRating": 69
+      }
+    },
+    {
+      "id": 88,
+      "name": "Camille Zhao",
+      "city": "Paris",
+      "latitude": 48.866,
+      "longitude": 2.345,
+      "description": "Jumping in: I’m offering my apartment in Paris. It’s in a vibrant district, has soft lighting in the evenings, and a coffee machine that behaves like it has a schedule of its own.",
+      "trustscore": 834,
+      "size": 88,
+      "beds": 2,
+      "startDate": "2026-08-18",
+      "endDate": "2026-09-10",
+      "guest": {
+        "respectRating": 72,
+        "cleanlinessRating": 85,
+        "rulesRating": 71,
+        "punctualityRating": 100,
+        "hostAgainRating": 58
+      },
+      "host": {
+        "photosRating": 97,
+        "cleanlinessRating": 94,
+        "communicationRating": 93,
+        "locationRating": 79,
+        "recommendRating": 85
+      }
+    },
+    {
+      "id": 89,
+      "name": "Tomás O'Brien",
+      "city": "London",
+      "latitude": 51.5155,
+      "longitude": -0.1105,
+      "description": "Just putting this out there: I’m offering my apartment in London. It’s centrally located, has warm interiors, and a coffee machine that sounds like it’s negotiating every brew.",
+      "trustscore": 690,
+      "size": 102,
+      "beds": 3,
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-27",
+      "guest": {
+        "respectRating": 75,
+        "cleanlinessRating": 68,
+        "rulesRating": 72,
+        "punctualityRating": 71,
+        "hostAgainRating": 60
+      },
+      "host": {
+        "photosRating": 84,
+        "cleanlinessRating": 65,
+        "communicationRating": 63,
+        "locationRating": 54,
+        "recommendRating": 78
+      }
+    },
+    {
+      "id": 90,
+      "name": "Elisabeth Gruber",
+      "city": "Vienna",
+      "latitude": 48.214,
+      "longitude": 16.37,
+      "description": "Starting simple: I’m offering my apartment in Vienna. It’s in a peaceful neighborhood, gets steady daylight, and a coffee machine that is reliably dramatic in the mornings.",
+      "trustscore": 220,
+      "size": 37,
+      "beds": 1,
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-23",
+      "guest": {
+        "respectRating": 15,
+        "cleanlinessRating": 43,
+        "rulesRating": 23,
+        "punctualityRating": 30,
+        "hostAgainRating": 15
+      },
+      "host": {
+        "photosRating": 0,
+        "cleanlinessRating": 20,
+        "communicationRating": 26,
+        "locationRating": 30,
+        "recommendRating": 18
+      }
+    },
+    {
+      "id": 91,
+      "name": "Noémie Laurent",
+      "city": "Paris",
+      "latitude": 48.858,
+      "longitude": 2.348,
+      "description": "Right away: I’m offering my apartment in Paris. It’s in a lively area with good cafés, has pleasant natural light, and a coffee machine that insists on being part of every morning.",
+      "trustscore": 905,
+      "size": 95,
+      "beds": 3,
+      "startDate": "2026-09-10",
+      "endDate": "2026-10-01",
+      "guest": {
+        "respectRating": 98,
+        "cleanlinessRating": 97,
+        "rulesRating": 91,
+        "punctualityRating": 86,
+        "hostAgainRating": 96
+      },
+      "host": {
+        "photosRating": 84,
+        "cleanlinessRating": 97,
+        "communicationRating": 87,
+        "locationRating": 78,
+        "recommendRating": 91
+      }
+    },
+    {
+      "id": 92,
+      "name": "Kofi Mensah",
+      "city": "London",
+      "latitude": 51.497,
+      "longitude": -0.142,
+      "description": "Hello there: I’m offering my apartment in London. It’s in a well-connected area, has a cozy layout, and a coffee machine that sounds like it has strong opinions about timing.",
+      "trustscore": 512,
+      "size": 83,
+      "beds": 2,
+      "startDate": "2026-08-09",
+      "endDate": "2026-09-06",
+      "guest": {
+        "respectRating": 78,
+        "cleanlinessRating": 39,
+        "rulesRating": 34,
+        "punctualityRating": 57,
+        "hostAgainRating": 76
+      },
+      "host": {
+        "photosRating": 38,
+        "cleanlinessRating": 43,
+        "communicationRating": 9,
+        "locationRating": 81,
+        "recommendRating": 57
+      }
+    },
+    {
+      "id": 93,
+      "name": "Selin Kaya",
+      "city": "Vienna",
+      "latitude": 48.211,
+      "longitude": 16.352,
+      "description": "To begin with: I’m offering my apartment in Vienna. It’s in a calm residential zone, has soft morning light, and a coffee machine that behaves like a very committed assistant.",
+      "trustscore": 640,
+      "size": 79,
+      "beds": 2,
+      "startDate": "2026-07-28",
+      "endDate": "2026-08-15",
+      "guest": {
+        "respectRating": 71,
+        "cleanlinessRating": 57,
+        "rulesRating": 55,
+        "punctualityRating": 47,
+        "hostAgainRating": 66
+      },
+      "host": {
+        "photosRating": 77,
+        "cleanlinessRating": 57,
+        "communicationRating": 58,
+        "locationRating": 75,
+        "recommendRating": 77
+      }
+    },
+    {
+      "id": 94,
+      "name": "Adrien Roche",
+      "city": "Paris",
+      "latitude": 48.85,
+      "longitude": 2.34,
+      "description": "Well hello: I’m offering my apartment in Paris. It’s in a pleasant neighborhood, has a bright kitchen corner, and a coffee machine that behaves like it’s slightly proud of itself.",
+      "trustscore": 433,
+      "size": 55,
+      "beds": 2,
+      "startDate": "2026-06-25",
+      "endDate": "2026-07-20",
+      "guest": {
+        "respectRating": 44,
+        "cleanlinessRating": 37,
+        "rulesRating": 35,
+        "punctualityRating": 57,
+        "hostAgainRating": 53
+      },
+      "host": {
+        "photosRating": 36,
+        "cleanlinessRating": 36,
+        "communicationRating": 49,
+        "locationRating": 52,
+        "recommendRating": 34
+      }
+    },
+    {
+      "id": 95,
+      "name": "Emily Nguyen",
+      "city": "London",
+      "latitude": 51.52,
+      "longitude": -0.125,
+      "description": "Kicking off here: I’m offering my apartment in London. It’s in a lively neighborhood, has comfortable natural light, and a coffee machine that sounds slightly too enthusiastic.",
+      "trustscore": 781,
+      "size": 70,
+      "beds": 2,
+      "startDate": "2026-09-15",
+      "endDate": "2026-10-05",
+      "guest": {
+        "respectRating": 79,
+        "cleanlinessRating": 47,
+        "rulesRating": 59,
+        "punctualityRating": 47,
+        "hostAgainRating": 97
+      },
+      "host": {
+        "photosRating": 95,
+        "cleanlinessRating": 89,
+        "communicationRating": 82,
+        "locationRating": 87,
+        "recommendRating": 99
+      }
+    },
+    {
+      "id": 96,
+      "name": "David Kim",
+      "city": "Vienna",
+      "latitude": 48.206,
+      "longitude": 16.401,
+      "description": "Just saying: I’m offering my apartment in Vienna. It’s in a quiet area, has a balanced layout, and a coffee machine that occasionally sounds like it’s thinking deeply.",
+      "trustscore": 359,
+      "size": 101,
+      "beds": 3,
+      "startDate": "2026-08-22",
+      "endDate": "2026-09-15",
+      "guest": {
+        "respectRating": 12,
+        "cleanlinessRating": 37,
+        "rulesRating": 14,
+        "punctualityRating": 56,
+        "hostAgainRating": 29
+      },
+      "host": {
+        "photosRating": 45,
+        "cleanlinessRating": 46,
+        "communicationRating": 37,
+        "locationRating": 34,
+        "recommendRating": 49
+      }
+    },
+    {
+      "id": 97,
+      "name": "Fatima Zahra",
+      "city": "Paris",
+      "latitude": 48.863,
+      "longitude": 2.356,
+      "description": "Here goes: I’m offering my apartment in Paris. It’s in a vibrant district, has warm evening light, and a coffee machine that treats mornings like a ritual.",
+      "trustscore": 668,
+      "size": 62,
+      "beds": 2,
+      "startDate": "2026-07-11",
+      "endDate": "2026-08-02",
+      "guest": {
+        "respectRating": 72,
+        "cleanlinessRating": 56,
+        "rulesRating": 43,
+        "punctualityRating": 87,
+        "hostAgainRating": 49
+      },
+      "host": {
+        "photosRating": 90,
+        "cleanlinessRating": 79,
+        "communicationRating": 51,
+        "locationRating": 83,
+        "recommendRating": 58
+      }
+    },
+    {
+      "id": 98,
+      "name": "George Ivanov",
+      "city": "London",
+      "latitude": 51.511,
+      "longitude": -0.131,
+      "description": "Straight in: I’m offering my apartment in London. It’s in a convenient area, has decent sunlight, and a coffee machine that sounds like it’s preparing for something important.",
+      "trustscore": 299,
+      "size": 46,
+      "beds": 1,
+      "startDate": "2026-06-14",
+      "endDate": "2026-06-30",
+      "guest": {
+        "respectRating": 35,
+        "cleanlinessRating": 39,
+        "rulesRating": 39,
+        "punctualityRating": 12,
+        "hostAgainRating": 18
+      },
+      "host": {
+        "photosRating": 27,
+        "cleanlinessRating": 28,
+        "communicationRating": 42,
+        "locationRating": 3,
+        "recommendRating": 56
+      }
+    },
+    {
+      "id": 99,
+      "name": "Anna Rossi",
+      "city": "Vienna",
+      "latitude": 48.2,
+      "longitude": 16.36,
+      "description": "Quick update: I’m offering my apartment in Vienna. It’s in a calm neighborhood, has soft natural lighting, and a coffee machine that behaves like a loyal but slightly noisy companion.",
+      "trustscore": 844,
+      "size": 89,
+      "beds": 2,
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-26",
+      "guest": {
+        "respectRating": 69,
+        "cleanlinessRating": 83,
+        "rulesRating": 97,
+        "punctualityRating": 74,
+        "hostAgainRating": 93
+      },
+      "host": {
+        "photosRating": 59,
+        "cleanlinessRating": 100,
+        "communicationRating": 100,
+        "locationRating": 69,
+        "recommendRating": 100
+      }
+    },
+    {
+      "id": 100,
+      "name": "Lucas Pereira",
+      "city": "Paris",
+      "latitude": 48.859,
+      "longitude": 2.37,
+      "description": "Last one: I’m offering my apartment in Paris. It’s in a lively yet comfortable neighborhood, has good natural light, and a coffee machine that insists on being part of the experience.",
+      "trustscore": 570,
+      "size": 118,
+      "beds": 3,
+      "startDate": "2026-09-20",
+      "endDate": "2026-10-17",
+      "guest": {
+        "respectRating": 60,
+        "cleanlinessRating": 47,
+        "rulesRating": 70,
+        "punctualityRating": 47,
+        "hostAgainRating": 46
+      },
+      "host": {
+        "photosRating": 74,
+        "cleanlinessRating": 53,
+        "communicationRating": 71,
+        "locationRating": 33,
+        "recommendRating": 69
+      }
+    }
   ]
 }
