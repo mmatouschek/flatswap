@@ -16,7 +16,7 @@ export default function FlatSwapScrollList({ searchResult }: Props) {
     <ScrollView style={{ flex: 1 }}>
       {searchResult
         .sort((a: Item, b: Item) => {
-          return b.trustscore - a.trustscore;
+		return b.trustscore - a.trustscore;
         })
         .map((item) => {
           return (
@@ -24,8 +24,9 @@ export default function FlatSwapScrollList({ searchResult }: Props) {
               onPress={() => {
                 navigation.navigate("DetailView", { id: item.id });
               }}
-            >
-              <View key={item.id} style={{ padding: 5 }}>
+            key = {"Touch"+item.id}
+			>
+              <View key={"View"+item.id} style={{ padding: 5 }}>
                 <FlatSwapScrollViewItem id={item.id} />
               </View>
             </TouchableOpacity>
