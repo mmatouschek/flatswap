@@ -13,7 +13,7 @@ type Properties = {
   onDatePress: () => void;
 };
 
-export default function FlatSwapCalendar({isVisible, top="30", left="152", startDate, endDate, onBackdropPress,onDatePress}: Properties) {
+export default function FlatSwapCalendar({isVisible, top="20.7%", left="40%", startDate, endDate, onBackdropPress,onDatePress}: Properties) {
   const markedDates = buildMarkedDateRange(
     startDate,
     endDate
