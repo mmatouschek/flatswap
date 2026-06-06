@@ -1,5 +1,5 @@
-import { useNavigation } from "@react-navigation/native";
-import React, { useState } from "react";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import React, { useState, useCallback } from "react";
 import {
   Image,
   Pressable,
@@ -24,6 +24,7 @@ type ChatItem = {
   name: string;
   lastMessage: string;
   timestamp: string;
+  reviewed: boolean;
   unread: number;
   messages: ChatMessage[];
 };
@@ -37,6 +38,9 @@ export default function ConversationsChats({
   chats,
   setChats,
 }: ConversationsChatsProps) {
+
+
+
   const navigation = useNavigation<any>();
   const [selectedChat, setSelectedChat] = useState<ChatItem | null>(null);
   const [messageInput, setMessageInput] = useState("");
@@ -81,6 +85,13 @@ export default function ConversationsChats({
       setMessageInput("");
     }
   };
+  
+  const [refreshKey, setRefreshKey] = useState(0);
+  useFocusEffect(
+    useCallback(() => {
+      setRefreshKey(k => k+1);
+    }, [])
+  );
 
   const handleBack = () => {
     if (selectedChat) {
@@ -94,7 +105,7 @@ export default function ConversationsChats({
     }
     setSelectedChat(null);
   };
-
+  
   if (selectedChat) {
     return (
       <View style={styles.detailScreen}>
@@ -110,10 +121,16 @@ export default function ConversationsChats({
             <Text style={styles.detailSubtitle}>FlatSwap chat</Text>
           </Pressable>
           <Pressable
-            style={styles.reviewMiniButton}
-            onPress={() => navigation.navigate("ReviewHost")}
+			disabled={selectedChat.reviewed}
+            style={styles.reviewMiniButton, {flexDirection:"row", alignItems:"center"}}
+            onPress={() => {
+			selectedChat.reviewed = true;
+			navigation.navigate("ReviewHost");}}
           >
-            <Text style={styles.reviewMiniButtonText}>Write review</Text>
+            <Text style={[styles.reviewMiniButtonText,{opacity:selectedChat.reviewed?0.5: 1}]}>Write review </Text>
+			<View style={{  flexDirection: "row", alignItems:"center", justifyContent:"center", width: 18, height: 18, borderRadius: 9, backgroundColor: selectedChat.reviewed? "green": "red"}} >
+			<Text style = {{color:"white", fontSize:14, lineHeight:12, includeFontPadding: false, fontWeight: "bold",transform: [{ translateX: -1.5}]}}> {selectedChat.reviewed? "✓": "!"}</Text>
+			</View>
           </Pressable>
         </View>
 
@@ -206,7 +223,10 @@ export default function ConversationsChats({
             <Text numberOfLines={1} style={styles.chatMessage}>
               {getLastMessageText(chat.messages) || chat.lastMessage}
             </Text>
-          </View>
+			<View style={{  flexDirection: "row", padding:1, justifyContent:"center", width: 60, height: 15, borderRadius: 5, backgroundColor: chat.reviewed? "green": "red"}} >
+			<Text style = {{fontSize:10, color: "white"}}>{chat.reviewed? "✓Reviewed": "✕Review"}</Text>
+			</View>
+		  </View>
 
           <View style={styles.chatRight}>
             <Text style={styles.timestamp}>{chat.timestamp}</Text>

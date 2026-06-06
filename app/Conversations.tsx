@@ -17,6 +17,7 @@ type ChatItem = {
 	lastMessage: string;
 	timestamp: string;
 	unread: number;
+	reviewed: boolean;
 	messages: ChatMessage[];
 };
 
@@ -31,6 +32,7 @@ export default function Conversations() {
 			lastMessage: 'See you then!',
 			timestamp: '09:12',
 			unread: 0,
+			reviewed: false,
 			messages: [
 				{ id: 1, sender: 'other', text: 'Hi! Are we set for June?', time: '09:00' },
 				{ id: 2, sender: 'me', text: "Yes, looking forward to it.", time: '09:12' },
@@ -43,6 +45,7 @@ export default function Conversations() {
 			lastMessage: 'I can send photos later',
 			timestamp: '08:05',
 			unread: 1,
+			reviewed: false,
 			messages: [
 				{ id: 1, sender: 'other', text: 'Interested in a summer swap?', time: '07:55' },
 			],
@@ -54,6 +57,7 @@ export default function Conversations() {
 			lastMessage: 'I can send photos later',
 			timestamp: 'Yesterday',
 			unread: 1,
+			reviewed: false,
 			messages: [
 				{ id: 1, sender: 'other', text: 'Would love to chat about a swap.', time: '18:40' },
 			],

@@ -23,6 +23,7 @@ type ChatItem = {
   lastMessage: string;
   timestamp: string;
   unread: number;
+  reviewed: boolean;
   messages: ChatMessage[];
 };
 
@@ -133,6 +134,7 @@ export default function ConversationsRequests({
       name: request.name,
       lastMessage: request.message,
       timestamp: time,
+	  reviewed: false,
       unread: 0,
       messages: [{ id: 1, sender: "other", text: request.message, time }],
     };
