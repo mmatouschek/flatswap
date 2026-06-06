@@ -23,7 +23,6 @@ const Stack = createNativeStackNavigator();
 function TabLayout() {
   return (
     <Tab.Navigator
-      initialRouteName="Search"
       //animation="fade"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {

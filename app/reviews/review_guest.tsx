@@ -34,9 +34,7 @@ export default function ReviewGuestScreen() {
       {
         text: "OK",
         onPress: () => {
-          navigation.navigate("Tab", {
-            screen: "Your Trip",
-          });
+          navigation.pop(2);
         },
       },
     ]);

@@ -200,7 +200,7 @@ export default function ConversationsChats({
           </Pressable>
 
           <View style={styles.chatContent}>
-            <Pressable onPress={() => openProfile(chat.userId)}>
+            <Pressable onPress={() => setSelectedChat({ ...chat, unread: 0 })}>
               <Text style={styles.chatNameLink}>{chat.name}</Text>
             </Pressable>
             <Text numberOfLines={1} style={styles.chatMessage}>
