@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { Text, View } from "react-native";
 import MapView, { Circle, Marker } from "react-native-maps";
 import getAllUsers from "../../backend/FlatSwapAPI";
+import { useSearchData } from "../../app/SearchData";
 type MapProps = {
   latitude?: number;
   longitude?: number;
@@ -15,8 +16,8 @@ export default function FlatSwapMap({
   searchResult,
 }: MapProps) {
   let results = searchResult;
-  if (results.length <= 0) {
-    results = getAllUsers();nd
+  if ((results.length <= 0)&&(useSearchData.getState().startDate==null)) {
+    results = getAllUsers();
   }
   const delta = 0.05;
   const navigation = useNavigation();

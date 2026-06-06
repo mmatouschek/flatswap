@@ -21,7 +21,7 @@ return result;
 export function getResults(city: string){
 let result: any[] = [];
 entries.entries.forEach((item) => {
-  if (item.city.startsWith(city)){
+  if (item.city==city){
 	result.push(item);
   }
 });

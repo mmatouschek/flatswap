@@ -24,6 +24,7 @@ export default function ListSearch() {
   const [current, setCurrent] = useState(
     useSearchData((state) => state.current),
   );
+  console.log(searchResult);
   return (
     <View style={{ flex: 1, padding: 10 }}>
       <View style={{ flex: 1 }}>
