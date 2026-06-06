@@ -1,11 +1,12 @@
+import { Ionicons } from "@expo/vector-icons";
 import { default as React, useState } from "react";
-import { Alert, View } from "react-native";
+import { Alert, Text, View } from "react-native";
 import { filterDate, getResults } from "../backend/FlatSwapAPI";
 import { DefaultStyles } from "../components/ui/DefaultStyles";
 import FlatSwapCalendar from "../components/ui/FlatSwapCalendar";
 import FlatSwapIconButton from "../components/ui/FlatSwapIconButton";
 import FlatSwapInput from "../components/ui/FlatSwapInput";
-import FlatSwapScrollList from "../components/ui/FlatSwapScrollList"
+import FlatSwapScrollList from "../components/ui/FlatSwapScrollList";
 import { useSearchData } from "./SearchData";
 
 export default function ListSearch() {
@@ -55,7 +56,10 @@ export default function ListSearch() {
             placeholder="..."
           />
           <FlatSwapIconButton
-            style={[DefaultStyles.button, { flex: 1 }]}
+            style={[
+              DefaultStyles.button,
+              { flex: 1, padding: 2, backgroundColor: "#1ca349" },
+            ]}
             icon="calendar"
             onPress={() => setCalendarVisible(true)}
           />
@@ -114,7 +118,36 @@ export default function ListSearch() {
         />
       </View>
       <View style={{ flex: 15 }}>
-        <FlatSwapScrollList searchResult={searchResult} />
+        {searchResult && searchResult.length > 0 ? (
+          <FlatSwapScrollList searchResult={searchResult} />
+        ) : (
+          <View
+            style={{
+              flex: 1, // Tells the View to take up all available empty space
+              justifyContent: "center", // Centers content vertically
+              alignItems: "center", // Centers content horizontally
+              padding: 32, // Keeps text from touching the screen edges on smaller devices
+            }}
+          >
+            {/* Hint: Adding an icon right above the text makes empty states look very professional! */}
+            <Ionicons
+              name="search-outline"
+              size={30}
+              color="#9ca3af"
+              style={{ marginBottom: 2 }}
+            />
+            <Text
+              style={{
+                color: "#6b7280", // A softer, slate-gray color is much easier on the eyes
+                textAlign: "center", // Ensures the multiline text is centered within itself
+                fontSize: 18,
+              }}
+            >
+              Search for a destination and pick travel dates to find your next
+              FlatSwap.
+            </Text>
+          </View>
+        )}
       </View>
     </View>
   );

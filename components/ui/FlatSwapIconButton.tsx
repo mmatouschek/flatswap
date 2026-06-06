@@ -1,14 +1,12 @@
-import { DefaultStyles } from "./DefaultStyles";
-import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-
+import React from "react";
+import { DefaultStyles } from "./DefaultStyles";
 
 import {
-  TouchableOpacity,
-  Text,
   StyleProp,
-  ViewStyle,
   TextStyle,
+  TouchableOpacity,
+  ViewStyle,
 } from "react-native";
 
 type ButtonProps = {
@@ -16,6 +14,7 @@ type ButtonProps = {
   onPress: () => void;
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
+  size: number;
 };
 
 export default function FlatSwapIconButton({
@@ -24,12 +23,8 @@ export default function FlatSwapIconButton({
   style = DefaultStyles.button,
 }: ButtonProps) {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      activeOpacity={0.8}
-      style={style}
-    >
-      <Ionicons name={icon} />
+    <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={style}>
+      <Ionicons name={icon} size={25} style={{ color: "#fff" }} />
     </TouchableOpacity>
   );
 }

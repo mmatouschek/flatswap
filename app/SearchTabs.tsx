@@ -15,6 +15,7 @@ export default function SearchTabs() {
           style={{
             flex: 1,
             padding: 5,
+            margin: 5,
             flexDirection: "row",
             justifyContent: "left",
           }}
@@ -25,6 +26,7 @@ export default function SearchTabs() {
               {
                 flex: 1,
                 height: 50,
+                marginRight: 3,
                 backgroundColor: "rgba(173, 216, 230,0.3)",
               },
             ]}
@@ -36,7 +38,12 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex: 1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
+              {
+                flex: 1,
+                height: 50,
+                backgroundColor: "#1ca349",
+                marginLeft: 3,
+              },
             ]}
             title="Map"
             onPress={() => {
@@ -56,6 +63,7 @@ export default function SearchTabs() {
           style={{
             flex: 1,
             padding: 5,
+            margin: 5,
             flexDirection: "row",
             justifyContent: "left",
           }}
@@ -63,7 +71,12 @@ export default function SearchTabs() {
           <FlatSwapButton
             style={[
               DefaultStyles.button,
-              { flex: 1, height: 50, backgroundColor: "rgba(173, 216, 230,1)" },
+              {
+                flex: 1,
+                height: 50,
+                backgroundColor: "#1ca349",
+                marginRight: 3,
+              },
             ]}
             title="List"
             onPress={() => {
@@ -77,6 +90,7 @@ export default function SearchTabs() {
                 flex: 1,
                 height: 50,
                 backgroundColor: "rgba(173, 216, 230,0.3)",
+                marginLeft: 3,
               },
             ]}
             title="Map"

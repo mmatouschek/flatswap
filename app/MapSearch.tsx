@@ -68,7 +68,10 @@ export default function MapSearch() {
         />
 
         <FlatSwapIconButton
-          style={[DefaultStyles.button, { flex: 1 }]}
+          style={[
+            DefaultStyles.button,
+            { flex: 1, padding: 2, backgroundColor: "#1ca349" },
+          ]}
           icon="calendar"
           onPress={() => setCalendarVisible(true)}
         />
