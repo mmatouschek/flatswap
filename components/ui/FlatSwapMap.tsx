@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Fragment } from "react";
 import { Text, View } from "react-native";
 import MapView, { Circle, Marker } from "react-native-maps";
-
+import getAllUsers from "../../backend/FlatSwapAPI";
 type MapProps = {
   latitude?: number;
   longitude?: number;
@@ -14,7 +14,10 @@ export default function FlatSwapMap({
   longitude,
   searchResult,
 }: MapProps) {
-  const results = searchResult;
+  let results = searchResult;
+  if (results.length <= 0) {
+    results = getAllUsers();nd
+  }
   const delta = 0.05;
   const navigation = useNavigation();
 

@@ -23,8 +23,8 @@ export default function MapSearch() {
   const [current, setCurrent] = useState(
     useSearchData((state) => state.current),
   );
-  let initLat = 40;
-  let initLong = 15;
+  let initLat = 48.2102;
+  let initLong = 16.3634;
   if (searchResult.length > 0) {
     initLat = searchResult[0].latitude;
     initLong = searchResult[0].longitude;
