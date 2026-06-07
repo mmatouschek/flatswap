@@ -1,7 +1,14 @@
+import { isUserLoggedIn } from "@/backend/services/AuthStorage";
 import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
-import { useRoute } from "@react-navigation/native";
-import { useState } from "react";
 import {
+  useFocusEffect,
+  useNavigation,
+  useRoute,
+} from "@react-navigation/native";
+
+import { useCallback, useState } from "react";
+import {
+  Alert,
   DeviceEventEmitter,
   Modal,
   ScrollView,
@@ -18,12 +25,20 @@ export default function DetailView() {
   const route = useRoute();
   const { id } = route.params;
   const user = getUser(id);
+  const navigation = useNavigation<any>();
 
   const [currentImage, setCurrentImage] = useState(1);
   const [requestSent, setRequestSent] = useState(false);
   const [buttonText, setButtonText] = useState("Request a swap with ");
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const [modalVisible, setModalVisible] = useState(false);
+
+  useFocusEffect(
+    useCallback(() => {
+      checkLogin();
+    }, []),
+  );
   /*
   let imageSource;
   if (id <= 20) {
@@ -44,18 +59,30 @@ export default function DetailView() {
     setCurrentImage((prev) => (prev == 1 ? 2 : 1));
   };
 
+  const checkLogin = async () => {
+    const result = await isUserLoggedIn();
+
+    setLoggedIn(result);
+  };
+
   const handleButtonPress = () => {
-    DeviceEventEmitter.emit("ADD_OUTGOING_REQUEST", {
-      id: Date.now(),
-      userId: id,
-      name: user.name,
-      startDate: user.startDate,
-      endDate: user.endDate,
-      message: "Would love to do a month-long swap in Vienna!",
-      outgoing: 1,
-    });
-    setRequestSent(true);
-    setButtonText("Request sent to ");
+    if (!loggedIn) {
+      Alert.alert("Login required", "Please login before creating a trip.");
+      navigation.navigate("Tab", { screen: "Profile" });
+      return;
+    } else {
+      DeviceEventEmitter.emit("ADD_OUTGOING_REQUEST", {
+        id: Date.now(),
+        userId: id,
+        name: user.name,
+        startDate: user.startDate,
+        endDate: user.endDate,
+        message: "Would love to do a month-long swap in Vienna!",
+        outgoing: 1,
+      });
+      setRequestSent(true);
+      setButtonText("Request sent to ");
+    }
   };
 
   return (
@@ -95,6 +122,9 @@ export default function DetailView() {
               <Text style={styles.username}>{user.name}'s</Text> Accomodation
             </Text>
             <Text style={styles.location}>
+              {user.gender}, {user.age} years old
+            </Text>
+            <Text style={styles.location}>
               <FontAwesomeFreeSolid
                 name={"location-dot"}
                 size={12}
@@ -111,7 +141,6 @@ export default function DetailView() {
               Available from {user.startDate.split("-").reverse().join(".")} to{" "}
               {user.endDate.split("-").reverse().join(".")}
             </Text>
-
             <View style={styles.trustscoreRow}>
               <Text style={styles.location}>
                 <FontAwesomeFreeSolid
@@ -119,7 +148,7 @@ export default function DetailView() {
                   size={12}
                   color={"#1ca349"}
                 />{" "}
-                {user.trustscore}/1000 Trust
+                {user.trustscore}/1000 Trust ({user.numberOfRatings} Reviews)
               </Text>
               <TouchableOpacity onPress={() => setModalVisible(true)}>
                 <Text style={styles.detailsLink}>Details</Text>
@@ -161,7 +190,7 @@ export default function DetailView() {
         animationType="fade"
         transparent={true}
         visible={modalVisible}
-        onRequestClose={() => setModalVisible(false)} // Handles Android hardware back button
+        onRequestClose={() => setModalVisible(false)}
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
@@ -175,35 +204,35 @@ export default function DetailView() {
             <Text style={styles.modalTitle}>
               <Text style={{ color: "#1ca349" }}>{user.name}'s</Text> Trustscore
             </Text>
-            <Text style={styles.modalSubtitle}>{user.trustscore}/1000</Text>
+            <Text style={[styles.modalSubtitle, { fontSize: 12 }]}>
+              {user.trustscore}/1000 From {user.numberOfRatings} Reviews
+            </Text>
 
             <Text style={styles.metricsHeader}>Guest Ratings</Text>
             <View style={styles.metricRow}>
               <Text style={styles.metricLabel}>Respect</Text>
-              <Text style={styles.metricValue}>
-                {user.guest?.respectRating}
-              </Text>
+              <Text style={styles.metricValue}>{user.guest.respectRating}</Text>
             </View>
             <View style={styles.metricRow}>
               <Text style={styles.metricLabel}>Cleanliness</Text>
               <Text style={styles.metricValue}>
-                {user.guest?.cleanlinessRating}
+                {user.guest.cleanlinessRating}
               </Text>
             </View>
             <View style={styles.metricRow}>
               <Text style={styles.metricLabel}>Rules</Text>
-              <Text style={styles.metricValue}>{user.guest?.rulesRating}</Text>
+              <Text style={styles.metricValue}>{user.guest.rulesRating}</Text>
             </View>
             <View style={styles.metricRow}>
               <Text style={styles.metricLabel}>Punctuality</Text>
               <Text style={styles.metricValue}>
-                {user.guest?.punctualityRating}
+                {user.guest.punctualityRating}
               </Text>
             </View>
             <View style={styles.metricRow}>
               <Text style={styles.metricLabel}>Host Again</Text>
               <Text style={styles.metricValue}>
-                {user.guest?.hostAgainRating}
+                {user.guest.hostAgainRating}
               </Text>
             </View>
 
@@ -276,7 +305,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold",
     color: "#555",
-    marginBottom: 5,
+    marginBottom: 0,
   },
   text: { fontSize: 16, paddingBottom: 15 },
   labelText: { fontWeight: "bold", fontSize: 16, marginTop: 5 },

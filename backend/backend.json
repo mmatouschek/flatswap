@@ -3,6 +3,8 @@
     {
       "id": 1,
       "name": "Alexander Miller",
+      "gender": "Male",
+      "age": 34,
       "city": "Vienna",
       "latitude": 48.2102,
       "longitude": 16.3634,
@@ -25,11 +27,14 @@
         "communicationRating": 77,
         "locationRating": 60,
         "recommendRating": 87
-      }
+      },
+      "numberOfRatings": 13
     },
     {
       "id": 2,
       "name": "Emma Carter",
+      "gender": "Female",
+      "age": 28,
       "city": "Paris",
       "latitude": 48.858,
       "longitude": 2.347,
@@ -52,11 +57,14 @@
         "communicationRating": 26,
         "locationRating": 41,
         "recommendRating": 4
-      }
+      },
+      "numberOfRatings": 1
     },
     {
       "id": 3,
       "name": "Lucas Bennett",
+      "gender": "Male",
+      "age": 31,
       "city": "London",
       "latitude": 51.509,
       "longitude": -0.118,
@@ -79,11 +87,14 @@
         "communicationRating": 88,
         "locationRating": 90,
         "recommendRating": 100
-      }
+      },
+      "numberOfRatings": 16
     },
     {
       "id": 4,
       "name": "Sophie Laurent",
+      "gender": "Female",
+      "age": 27,
       "city": "Paris",
       "latitude": 48.8532,
       "longitude": 2.3499,
@@ -106,11 +117,14 @@
         "communicationRating": 80,
         "locationRating": 51,
         "recommendRating": 59
-      }
+      },
+      "numberOfRatings": 18
     },
     {
       "id": 5,
       "name": "Daniel Brooks",
+      "gender": "Male",
+      "age": 42,
       "city": "Vienna",
       "latitude": 48.2049,
       "longitude": 16.3705,
@@ -133,11 +147,14 @@
         "communicationRating": 81,
         "locationRating": 93,
         "recommendRating": 94
-      }
+      },
+      "numberOfRatings": 8
     },
     {
       "id": 6,
       "name": "Charlotte Evans",
+      "gender": "Female",
+      "age": 33,
       "city": "London",
       "latitude": 51.5135,
       "longitude": -0.1312,
@@ -160,11 +177,14 @@
         "communicationRating": 40,
         "locationRating": 52,
         "recommendRating": 45
-      }
+      },
+      "numberOfRatings": 14
     },
     {
       "id": 7,
       "name": "Julian Weber",
+      "gender": "Male",
+      "age": 36,
       "city": "Vienna",
       "latitude": 48.2128,
       "longitude": 16.3791,
@@ -187,11 +207,14 @@
         "communicationRating": 100,
         "locationRating": 100,
         "recommendRating": 100
-      }
+      },
+      "numberOfRatings": 9
     },
     {
       "id": 8,
       "name": "Isabelle Martin",
+      "gender": "Female",
+      "age": 30,
       "city": "Paris",
       "latitude": 48.8601,
       "longitude": 2.3556,
@@ -214,11 +237,14 @@
         "communicationRating": 34,
         "locationRating": 86,
         "recommendRating": 35
-      }
+      },
+      "numberOfRatings": 25
     },
     {
       "id": 9,
       "name": "Henry Collins",
+      "gender": "Male",
+      "age": 45,
       "city": "London",
       "latitude": 51.5062,
       "longitude": -0.1246,
@@ -241,11 +267,14 @@
         "communicationRating": 0,
         "locationRating": 22,
         "recommendRating": 3
-      }
+      },
+      "numberOfRatings": 15
     },
     {
       "id": 10,
       "name": "Amelia Scott",
+      "gender": "Female",
+      "age": 26,
       "city": "Vienna",
       "latitude": 48.2067,
       "longitude": 16.3759,
@@ -268,11 +297,14 @@
         "communicationRating": 84,
         "locationRating": 83,
         "recommendRating": 89
-      }
+      },
+      "numberOfRatings": 1
     },
     {
       "id": 11,
       "name": "Thomas Wright",
+      "gender": "Male",
+      "age": 38,
       "city": "London",
       "latitude": 51.5118,
       "longitude": -0.121,
@@ -295,15 +327,18 @@
         "communicationRating": 56,
         "locationRating": 73,
         "recommendRating": 55
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 12,
       "name": "Clara Dubois",
+      "gender": "Female",
+      "age": 24,
       "city": "Paris",
       "latitude": 48.8555,
       "longitude": 2.3608,
-      "description": "A bright studio apartment with modern furnishings, located close to cafés and cultural landmarks.",
+      "description": "A bright studio apartment with modern furnishings, located close to caf\u00e9s and cultural landmarks.",
       "trustscore": 412,
       "size": 47,
       "beds": 1,
@@ -322,11 +357,14 @@
         "communicationRating": 35,
         "locationRating": 36,
         "recommendRating": 29
-      }
+      },
+      "numberOfRatings": 1
     },
     {
       "id": 13,
       "name": "Benjamin Clarke",
+      "gender": "Male",
+      "age": 32,
       "city": "Vienna",
       "latitude": 48.2145,
       "longitude": 16.3661,
@@ -349,11 +387,14 @@
         "communicationRating": 100,
         "locationRating": 100,
         "recommendRating": 87
-      }
+      },
+      "numberOfRatings": 9
     },
     {
       "id": 14,
       "name": "Olivia Brown",
+      "gender": "Female",
+      "age": 28,
       "city": "London",
       "latitude": 51.5083,
       "longitude": -0.135,
@@ -376,11 +417,14 @@
         "communicationRating": 48,
         "locationRating": 22,
         "recommendRating": 49
-      }
+      },
+      "numberOfRatings": 15
     },
     {
       "id": 15,
       "name": "Louis Moreau",
+      "gender": "Male",
+      "age": 35,
       "city": "Paris",
       "latitude": 48.852,
       "longitude": 2.3625,
@@ -403,11 +447,14 @@
         "communicationRating": 92,
         "locationRating": 67,
         "recommendRating": 56
-      }
+      },
+      "numberOfRatings": 8
     },
     {
       "id": 16,
       "name": "Mia Johnson",
+      "gender": "Female",
+      "age": 29,
       "city": "Vienna",
       "latitude": 48.209,
       "longitude": 16.3808,
@@ -430,11 +477,14 @@
         "communicationRating": 100,
         "locationRating": 57,
         "recommendRating": 49
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 17,
       "name": "George Taylor",
+      "gender": "Male",
+      "age": 41,
       "city": "London",
       "latitude": 51.5129,
       "longitude": -0.1284,
@@ -457,11 +507,14 @@
         "communicationRating": 85,
         "locationRating": 85,
         "recommendRating": 70
-      }
+      },
+      "numberOfRatings": 11
     },
     {
       "id": 18,
       "name": "Camille Rousseau",
+      "gender": "Female",
+      "age": 31,
       "city": "Paris",
       "latitude": 48.8571,
       "longitude": 2.3509,
@@ -484,11 +537,14 @@
         "communicationRating": 45,
         "locationRating": 25,
         "recommendRating": 4
-      }
+      },
+      "numberOfRatings": 11
     },
     {
       "id": 19,
       "name": "Ethan Walker",
+      "gender": "Male",
+      "age": 27,
       "city": "Vienna",
       "latitude": 48.2038,
       "longitude": 16.3729,
@@ -511,11 +567,14 @@
         "communicationRating": 100,
         "locationRating": 92,
         "recommendRating": 98
-      }
+      },
+      "numberOfRatings": 7
     },
     {
       "id": 20,
       "name": "Victoria Hill",
+      "gender": "Female",
+      "age": 34,
       "city": "London",
       "latitude": 51.5072,
       "longitude": -0.1205,
@@ -538,15 +597,18 @@
         "communicationRating": 68,
         "locationRating": 57,
         "recommendRating": 90
-      }
+      },
+      "numberOfRatings": 2
     },
     {
       "id": 21,
       "name": "Emma Fischer",
+      "gender": "Female",
+      "age": 30,
       "city": "Vienna",
       "latitude": 48.21984,
       "longitude": 16.37391,
-      "description": "Hi there, I’m offering my apartment in Vienna. It’s in a calm neighborhood with a tiny bakery downstairs, plenty of natural light, and a coffee machine that sounds more professional than it really is.",
+      "description": "Hi there, I\u2019m offering my apartment in Vienna. It\u2019s in a calm neighborhood with a tiny bakery downstairs, plenty of natural light, and a coffee machine that sounds more professional than it really is.",
       "trustscore": 684,
       "size": 74,
       "beds": 2,
@@ -565,15 +627,18 @@
         "communicationRating": 69,
         "locationRating": 60,
         "recommendRating": 83
-      }
+      },
+      "numberOfRatings": 12
     },
     {
       "id": 22,
       "name": "Louis Bernard",
+      "gender": "Male",
+      "age": 33,
       "city": "Paris",
       "latitude": 48.87251,
       "longitude": 2.32184,
-      "description": "Hey, I am offering my apartment in Paris. The area is lively but somehow still quiet at night, there’s a balcony with questionable plants, and the kitchen comes with a very loyal coffee machine.",
+      "description": "Hey, I am offering my apartment in Paris. The area is lively but somehow still quiet at night, there\u2019s a balcony with questionable plants, and the kitchen comes with a very loyal coffee machine.",
       "trustscore": 531,
       "size": 46,
       "beds": 1,
@@ -592,15 +657,18 @@
         "communicationRating": 35,
         "locationRating": 57,
         "recommendRating": 54
-      }
+      },
+      "numberOfRatings": 8
     },
     {
       "id": 23,
       "name": "Daniel Cooper",
+      "gender": "Male",
+      "age": 39,
       "city": "London",
       "latitude": 51.51847,
       "longitude": -0.14392,
-      "description": "Good news for anyone who likes wooden floors and strong espresso: I’m offering my apartment in London. It’s in a vibrant neighborhood, close to parks, and the sofa has seen many excellent naps.",
+      "description": "Good news for anyone who likes wooden floors and strong espresso: I\u2019m offering my apartment in London. It\u2019s in a vibrant neighborhood, close to parks, and the sofa has seen many excellent naps.",
       "trustscore": 902,
       "size": 95,
       "beds": 3,
@@ -619,15 +687,18 @@
         "communicationRating": 71,
         "locationRating": 97,
         "recommendRating": 99
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 24,
       "name": "Sophie Klein",
+      "gender": "Female",
+      "age": 25,
       "city": "Vienna",
       "latitude": 48.20127,
       "longitude": 16.41832,
-      "description": "Hello, I’m offering my apartment in Vienna. The neighborhood is peaceful, the balcony gets afternoon sun, and there’s a coffee machine that behaves differently every morning.",
+      "description": "Hello, I\u2019m offering my apartment in Vienna. The neighborhood is peaceful, the balcony gets afternoon sun, and there\u2019s a coffee machine that behaves differently every morning.",
       "trustscore": 418,
       "size": 52,
       "beds": 2,
@@ -646,15 +717,18 @@
         "communicationRating": 16,
         "locationRating": 56,
         "recommendRating": 32
-      }
+      },
+      "numberOfRatings": 23
     },
     {
       "id": 25,
       "name": "Claire Moreau",
+      "gender": "Female",
+      "age": 28,
       "city": "Paris",
       "latitude": 48.84563,
       "longitude": 2.37244,
-      "description": "Just putting my apartment in Paris out there. It’s in a friendly neighborhood with lots of cafés nearby, good sunlight in the kitchen, and a coffee machine that takes its job seriously.",
+      "description": "Just putting my apartment in Paris out there. It\u2019s in a friendly neighborhood with lots of caf\u00e9s nearby, good sunlight in the kitchen, and a coffee machine that takes its job seriously.",
       "trustscore": 773,
       "size": 81,
       "beds": 2,
@@ -673,15 +747,18 @@
         "communicationRating": 76,
         "locationRating": 73,
         "recommendRating": 92
-      }
+      },
+      "numberOfRatings": 15
     },
     {
       "id": 26,
       "name": "Oliver Hayes",
+      "gender": "Male",
+      "age": 36,
       "city": "London",
       "latitude": 51.49233,
       "longitude": -0.09571,
-      "description": "Hey everyone, I’m offering my apartment in London. It’s tucked into a quieter street, has a surprisingly sunny living room, and includes a coffee machine with more buttons than necessary.",
+      "description": "Hey everyone, I\u2019m offering my apartment in London. It\u2019s tucked into a quieter street, has a surprisingly sunny living room, and includes a coffee machine with more buttons than necessary.",
       "trustscore": 256,
       "size": 44,
       "beds": 1,
@@ -700,15 +777,18 @@
         "communicationRating": 40,
         "locationRating": 35,
         "recommendRating": 9
-      }
+      },
+      "numberOfRatings": 4
     },
     {
       "id": 27,
       "name": "Mila Wagner",
+      "gender": "Female",
+      "age": 27,
       "city": "Vienna",
       "latitude": 48.18754,
       "longitude": 16.35682,
-      "description": "A quick note: I’m offering my apartment in Vienna. The area is relaxed and green, there’s a comfortable balcony for morning coffee, and the apartment has exactly the right amount of squeaky floorboards.",
+      "description": "A quick note: I\u2019m offering my apartment in Vienna. The area is relaxed and green, there\u2019s a comfortable balcony for morning coffee, and the apartment has exactly the right amount of squeaky floorboards.",
       "trustscore": 614,
       "size": 91,
       "beds": 3,
@@ -727,15 +807,18 @@
         "communicationRating": 65,
         "locationRating": 61,
         "recommendRating": 43
-      }
+      },
+      "numberOfRatings": 5
     },
     {
       "id": 28,
       "name": "Theo Lambert",
+      "gender": "Male",
+      "age": 32,
       "city": "Paris",
       "latitude": 48.89021,
       "longitude": 2.34455,
-      "description": "Hi, I’m offering my apartment in Paris. It’s near a busy neighborhood full of little restaurants, but the apartment itself stays quiet, especially once the coffee machine stops growling.",
+      "description": "Hi, I\u2019m offering my apartment in Paris. It\u2019s near a busy neighborhood full of little restaurants, but the apartment itself stays quiet, especially once the coffee machine stops growling.",
       "trustscore": 845,
       "size": 63,
       "beds": 2,
@@ -754,15 +837,18 @@
         "communicationRating": 70,
         "locationRating": 91,
         "recommendRating": 85
-      }
+      },
+      "numberOfRatings": 20
     },
     {
       "id": 29,
       "name": "Hannah Brooks",
+      "gender": "Female",
+      "age": 29,
       "city": "London",
       "latitude": 51.53584,
       "longitude": -0.18274,
-      "description": "Thought I’d share my apartment in London. It’s bright, comfortable, in a nice neighborhood with good bus connections, and there’s a coffee machine that deserves at least partial credit for the atmosphere.",
+      "description": "Thought I\u2019d share my apartment in London. It\u2019s bright, comfortable, in a nice neighborhood with good bus connections, and there\u2019s a coffee machine that deserves at least partial credit for the atmosphere.",
       "trustscore": 389,
       "size": 58,
       "beds": 2,
@@ -781,15 +867,18 @@
         "communicationRating": 38,
         "locationRating": 22,
         "recommendRating": 33
-      }
+      },
+      "numberOfRatings": 9
     },
     {
       "id": 30,
       "name": "Julien Petit",
+      "gender": "Male",
+      "age": 40,
       "city": "Paris",
       "latitude": 48.86175,
       "longitude": 2.28791,
-      "description": "Hello there, I’m offering my apartment in Paris. It’s in a quieter part of the city, has a small reading corner by the window, and a coffee machine that operates with confidence.",
+      "description": "Hello there, I\u2019m offering my apartment in Paris. It\u2019s in a quieter part of the city, has a small reading corner by the window, and a coffee machine that operates with confidence.",
       "trustscore": 967,
       "size": 109,
       "beds": 3,
@@ -808,15 +897,18 @@
         "communicationRating": 98,
         "locationRating": 97,
         "recommendRating": 100
-      }
+      },
+      "numberOfRatings": 11
     },
     {
       "id": 31,
       "name": "Lena Hartmann",
+      "gender": "Female",
+      "age": 31,
       "city": "Vienna",
       "latitude": 48.24018,
       "longitude": 16.41266,
-      "description": "Hey, I’m offering my apartment in Vienna. The neighborhood is calm and leafy, there’s a decent kitchen setup, and the coffee machine is responsible for most of the apartment’s personality.",
+      "description": "Hey, I\u2019m offering my apartment in Vienna. The neighborhood is calm and leafy, there\u2019s a decent kitchen setup, and the coffee machine is responsible for most of the apartment\u2019s personality.",
       "trustscore": 741,
       "size": 38,
       "beds": 1,
@@ -835,15 +927,18 @@
         "communicationRating": 81,
         "locationRating": 77,
         "recommendRating": 71
-      }
+      },
+      "numberOfRatings": 14
     },
     {
       "id": 32,
       "name": "Nathan Reed",
+      "gender": "Male",
+      "age": 35,
       "city": "London",
       "latitude": 51.50147,
       "longitude": -0.16825,
-      "description": "I’m offering my apartment in London. It’s close to cafés and parks, the living room gets great evening light, and there’s a coffee machine that sounds like it’s preparing for launch.",
+      "description": "I\u2019m offering my apartment in London. It\u2019s close to caf\u00e9s and parks, the living room gets great evening light, and there\u2019s a coffee machine that sounds like it\u2019s preparing for launch.",
       "trustscore": 592,
       "size": 88,
       "beds": 2,
@@ -862,15 +957,18 @@
         "communicationRating": 39,
         "locationRating": 42,
         "recommendRating": 60
-      }
+      },
+      "numberOfRatings": 4
     },
     {
       "id": 33,
       "name": "Camille Rousseau",
+      "gender": "Female",
+      "age": 33,
       "city": "Paris",
       "latitude": 48.82844,
       "longitude": 2.35613,
-      "description": "Hi everyone, I’m offering my apartment in Paris. It’s in a friendly neighborhood with a weekend market nearby, lots of sunlight in the mornings, and a very committed coffee machine.",
+      "description": "Hi everyone, I\u2019m offering my apartment in Paris. It\u2019s in a friendly neighborhood with a weekend market nearby, lots of sunlight in the mornings, and a very committed coffee machine.",
       "trustscore": 477,
       "size": 72,
       "beds": 2,
@@ -889,11 +987,14 @@
         "communicationRating": 45,
         "locationRating": 61,
         "recommendRating": 38
-      }
+      },
+      "numberOfRatings": 4
     },
     {
       "id": 34,
       "name": "Felix Bauer",
+      "gender": "Male",
+      "age": 28,
       "city": "Vienna",
       "latitude": 48.20894,
       "longitude": 16.33872,
@@ -916,15 +1017,18 @@
         "communicationRating": 46,
         "locationRating": 21,
         "recommendRating": 6
-      }
+      },
+      "numberOfRatings": 4
     },
     {
       "id": 35,
       "name": "Eva Sinclair",
+      "gender": "Female",
+      "age": 26,
       "city": "London",
       "latitude": 51.47621,
       "longitude": -0.12153,
-      "description": "Hello, I’m offering my apartment in London. It’s in a vibrant neighborhood with good food nearby, the place stays cozy even on rainy days, and there’s a coffee machine ready for duty.",
+      "description": "Hello, I\u2019m offering my apartment in London. It\u2019s in a vibrant neighborhood with good food nearby, the place stays cozy even on rainy days, and there\u2019s a coffee machine ready for duty.",
       "trustscore": 828,
       "size": 102,
       "beds": 3,
@@ -943,15 +1047,18 @@
         "communicationRating": 62,
         "locationRating": 78,
         "recommendRating": 100
-      }
+      },
+      "numberOfRatings": 3
     },
     {
       "id": 36,
       "name": "Antoine Girard",
+      "gender": "Male",
+      "age": 37,
       "city": "Paris",
       "latitude": 48.85328,
       "longitude": 2.40187,
-      "description": "Hey there, I’m offering my apartment in Paris. It’s in a quieter residential area, there’s a comfortable couch near the window, and the coffee machine works harder than I do.",
+      "description": "Hey there, I\u2019m offering my apartment in Paris. It\u2019s in a quieter residential area, there\u2019s a comfortable couch near the window, and the coffee machine works harder than I do.",
       "trustscore": 649,
       "size": 67,
       "beds": 2,
@@ -970,15 +1077,18 @@
         "communicationRating": 64,
         "locationRating": 53,
         "recommendRating": 57
-      }
+      },
+      "numberOfRatings": 2
     },
     {
       "id": 37,
       "name": "Julia Neumann",
+      "gender": "Female",
+      "age": 30,
       "city": "Vienna",
       "latitude": 48.22763,
       "longitude": 16.44781,
-      "description": "A little apartment listing from Vienna: the neighborhood is quiet, there’s plenty of light in the afternoons, and the coffee machine occasionally sounds offended but always delivers.",
+      "description": "A little apartment listing from Vienna: the neighborhood is quiet, there\u2019s plenty of light in the afternoons, and the coffee machine occasionally sounds offended but always delivers.",
       "trustscore": 315,
       "size": 55,
       "beds": 2,
@@ -997,15 +1107,18 @@
         "communicationRating": 32,
         "locationRating": 8,
         "recommendRating": 19
-      }
+      },
+      "numberOfRatings": 24
     },
     {
       "id": 38,
       "name": "George Whitaker",
+      "gender": "Male",
+      "age": 44,
       "city": "London",
       "latitude": 51.54792,
       "longitude": -0.07411,
-      "description": "Hi, I’m offering my apartment in London. It’s close to a lively neighborhood with good transit connections, has a sunny kitchen, and includes a coffee machine with strong opinions.",
+      "description": "Hi, I\u2019m offering my apartment in London. It\u2019s close to a lively neighborhood with good transit connections, has a sunny kitchen, and includes a coffee machine with strong opinions.",
       "trustscore": 721,
       "size": 84,
       "beds": 2,
@@ -1024,15 +1137,18 @@
         "communicationRating": 88,
         "locationRating": 51,
         "recommendRating": 78
-      }
+      },
+      "numberOfRatings": 22
     },
     {
       "id": 39,
       "name": "Lucie Fontaine",
+      "gender": "Female",
+      "age": 25,
       "city": "Paris",
       "latitude": 48.87648,
       "longitude": 2.29514,
-      "description": "Just sharing my apartment in Paris. The area has a nice mix of quiet streets and busy cafés, the apartment gets lovely morning light, and there’s an excellent coffee machine in the kitchen.",
+      "description": "Just sharing my apartment in Paris. The area has a nice mix of quiet streets and busy caf\u00e9s, the apartment gets lovely morning light, and there\u2019s an excellent coffee machine in the kitchen.",
       "trustscore": 554,
       "size": 40,
       "beds": 1,
@@ -1051,15 +1167,18 @@
         "communicationRating": 52,
         "locationRating": 49,
         "recommendRating": 71
-      }
+      },
+      "numberOfRatings": 13
     },
     {
       "id": 40,
       "name": "Sebastian Clark",
+      "gender": "Male",
+      "age": 38,
       "city": "London",
       "latitude": 51.50964,
       "longitude": -0.20877,
-      "description": "Hey, I’m offering my apartment in London. It’s in a relaxed neighborhood with good grocery stores nearby, there’s a comfortable balcony setup, and the coffee machine is surprisingly dramatic for such a small appliance.",
+      "description": "Hey, I\u2019m offering my apartment in London. It\u2019s in a relaxed neighborhood with good grocery stores nearby, there\u2019s a comfortable balcony setup, and the coffee machine is surprisingly dramatic for such a small appliance.",
       "trustscore": 883,
       "size": 117,
       "beds": 3,
@@ -1078,15 +1197,18 @@
         "communicationRating": 96,
         "locationRating": 100,
         "recommendRating": 78
-      }
+      },
+      "numberOfRatings": 18
     },
     {
       "id": 41,
       "name": "Aisha Khan",
+      "gender": "Female",
+      "age": 29,
       "city": "Vienna",
       "latitude": 48.22,
       "longitude": 16.39,
-      "description": "Quick note: I’m offering my apartment in Vienna. It’s in a calm area with soft morning light, a small but determined coffee machine, and windows that politely let the sun in.",
+      "description": "Quick note: I\u2019m offering my apartment in Vienna. It\u2019s in a calm area with soft morning light, a small but determined coffee machine, and windows that politely let the sun in.",
       "trustscore": 612,
       "size": 60,
       "beds": 2,
@@ -1105,15 +1227,18 @@
         "communicationRating": 58,
         "locationRating": 68,
         "recommendRating": 72
-      }
+      },
+      "numberOfRatings": 23
     },
     {
       "id": 42,
       "name": "Mateo Silva",
+      "gender": "Male",
+      "age": 34,
       "city": "Paris",
       "latitude": 48.86,
       "longitude": 2.34,
-      "description": "Hello from Paris: I’m offering my apartment. It sits in a lively neighborhood, has a cozy kitchen corner, and a coffee machine that behaves like it has opinions.",
+      "description": "Hello from Paris: I\u2019m offering my apartment. It sits in a lively neighborhood, has a cozy kitchen corner, and a coffee machine that behaves like it has opinions.",
       "trustscore": 447,
       "size": 45,
       "beds": 1,
@@ -1132,15 +1257,18 @@
         "communicationRating": 22,
         "locationRating": 47,
         "recommendRating": 62
-      }
+      },
+      "numberOfRatings": 18
     },
     {
       "id": 43,
       "name": "Yuki Tanaka",
+      "gender": "Female",
+      "age": 31,
       "city": "London",
       "latitude": 51.515,
       "longitude": -0.13,
-      "description": "Just sharing my apartment in London. It’s located in a vibrant neighborhood, has decent natural light, and a coffee machine that sounds more powerful than it is.",
+      "description": "Just sharing my apartment in London. It\u2019s located in a vibrant neighborhood, has decent natural light, and a coffee machine that sounds more powerful than it is.",
       "trustscore": 803,
       "size": 92,
       "beds": 3,
@@ -1159,15 +1287,18 @@
         "communicationRating": 84,
         "locationRating": 97,
         "recommendRating": 79
-      }
+      },
+      "numberOfRatings": 3
     },
     {
       "id": 44,
-      "name": "Amélie Dubois",
+      "name": "Am\u00e9lie Dubois",
+      "gender": "Female",
+      "age": 27,
       "city": "Vienna",
       "latitude": 48.198,
       "longitude": 16.36,
-      "description": "A brief note: I’m offering my apartment in Vienna. The area is quiet, the balcony is suitable for overthinking coffee, and the coffee machine is reliably enthusiastic.",
+      "description": "A brief note: I\u2019m offering my apartment in Vienna. The area is quiet, the balcony is suitable for overthinking coffee, and the coffee machine is reliably enthusiastic.",
       "trustscore": 299,
       "size": 38,
       "beds": 1,
@@ -1186,15 +1317,18 @@
         "communicationRating": 53,
         "locationRating": 22,
         "recommendRating": 46
-      }
+      },
+      "numberOfRatings": 18
     },
     {
       "id": 45,
       "name": "Omar El-Sayed",
+      "gender": "Male",
+      "age": 36,
       "city": "Paris",
       "latitude": 48.845,
       "longitude": 2.37,
-      "description": "Hey there, I’m offering my apartment in Paris. It’s in a friendly district with cafés nearby, has warm afternoon light, and a coffee machine that never judges your timing.",
+      "description": "Hey there, I\u2019m offering my apartment in Paris. It\u2019s in a friendly district with caf\u00e9s nearby, has warm afternoon light, and a coffee machine that never judges your timing.",
       "trustscore": 910,
       "size": 110,
       "beds": 3,
@@ -1213,15 +1347,18 @@
         "communicationRating": 87,
         "locationRating": 82,
         "recommendRating": 100
-      }
+      },
+      "numberOfRatings": 11
     },
     {
       "id": 46,
       "name": "Sofia Petrova",
+      "gender": "Female",
+      "age": 28,
       "city": "London",
       "latitude": 51.5,
       "longitude": -0.11,
-      "description": "Hi there, I’m offering my apartment in London. It’s in a well-connected area, has a bright living room, and a coffee machine that takes its morning duties very seriously.",
+      "description": "Hi there, I\u2019m offering my apartment in London. It\u2019s in a well-connected area, has a bright living room, and a coffee machine that takes its morning duties very seriously.",
       "trustscore": 522,
       "size": 70,
       "beds": 2,
@@ -1240,15 +1377,18 @@
         "communicationRating": 64,
         "locationRating": 53,
         "recommendRating": 46
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 47,
       "name": "Luca Rossi",
+      "gender": "Male",
+      "age": 32,
       "city": "Vienna",
       "latitude": 48.212,
       "longitude": 16.41,
-      "description": "Good day: I’m offering my apartment in Vienna. It’s in a peaceful neighborhood, has a comfortable layout, and a coffee machine that occasionally sounds philosophical.",
+      "description": "Good day: I\u2019m offering my apartment in Vienna. It\u2019s in a peaceful neighborhood, has a comfortable layout, and a coffee machine that occasionally sounds philosophical.",
       "trustscore": 684,
       "size": 88,
       "beds": 2,
@@ -1267,15 +1407,18 @@
         "communicationRating": 46,
         "locationRating": 61,
         "recommendRating": 79
-      }
+      },
+      "numberOfRatings": 24
     },
     {
       "id": 48,
       "name": "Priya Nair",
+      "gender": "Female",
+      "age": 30,
       "city": "Paris",
       "latitude": 48.87,
       "longitude": 2.32,
-      "description": "Well hello, I’m offering my apartment in Paris. It’s in a vibrant area with plenty of cafés, gets nice daylight, and includes a coffee machine with surprising confidence.",
+      "description": "Well hello, I\u2019m offering my apartment in Paris. It\u2019s in a vibrant area with plenty of caf\u00e9s, gets nice daylight, and includes a coffee machine with surprising confidence.",
       "trustscore": 571,
       "size": 52,
       "beds": 2,
@@ -1294,15 +1437,18 @@
         "communicationRating": 58,
         "locationRating": 61,
         "recommendRating": 61
-      }
+      },
+      "numberOfRatings": 14
     },
     {
       "id": 49,
       "name": "Chen Wei",
+      "gender": "Male",
+      "age": 35,
       "city": "London",
       "latitude": 51.52,
       "longitude": -0.14,
-      "description": "Surprise listing: I’m offering my apartment in London. It’s in a quiet pocket of a lively city, has decent sunlight, and a coffee machine that refuses to be subtle.",
+      "description": "Surprise listing: I\u2019m offering my apartment in London. It\u2019s in a quiet pocket of a lively city, has decent sunlight, and a coffee machine that refuses to be subtle.",
       "trustscore": 366,
       "size": 49,
       "beds": 1,
@@ -1321,15 +1467,18 @@
         "communicationRating": 36,
         "locationRating": 17,
         "recommendRating": 56
-      }
+      },
+      "numberOfRatings": 25
     },
     {
       "id": 50,
       "name": "Noah Johnson",
+      "gender": "Male",
+      "age": 29,
       "city": "Vienna",
       "latitude": 48.23,
       "longitude": 16.345,
-      "description": "A quick hello: I’m offering my apartment in Vienna. The neighborhood is calm, the space is roomy, and the coffee machine has an unnecessarily strong personality.",
+      "description": "A quick hello: I\u2019m offering my apartment in Vienna. The neighborhood is calm, the space is roomy, and the coffee machine has an unnecessarily strong personality.",
       "trustscore": 740,
       "size": 101,
       "beds": 3,
@@ -1348,15 +1497,18 @@
         "communicationRating": 67,
         "locationRating": 86,
         "recommendRating": 93
-      }
+      },
+      "numberOfRatings": 8
     },
     {
       "id": 51,
-      "name": "Elena García",
+      "name": "Elena Garc\u00eda",
+      "gender": "Female",
+      "age": 26,
       "city": "Paris",
       "latitude": 48.852,
       "longitude": 2.36,
-      "description": "Just a small note: I’m offering my apartment in Paris. It’s in a charming neighborhood, has soft natural light, and a coffee machine that behaves like a morning ritual guardian.",
+      "description": "Just a small note: I\u2019m offering my apartment in Paris. It\u2019s in a charming neighborhood, has soft natural light, and a coffee machine that behaves like a morning ritual guardian.",
       "trustscore": 623,
       "size": 83,
       "beds": 2,
@@ -1375,15 +1527,18 @@
         "communicationRating": 50,
         "locationRating": 61,
         "recommendRating": 65
-      }
+      },
+      "numberOfRatings": 22
     },
     {
       "id": 52,
       "name": "Kwame Mensah",
+      "gender": "Male",
+      "age": 38,
       "city": "London",
       "latitude": 51.495,
       "longitude": -0.15,
-      "description": "Hey, I’m offering my apartment in London. It’s in a convenient area, has a relaxed atmosphere, and a coffee machine that sounds slightly overconfident.",
+      "description": "Hey, I\u2019m offering my apartment in London. It\u2019s in a convenient area, has a relaxed atmosphere, and a coffee machine that sounds slightly overconfident.",
       "trustscore": 458,
       "size": 65,
       "beds": 2,
@@ -1402,15 +1557,18 @@
         "communicationRating": 43,
         "locationRating": 56,
         "recommendRating": 60
-      }
+      },
+      "numberOfRatings": 5
     },
     {
       "id": 53,
       "name": "Hiroshi Sato",
+      "gender": "Male",
+      "age": 41,
       "city": "Vienna",
       "latitude": 48.205,
       "longitude": 16.395,
-      "description": "Friendly update: I’m offering my apartment in Vienna. It’s in a quiet street, has soft lighting throughout the day, and a coffee machine that behaves consistently enough.",
+      "description": "Friendly update: I\u2019m offering my apartment in Vienna. It\u2019s in a quiet street, has soft lighting throughout the day, and a coffee machine that behaves consistently enough.",
       "trustscore": 319,
       "size": 44,
       "beds": 1,
@@ -1429,15 +1587,18 @@
         "communicationRating": 20,
         "locationRating": 25,
         "recommendRating": 27
-      }
+      },
+      "numberOfRatings": 25
     },
     {
       "id": 54,
       "name": "Zara Ahmed",
+      "gender": "Female",
+      "age": 27,
       "city": "Paris",
       "latitude": 48.84,
       "longitude": 2.39,
-      "description": "Hey there, I’m offering my apartment in Paris. It’s in a lively district, has a cozy interior, and a coffee machine that quietly insists on being part of your morning.",
+      "description": "Hey there, I\u2019m offering my apartment in Paris. It\u2019s in a lively district, has a cozy interior, and a coffee machine that quietly insists on being part of your morning.",
       "trustscore": 792,
       "size": 95,
       "beds": 3,
@@ -1456,15 +1617,18 @@
         "communicationRating": 55,
         "locationRating": 75,
         "recommendRating": 73
-      }
+      },
+      "numberOfRatings": 1
     },
     {
       "id": 55,
       "name": "Isabella Thompson",
+      "gender": "Female",
+      "age": 33,
       "city": "London",
       "latitude": 51.51,
       "longitude": -0.1,
-      "description": "Hello from London: I’m offering my apartment. It’s bright, spacious, in a good neighborhood, and features a coffee machine that sounds like it’s negotiating every brew.",
+      "description": "Hello from London: I\u2019m offering my apartment. It\u2019s bright, spacious, in a good neighborhood, and features a coffee machine that sounds like it\u2019s negotiating every brew.",
       "trustscore": 885,
       "size": 120,
       "beds": 3,
@@ -1483,15 +1647,18 @@
         "communicationRating": 89,
         "locationRating": 71,
         "recommendRating": 97
-      }
+      },
+      "numberOfRatings": 22
     },
     {
       "id": 56,
-      "name": "Milan Kovács",
+      "name": "Milan Kov\u00e1cs",
+      "gender": "Male",
+      "age": 30,
       "city": "Vienna",
       "latitude": 48.2155,
       "longitude": 16.33,
-      "description": "A quick hello from Vienna: I’m offering my apartment. It’s in a relaxed neighborhood, has plenty of daylight, and a coffee machine that occasionally surprises me.",
+      "description": "A quick hello from Vienna: I\u2019m offering my apartment. It\u2019s in a relaxed neighborhood, has plenty of daylight, and a coffee machine that occasionally surprises me.",
       "trustscore": 533,
       "size": 57,
       "beds": 2,
@@ -1510,15 +1677,18 @@
         "communicationRating": 65,
         "locationRating": 65,
         "recommendRating": 52
-      }
+      },
+      "numberOfRatings": 6
     },
     {
       "id": 57,
       "name": "Fatou Ndiaye",
+      "gender": "Female",
+      "age": 29,
       "city": "Paris",
       "latitude": 48.865,
       "longitude": 2.3,
-      "description": "Well met: I’m offering my apartment in Paris. It’s in a calm residential area, has soft lighting in the evenings, and a coffee machine that takes itself quite seriously.",
+      "description": "Well met: I\u2019m offering my apartment in Paris. It\u2019s in a calm residential area, has soft lighting in the evenings, and a coffee machine that takes itself quite seriously.",
       "trustscore": 412,
       "size": 39,
       "beds": 1,
@@ -1537,15 +1707,18 @@
         "communicationRating": 27,
         "locationRating": 66,
         "recommendRating": 32
-      }
+      },
+      "numberOfRatings": 16
     },
     {
       "id": 58,
       "name": "Diego Martinez",
+      "gender": "Male",
+      "age": 34,
       "city": "London",
       "latitude": 51.53,
       "longitude": -0.12,
-      "description": "Hi there: I’m offering my apartment in London. It’s in a lively area, has comfortable furniture, and a coffee machine that sounds slightly too proud of itself.",
+      "description": "Hi there: I\u2019m offering my apartment in London. It\u2019s in a lively area, has comfortable furniture, and a coffee machine that sounds slightly too proud of itself.",
       "trustscore": 677,
       "size": 77,
       "beds": 2,
@@ -1564,15 +1737,18 @@
         "communicationRating": 74,
         "locationRating": 57,
         "recommendRating": 62
-      }
+      },
+      "numberOfRatings": 10
     },
     {
       "id": 59,
       "name": "Anika Schmidt",
+      "gender": "Female",
+      "age": 31,
       "city": "Vienna",
       "latitude": 48.195,
       "longitude": 16.385,
-      "description": "Just a note: I’m offering my apartment in Vienna. The neighborhood is peaceful, the space feels balanced, and the coffee machine is surprisingly expressive.",
+      "description": "Just a note: I\u2019m offering my apartment in Vienna. The neighborhood is peaceful, the space feels balanced, and the coffee machine is surprisingly expressive.",
       "trustscore": 734,
       "size": 90,
       "beds": 2,
@@ -1591,15 +1767,18 @@
         "communicationRating": 82,
         "locationRating": 62,
         "recommendRating": 72
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 60,
       "name": "Liam O'Connor",
+      "gender": "Male",
+      "age": 37,
       "city": "Paris",
       "latitude": 48.855,
       "longitude": 2.41,
-      "description": "Hello there, I’m offering my apartment in Paris. It’s in a friendly neighborhood, has good natural light, and a coffee machine that behaves like it’s part of the family.",
+      "description": "Hello there, I\u2019m offering my apartment in Paris. It\u2019s in a friendly neighborhood, has good natural light, and a coffee machine that behaves like it\u2019s part of the family.",
       "trustscore": 566,
       "size": 68,
       "beds": 2,
@@ -1618,15 +1797,18 @@
         "communicationRating": 51,
         "locationRating": 60,
         "recommendRating": 61
-      }
+      },
+      "numberOfRatings": 11
     },
     {
       "id": 61,
-      "name": "Nadia Petrović",
+      "name": "Nadia Petrovi\u0107",
+      "gender": "Female",
+      "age": 28,
       "city": "Vienna",
       "latitude": 48.2142,
       "longitude": 16.3621,
-      "description": "Starting off simply: I’m offering my apartment in Vienna. It’s in a quiet street with leafy views, has a cozy kitchen setup, and a coffee machine that occasionally sounds like it’s thinking out loud.",
+      "description": "Starting off simply: I\u2019m offering my apartment in Vienna. It\u2019s in a quiet street with leafy views, has a cozy kitchen setup, and a coffee machine that occasionally sounds like it\u2019s thinking out loud.",
       "trustscore": 488,
       "size": 73,
       "beds": 2,
@@ -1645,15 +1827,18 @@
         "communicationRating": 56,
         "locationRating": 43,
         "recommendRating": 32
-      }
+      },
+      "numberOfRatings": 10
     },
     {
       "id": 62,
       "name": "Ethan Walker",
+      "gender": "Male",
+      "age": 32,
       "city": "London",
       "latitude": 51.5123,
       "longitude": -0.1184,
-      "description": "Jumping right in: I’m offering my apartment in London. It’s in a vibrant area, gets solid daylight, and includes a coffee machine that sounds more ambitious than it needs to be.",
+      "description": "Jumping right in: I\u2019m offering my apartment in London. It\u2019s in a vibrant area, gets solid daylight, and includes a coffee machine that sounds more ambitious than it needs to be.",
       "trustscore": 617,
       "size": 84,
       "beds": 2,
@@ -1672,15 +1857,18 @@
         "communicationRating": 76,
         "locationRating": 38,
         "recommendRating": 46
-      }
+      },
+      "numberOfRatings": 11
     },
     {
       "id": 63,
-      "name": "Chloé Bernard",
+      "name": "Chlo\u00e9 Bernard",
+      "gender": "Female",
+      "age": 26,
       "city": "Paris",
       "latitude": 48.8609,
       "longitude": 2.3412,
-      "description": "Out of nowhere: I’m offering my apartment in Paris. It sits in a lively neighborhood, has soft morning light, and a coffee machine that behaves like it has opinions about timing.",
+      "description": "Out of nowhere: I\u2019m offering my apartment in Paris. It sits in a lively neighborhood, has soft morning light, and a coffee machine that behaves like it has opinions about timing.",
       "trustscore": 739,
       "size": 91,
       "beds": 3,
@@ -1699,15 +1887,18 @@
         "communicationRating": 100,
         "locationRating": 72,
         "recommendRating": 61
-      }
+      },
+      "numberOfRatings": 22
     },
     {
       "id": 64,
       "name": "Jonas Richter",
+      "gender": "Male",
+      "age": 35,
       "city": "Vienna",
       "latitude": 48.2071,
       "longitude": 16.3905,
-      "description": "Here we go: I’m offering my apartment in Vienna. The area is calm, the interior is simple and bright, and the coffee machine produces exactly the right amount of morning optimism.",
+      "description": "Here we go: I\u2019m offering my apartment in Vienna. The area is calm, the interior is simple and bright, and the coffee machine produces exactly the right amount of morning optimism.",
       "trustscore": 352,
       "size": 46,
       "beds": 1,
@@ -1726,15 +1917,18 @@
         "communicationRating": 32,
         "locationRating": 35,
         "recommendRating": 20
-      }
+      },
+      "numberOfRatings": 7
     },
     {
       "id": 65,
       "name": "Maya Singh",
+      "gender": "Female",
+      "age": 30,
       "city": "London",
       "latitude": 51.5058,
       "longitude": -0.1416,
-      "description": "Straight to it: I’m offering my apartment in London. It’s in a convenient neighborhood, has a bright living space, and a coffee machine that sounds like it’s preparing for a mission.",
+      "description": "Straight to it: I\u2019m offering my apartment in London. It\u2019s in a convenient neighborhood, has a bright living space, and a coffee machine that sounds like it\u2019s preparing for a mission.",
       "trustscore": 804,
       "size": 112,
       "beds": 3,
@@ -1753,15 +1947,18 @@
         "communicationRating": 94,
         "locationRating": 60,
         "recommendRating": 98
-      }
+      },
+      "numberOfRatings": 3
     },
     {
       "id": 66,
       "name": "Pierre Laurent",
+      "gender": "Male",
+      "age": 42,
       "city": "Paris",
       "latitude": 48.8513,
       "longitude": 2.3658,
-      "description": "Well then: I’m offering my apartment in Paris. It’s in a friendly district, has a compact sunny balcony, and a coffee machine that insists on participating in your routine.",
+      "description": "Well then: I\u2019m offering my apartment in Paris. It\u2019s in a friendly district, has a compact sunny balcony, and a coffee machine that insists on participating in your routine.",
       "trustscore": 563,
       "size": 58,
       "beds": 2,
@@ -1780,15 +1977,18 @@
         "communicationRating": 45,
         "locationRating": 52,
         "recommendRating": 63
-      }
+      },
+      "numberOfRatings": 14
     },
     {
       "id": 67,
       "name": "Elif Demir",
+      "gender": "Female",
+      "age": 29,
       "city": "Vienna",
       "latitude": 48.2006,
       "longitude": 16.3759,
-      "description": "Quick update: I’m offering my apartment in Vienna. It’s in a peaceful area, has warm natural lighting, and a coffee machine that behaves like a well-trained but slightly dramatic assistant.",
+      "description": "Quick update: I\u2019m offering my apartment in Vienna. It\u2019s in a peaceful area, has warm natural lighting, and a coffee machine that behaves like a well-trained but slightly dramatic assistant.",
       "trustscore": 691,
       "size": 96,
       "beds": 3,
@@ -1807,15 +2007,18 @@
         "communicationRating": 71,
         "locationRating": 83,
         "recommendRating": 78
-      }
+      },
+      "numberOfRatings": 6
     },
     {
       "id": 68,
       "name": "Oliver Bennett",
+      "gender": "Male",
+      "age": 36,
       "city": "London",
       "latitude": 51.5189,
       "longitude": -0.1321,
-      "description": "Hello there: I’m offering my apartment in London. It’s in a lively but comfortable neighborhood, has good window light, and a coffee machine that sounds overly confident before every brew.",
+      "description": "Hello there: I\u2019m offering my apartment in London. It\u2019s in a lively but comfortable neighborhood, has good window light, and a coffee machine that sounds overly confident before every brew.",
       "trustscore": 279,
       "size": 41,
       "beds": 1,
@@ -1834,15 +2037,18 @@
         "communicationRating": 0,
         "locationRating": 37,
         "recommendRating": 31
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 69,
       "name": "Sofia Alvarez",
+      "gender": "Female",
+      "age": 31,
       "city": "Paris",
       "latitude": 48.8662,
       "longitude": 2.347,
-      "description": "To put it simply: I’m offering my apartment in Paris. It’s in a charming neighborhood, has soft afternoon light, and a coffee machine that quietly dominates the kitchen.",
+      "description": "To put it simply: I\u2019m offering my apartment in Paris. It\u2019s in a charming neighborhood, has soft afternoon light, and a coffee machine that quietly dominates the kitchen.",
       "trustscore": 842,
       "size": 79,
       "beds": 2,
@@ -1861,15 +2067,18 @@
         "communicationRating": 66,
         "locationRating": 93,
         "recommendRating": 97
-      }
+      },
+      "numberOfRatings": 21
     },
     {
       "id": 70,
       "name": "Lukas Weber",
+      "gender": "Male",
+      "age": 28,
       "city": "Vienna",
       "latitude": 48.2119,
       "longitude": 16.3512,
-      "description": "Starting here: I’m offering my apartment in Vienna. The neighborhood is relaxed, the apartment is airy, and the coffee machine behaves like it’s part of the morning weather system.",
+      "description": "Starting here: I\u2019m offering my apartment in Vienna. The neighborhood is relaxed, the apartment is airy, and the coffee machine behaves like it\u2019s part of the morning weather system.",
       "trustscore": 415,
       "size": 52,
       "beds": 2,
@@ -1888,15 +2097,18 @@
         "communicationRating": 34,
         "locationRating": 47,
         "recommendRating": 42
-      }
+      },
+      "numberOfRatings": 13
     },
     {
       "id": 71,
       "name": "Amira Hassan",
+      "gender": "Female",
+      "age": 33,
       "city": "London",
       "latitude": 51.5091,
       "longitude": -0.1098,
-      "description": "Right away: I’m offering my apartment in London. It’s in a central but calm area, has warm lighting, and a coffee machine that sounds like it’s negotiating every cup.",
+      "description": "Right away: I\u2019m offering my apartment in London. It\u2019s in a central but calm area, has warm lighting, and a coffee machine that sounds like it\u2019s negotiating every cup.",
       "trustscore": 903,
       "size": 118,
       "beds": 3,
@@ -1915,15 +2127,18 @@
         "communicationRating": 91,
         "locationRating": 94,
         "recommendRating": 92
-      }
+      },
+      "numberOfRatings": 1
     },
     {
       "id": 72,
       "name": "Luc Morel",
+      "gender": "Male",
+      "age": 39,
       "city": "Paris",
       "latitude": 48.8579,
       "longitude": 2.3294,
-      "description": "Let’s go: I’m offering my apartment in Paris. It’s in a lively neighborhood, has a bright kitchen corner, and a coffee machine that takes its role extremely seriously.",
+      "description": "Let\u2019s go: I\u2019m offering my apartment in Paris. It\u2019s in a lively neighborhood, has a bright kitchen corner, and a coffee machine that takes its role extremely seriously.",
       "trustscore": 338,
       "size": 44,
       "beds": 1,
@@ -1942,15 +2157,18 @@
         "communicationRating": 33,
         "locationRating": 38,
         "recommendRating": 11
-      }
+      },
+      "numberOfRatings": 8
     },
     {
       "id": 73,
       "name": "Emilia Novak",
+      "gender": "Female",
+      "age": 27,
       "city": "Vienna",
       "latitude": 48.2033,
       "longitude": 16.3987,
-      "description": "Here’s the situation: I’m offering my apartment in Vienna. It’s in a quiet residential area, has gentle daylight, and a coffee machine that insists on being part of conversations.",
+      "description": "Here\u2019s the situation: I\u2019m offering my apartment in Vienna. It\u2019s in a quiet residential area, has gentle daylight, and a coffee machine that insists on being part of conversations.",
       "trustscore": 756,
       "size": 87,
       "beds": 2,
@@ -1969,15 +2187,18 @@
         "communicationRating": 71,
         "locationRating": 85,
         "recommendRating": 71
-      }
+      },
+      "numberOfRatings": 12
     },
     {
       "id": 74,
       "name": "Thomas Reid",
+      "gender": "Male",
+      "age": 45,
       "city": "London",
       "latitude": 51.4965,
       "longitude": -0.1379,
-      "description": "Quick note: I’m offering my apartment in London. It’s in a well-connected neighborhood, has a comfortable layout, and a coffee machine that sounds slightly theatrical.",
+      "description": "Quick note: I\u2019m offering my apartment in London. It\u2019s in a well-connected neighborhood, has a comfortable layout, and a coffee machine that sounds slightly theatrical.",
       "trustscore": 466,
       "size": 67,
       "beds": 2,
@@ -1996,15 +2217,18 @@
         "communicationRating": 49,
         "locationRating": 38,
         "recommendRating": 32
-      }
+      },
+      "numberOfRatings": 23
     },
     {
       "id": 75,
-      "name": "Inès Charpentier",
+      "name": "In\u00e8s Charpentier",
+      "gender": "Female",
+      "age": 30,
       "city": "Paris",
       "latitude": 48.8446,
       "longitude": 2.3589,
-      "description": "Hi there: I’m offering my apartment in Paris. It’s in a pleasant neighborhood, has soft natural light, and a coffee machine that behaves like it’s mildly proud of itself.",
+      "description": "Hi there: I\u2019m offering my apartment in Paris. It\u2019s in a pleasant neighborhood, has soft natural light, and a coffee machine that behaves like it\u2019s mildly proud of itself.",
       "trustscore": 611,
       "size": 92,
       "beds": 3,
@@ -2023,15 +2247,18 @@
         "communicationRating": 72,
         "locationRating": 45,
         "recommendRating": 51
-      }
+      },
+      "numberOfRatings": 19
     },
     {
       "id": 76,
       "name": "Ben Carter",
+      "gender": "Male",
+      "age": 34,
       "city": "Vienna",
       "latitude": 48.2185,
       "longitude": 16.3829,
-      "description": "Just saying: I’m offering my apartment in Vienna. It’s in a calm area, has a practical layout, and a coffee machine that occasionally sounds like it’s planning something.",
+      "description": "Just saying: I\u2019m offering my apartment in Vienna. It\u2019s in a calm area, has a practical layout, and a coffee machine that occasionally sounds like it\u2019s planning something.",
       "trustscore": 523,
       "size": 60,
       "beds": 2,
@@ -2050,15 +2277,18 @@
         "communicationRating": 47,
         "locationRating": 42,
         "recommendRating": 49
-      }
+      },
+      "numberOfRatings": 24
     },
     {
       "id": 77,
       "name": "Noor Al-Mansouri",
+      "gender": "Female",
+      "age": 28,
       "city": "London",
       "latitude": 51.5227,
       "longitude": -0.1256,
-      "description": "To begin: I’m offering my apartment in London. It’s in a vibrant district, has good sunlight exposure, and a coffee machine that sounds more confident than necessary.",
+      "description": "To begin: I\u2019m offering my apartment in London. It\u2019s in a vibrant district, has good sunlight exposure, and a coffee machine that sounds more confident than necessary.",
       "trustscore": 742,
       "size": 83,
       "beds": 2,
@@ -2077,15 +2307,18 @@
         "communicationRating": 71,
         "locationRating": 73,
         "recommendRating": 72
-      }
+      },
+      "numberOfRatings": 5
     },
     {
       "id": 78,
       "name": "Clara Dupont",
+      "gender": "Female",
+      "age": 25,
       "city": "Paris",
       "latitude": 48.8627,
       "longitude": 2.3781,
-      "description": "Here it is: I’m offering my apartment in Paris. It’s in a lively neighborhood, has a comfortable interior, and a coffee machine that treats mornings like a performance.",
+      "description": "Here it is: I\u2019m offering my apartment in Paris. It\u2019s in a lively neighborhood, has a comfortable interior, and a coffee machine that treats mornings like a performance.",
       "trustscore": 888,
       "size": 104,
       "beds": 3,
@@ -2104,15 +2337,18 @@
         "communicationRating": 100,
         "locationRating": 100,
         "recommendRating": 89
-      }
+      },
+      "numberOfRatings": 25
     },
     {
       "id": 79,
       "name": "Henry Collins",
+      "gender": "Male",
+      "age": 41,
       "city": "Vienna",
       "latitude": 48.2096,
       "longitude": 16.3408,
-      "description": "Right away: I’m offering my apartment in Vienna. It’s in a quiet neighborhood, has steady natural light, and a coffee machine that behaves like a reliable morning companion.",
+      "description": "Right away: I\u2019m offering my apartment in Vienna. It\u2019s in a quiet neighborhood, has steady natural light, and a coffee machine that behaves like a reliable morning companion.",
       "trustscore": 377,
       "size": 48,
       "beds": 1,
@@ -2131,15 +2367,18 @@
         "communicationRating": 17,
         "locationRating": 49,
         "recommendRating": 33
-      }
+      },
+      "numberOfRatings": 23
     },
     {
       "id": 80,
       "name": "Amina Rahman",
+      "gender": "Female",
+      "age": 32,
       "city": "London",
       "latitude": 51.5032,
       "longitude": -0.1487,
-      "description": "Last but not least: I’m offering my apartment in London. It’s in a calm yet central area, has warm interiors, and a coffee machine that seems emotionally invested in your mornings.",
+      "description": "Last but not least: I\u2019m offering my apartment in London. It\u2019s in a calm yet central area, has warm interiors, and a coffee machine that seems emotionally invested in your mornings.",
       "trustscore": 650,
       "size": 75,
       "beds": 2,
@@ -2158,15 +2397,18 @@
         "communicationRating": 48,
         "locationRating": 64,
         "recommendRating": 66
-      }
+      },
+      "numberOfRatings": 15
     },
     {
       "id": 81,
       "name": "Jonas Koller",
+      "gender": "Male",
+      "age": 36,
       "city": "Vienna",
       "latitude": 48.2105,
       "longitude": 16.365,
-      "description": "Kicking things off: I’m offering my apartment in Vienna. It’s in a quiet residential pocket, has soft natural light, and a coffee machine that behaves like it’s slightly opinionated.",
+      "description": "Kicking things off: I\u2019m offering my apartment in Vienna. It\u2019s in a quiet residential pocket, has soft natural light, and a coffee machine that behaves like it\u2019s slightly opinionated.",
       "trustscore": 540,
       "size": 66,
       "beds": 2,
@@ -2185,15 +2427,18 @@
         "communicationRating": 45,
         "locationRating": 61,
         "recommendRating": 44
-      }
+      },
+      "numberOfRatings": 4
     },
     {
       "id": 82,
-      "name": "Leïla Benali",
+      "name": "Le\u00efla Benali",
+      "gender": "Female",
+      "age": 29,
       "city": "Paris",
       "latitude": 48.86,
       "longitude": 2.33,
-      "description": "Out of nowhere: I’m offering my apartment in Paris. It’s in a lively area with cafés nearby, has warm morning light, and a coffee machine that insists on being part of the routine.",
+      "description": "Out of nowhere: I\u2019m offering my apartment in Paris. It\u2019s in a lively area with caf\u00e9s nearby, has warm morning light, and a coffee machine that insists on being part of the routine.",
       "trustscore": 418,
       "size": 49,
       "beds": 1,
@@ -2212,15 +2457,18 @@
         "communicationRating": 64,
         "locationRating": 39,
         "recommendRating": 39
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 83,
       "name": "Raj Patel",
+      "gender": "Male",
+      "age": 35,
       "city": "London",
       "latitude": 51.509,
       "longitude": -0.135,
-      "description": "Straight in: I’m offering my apartment in London. It’s in a well-connected neighborhood, gets decent daylight, and includes a coffee machine that sounds more ambitious than necessary.",
+      "description": "Straight in: I\u2019m offering my apartment in London. It\u2019s in a well-connected neighborhood, gets decent daylight, and includes a coffee machine that sounds more ambitious than necessary.",
       "trustscore": 777,
       "size": 91,
       "beds": 3,
@@ -2239,15 +2487,18 @@
         "communicationRating": 87,
         "locationRating": 66,
         "recommendRating": 89
-      }
+      },
+      "numberOfRatings": 14
     },
     {
       "id": 84,
       "name": "Marta Novak",
+      "gender": "Female",
+      "age": 31,
       "city": "Vienna",
       "latitude": 48.1988,
       "longitude": 16.3802,
-      "description": "To begin: I’m offering my apartment in Vienna. It’s spacious, sits in a calm area, and has a coffee machine that occasionally sounds like it’s making life decisions.",
+      "description": "To begin: I\u2019m offering my apartment in Vienna. It\u2019s spacious, sits in a calm area, and has a coffee machine that occasionally sounds like it\u2019s making life decisions.",
       "trustscore": 301,
       "size": 120,
       "beds": 3,
@@ -2266,15 +2517,18 @@
         "communicationRating": 46,
         "locationRating": 62,
         "recommendRating": 17
-      }
+      },
+      "numberOfRatings": 4
     },
     {
       "id": 85,
       "name": "Hugo Martin",
+      "gender": "Male",
+      "age": 38,
       "city": "Paris",
       "latitude": 48.853,
       "longitude": 2.362,
-      "description": "Well then: I’m offering my apartment in Paris. It’s in a friendly neighborhood, has nice afternoon light, and a coffee machine that behaves like a small household celebrity.",
+      "description": "Well then: I\u2019m offering my apartment in Paris. It\u2019s in a friendly neighborhood, has nice afternoon light, and a coffee machine that behaves like a small household celebrity.",
       "trustscore": 612,
       "size": 72,
       "beds": 2,
@@ -2293,15 +2547,18 @@
         "communicationRating": 58,
         "locationRating": 70,
         "recommendRating": 46
-      }
+      },
+      "numberOfRatings": 2
     },
     {
       "id": 86,
       "name": "Sienna Clarke",
+      "gender": "Female",
+      "age": 26,
       "city": "London",
       "latitude": 51.503,
       "longitude": -0.12,
-      "description": "Here we go: I’m offering my apartment in London. It’s in a lively but comfortable area, has a bright kitchen, and a coffee machine that sounds slightly too confident.",
+      "description": "Here we go: I\u2019m offering my apartment in London. It\u2019s in a lively but comfortable area, has a bright kitchen, and a coffee machine that sounds slightly too confident.",
       "trustscore": 455,
       "size": 58,
       "beds": 2,
@@ -2320,15 +2577,18 @@
         "communicationRating": 63,
         "locationRating": 51,
         "recommendRating": 55
-      }
+      },
+      "numberOfRatings": 6
     },
     {
       "id": 87,
       "name": "Arman Yilmaz",
+      "gender": "Male",
+      "age": 33,
       "city": "Vienna",
       "latitude": 48.205,
       "longitude": 16.39,
-      "description": "A quick note: I’m offering my apartment in Vienna. It’s in a quiet street, has gentle daylight, and a coffee machine that treats mornings like a performance.",
+      "description": "A quick note: I\u2019m offering my apartment in Vienna. It\u2019s in a quiet street, has gentle daylight, and a coffee machine that treats mornings like a performance.",
       "trustscore": 688,
       "size": 44,
       "beds": 1,
@@ -2347,15 +2607,18 @@
         "communicationRating": 70,
         "locationRating": 64,
         "recommendRating": 69
-      }
+      },
+      "numberOfRatings": 13
     },
     {
       "id": 88,
       "name": "Camille Zhao",
+      "gender": "Female",
+      "age": 28,
       "city": "Paris",
       "latitude": 48.866,
       "longitude": 2.345,
-      "description": "Jumping in: I’m offering my apartment in Paris. It’s in a vibrant district, has soft lighting in the evenings, and a coffee machine that behaves like it has a schedule of its own.",
+      "description": "Jumping in: I\u2019m offering my apartment in Paris. It\u2019s in a vibrant district, has soft lighting in the evenings, and a coffee machine that behaves like it has a schedule of its own.",
       "trustscore": 834,
       "size": 88,
       "beds": 2,
@@ -2374,15 +2637,18 @@
         "communicationRating": 93,
         "locationRating": 79,
         "recommendRating": 85
-      }
+      },
+      "numberOfRatings": 10
     },
     {
       "id": 89,
-      "name": "Tomás O'Brien",
+      "name": "Tom\u00e1s O'Brien",
+      "gender": "Male",
+      "age": 40,
       "city": "London",
       "latitude": 51.5155,
       "longitude": -0.1105,
-      "description": "Just putting this out there: I’m offering my apartment in London. It’s centrally located, has warm interiors, and a coffee machine that sounds like it’s negotiating every brew.",
+      "description": "Just putting this out there: I\u2019m offering my apartment in London. It\u2019s centrally located, has warm interiors, and a coffee machine that sounds like it\u2019s negotiating every brew.",
       "trustscore": 690,
       "size": 102,
       "beds": 3,
@@ -2401,15 +2667,18 @@
         "communicationRating": 63,
         "locationRating": 54,
         "recommendRating": 78
-      }
+      },
+      "numberOfRatings": 17
     },
     {
       "id": 90,
       "name": "Elisabeth Gruber",
+      "gender": "Female",
+      "age": 45,
       "city": "Vienna",
       "latitude": 48.214,
       "longitude": 16.37,
-      "description": "Starting simple: I’m offering my apartment in Vienna. It’s in a peaceful neighborhood, gets steady daylight, and a coffee machine that is reliably dramatic in the mornings.",
+      "description": "Starting simple: I\u2019m offering my apartment in Vienna. It\u2019s in a peaceful neighborhood, gets steady daylight, and a coffee machine that is reliably dramatic in the mornings.",
       "trustscore": 220,
       "size": 37,
       "beds": 1,
@@ -2428,15 +2697,18 @@
         "communicationRating": 26,
         "locationRating": 30,
         "recommendRating": 18
-      }
+      },
+      "numberOfRatings": 13
     },
     {
       "id": 91,
-      "name": "Noémie Laurent",
+      "name": "No\u00e9mie Laurent",
+      "gender": "Female",
+      "age": 30,
       "city": "Paris",
       "latitude": 48.858,
       "longitude": 2.348,
-      "description": "Right away: I’m offering my apartment in Paris. It’s in a lively area with good cafés, has pleasant natural light, and a coffee machine that insists on being part of every morning.",
+      "description": "Right away: I\u2019m offering my apartment in Paris. It\u2019s in a lively area with good caf\u00e9s, has pleasant natural light, and a coffee machine that insists on being part of every morning.",
       "trustscore": 905,
       "size": 95,
       "beds": 3,
@@ -2455,15 +2727,18 @@
         "communicationRating": 87,
         "locationRating": 78,
         "recommendRating": 91
-      }
+      },
+      "numberOfRatings": 15
     },
     {
       "id": 92,
       "name": "Kofi Mensah",
+      "gender": "Male",
+      "age": 37,
       "city": "London",
       "latitude": 51.497,
       "longitude": -0.142,
-      "description": "Hello there: I’m offering my apartment in London. It’s in a well-connected area, has a cozy layout, and a coffee machine that sounds like it has strong opinions about timing.",
+      "description": "Hello there: I\u2019m offering my apartment in London. It\u2019s in a well-connected area, has a cozy layout, and a coffee machine that sounds like it has strong opinions about timing.",
       "trustscore": 512,
       "size": 83,
       "beds": 2,
@@ -2482,15 +2757,18 @@
         "communicationRating": 9,
         "locationRating": 81,
         "recommendRating": 57
-      }
+      },
+      "numberOfRatings": 25
     },
     {
       "id": 93,
       "name": "Selin Kaya",
+      "gender": "Female",
+      "age": 29,
       "city": "Vienna",
       "latitude": 48.211,
       "longitude": 16.352,
-      "description": "To begin with: I’m offering my apartment in Vienna. It’s in a calm residential zone, has soft morning light, and a coffee machine that behaves like a very committed assistant.",
+      "description": "To begin with: I\u2019m offering my apartment in Vienna. It\u2019s in a calm residential zone, has soft morning light, and a coffee machine that behaves like a very committed assistant.",
       "trustscore": 640,
       "size": 79,
       "beds": 2,
@@ -2509,15 +2787,18 @@
         "communicationRating": 58,
         "locationRating": 75,
         "recommendRating": 77
-      }
+      },
+      "numberOfRatings": 20
     },
     {
       "id": 94,
       "name": "Adrien Roche",
+      "gender": "Male",
+      "age": 34,
       "city": "Paris",
       "latitude": 48.85,
       "longitude": 2.34,
-      "description": "Well hello: I’m offering my apartment in Paris. It’s in a pleasant neighborhood, has a bright kitchen corner, and a coffee machine that behaves like it’s slightly proud of itself.",
+      "description": "Well hello: I\u2019m offering my apartment in Paris. It\u2019s in a pleasant neighborhood, has a bright kitchen corner, and a coffee machine that behaves like it\u2019s slightly proud of itself.",
       "trustscore": 433,
       "size": 55,
       "beds": 2,
@@ -2536,15 +2817,18 @@
         "communicationRating": 49,
         "locationRating": 52,
         "recommendRating": 34
-      }
+      },
+      "numberOfRatings": 3
     },
     {
       "id": 95,
       "name": "Emily Nguyen",
+      "gender": "Female",
+      "age": 27,
       "city": "London",
       "latitude": 51.52,
       "longitude": -0.125,
-      "description": "Kicking off here: I’m offering my apartment in London. It’s in a lively neighborhood, has comfortable natural light, and a coffee machine that sounds slightly too enthusiastic.",
+      "description": "Kicking off here: I\u2019m offering my apartment in London. It\u2019s in a lively neighborhood, has comfortable natural light, and a coffee machine that sounds slightly too enthusiastic.",
       "trustscore": 781,
       "size": 70,
       "beds": 2,
@@ -2563,15 +2847,18 @@
         "communicationRating": 82,
         "locationRating": 87,
         "recommendRating": 99
-      }
+      },
+      "numberOfRatings": 4
     },
     {
       "id": 96,
       "name": "David Kim",
+      "gender": "Male",
+      "age": 31,
       "city": "Vienna",
       "latitude": 48.206,
       "longitude": 16.401,
-      "description": "Just saying: I’m offering my apartment in Vienna. It’s in a quiet area, has a balanced layout, and a coffee machine that occasionally sounds like it’s thinking deeply.",
+      "description": "Just saying: I\u2019m offering my apartment in Vienna. It\u2019s in a quiet area, has a balanced layout, and a coffee machine that occasionally sounds like it\u2019s thinking deeply.",
       "trustscore": 359,
       "size": 101,
       "beds": 3,
@@ -2590,15 +2877,18 @@
         "communicationRating": 37,
         "locationRating": 34,
         "recommendRating": 49
-      }
+      },
+      "numberOfRatings": 20
     },
     {
       "id": 97,
       "name": "Fatima Zahra",
+      "gender": "Female",
+      "age": 33,
       "city": "Paris",
       "latitude": 48.863,
       "longitude": 2.356,
-      "description": "Here goes: I’m offering my apartment in Paris. It’s in a vibrant district, has warm evening light, and a coffee machine that treats mornings like a ritual.",
+      "description": "Here goes: I\u2019m offering my apartment in Paris. It\u2019s in a vibrant district, has warm evening light, and a coffee machine that treats mornings like a ritual.",
       "trustscore": 668,
       "size": 62,
       "beds": 2,
@@ -2617,15 +2907,18 @@
         "communicationRating": 51,
         "locationRating": 83,
         "recommendRating": 58
-      }
+      },
+      "numberOfRatings": 23
     },
     {
       "id": 98,
       "name": "George Ivanov",
+      "gender": "Male",
+      "age": 39,
       "city": "London",
       "latitude": 51.511,
       "longitude": -0.131,
-      "description": "Straight in: I’m offering my apartment in London. It’s in a convenient area, has decent sunlight, and a coffee machine that sounds like it’s preparing for something important.",
+      "description": "Straight in: I\u2019m offering my apartment in London. It\u2019s in a convenient area, has decent sunlight, and a coffee machine that sounds like it\u2019s preparing for something important.",
       "trustscore": 299,
       "size": 46,
       "beds": 1,
@@ -2644,15 +2937,18 @@
         "communicationRating": 42,
         "locationRating": 3,
         "recommendRating": 56
-      }
+      },
+      "numberOfRatings": 8
     },
     {
       "id": 99,
       "name": "Anna Rossi",
+      "gender": "Female",
+      "age": 25,
       "city": "Vienna",
       "latitude": 48.2,
       "longitude": 16.36,
-      "description": "Quick update: I’m offering my apartment in Vienna. It’s in a calm neighborhood, has soft natural lighting, and a coffee machine that behaves like a loyal but slightly noisy companion.",
+      "description": "Quick update: I\u2019m offering my apartment in Vienna. It\u2019s in a calm neighborhood, has soft natural lighting, and a coffee machine that behaves like a loyal but slightly noisy companion.",
       "trustscore": 844,
       "size": 89,
       "beds": 2,
@@ -2671,15 +2967,18 @@
         "communicationRating": 100,
         "locationRating": 69,
         "recommendRating": 100
-      }
+      },
+      "numberOfRatings": 25
     },
     {
       "id": 100,
       "name": "Lucas Pereira",
+      "gender": "Male",
+      "age": 36,
       "city": "Paris",
       "latitude": 48.859,
       "longitude": 2.37,
-      "description": "Last one: I’m offering my apartment in Paris. It’s in a lively yet comfortable neighborhood, has good natural light, and a coffee machine that insists on being part of the experience.",
+      "description": "Last one: I\u2019m offering my apartment in Paris. It\u2019s in a lively yet comfortable neighborhood, has good natural light, and a coffee machine that insists on being part of the experience.",
       "trustscore": 570,
       "size": 118,
       "beds": 3,
@@ -2698,7 +2997,8 @@
         "communicationRating": 71,
         "locationRating": 33,
         "recommendRating": 69
-      }
+      },
+      "numberOfRatings": 1
     }
   ]
 }
