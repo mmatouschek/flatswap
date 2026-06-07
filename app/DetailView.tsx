@@ -1,11 +1,12 @@
 import { isUserLoggedIn } from "@/backend/services/AuthStorage";
 import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
+import FlatSwapCalendarNew from "../components/ui/FlatSwapCalendarNew";
 import {
   useFocusEffect,
   useNavigation,
   useRoute,
 } from "@react-navigation/native";
-
+import { useSearchData } from "./SearchData";
 import { useCallback, useState } from "react";
 import {
   Alert,
@@ -33,7 +34,16 @@ export default function DetailView() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const [modalVisible, setModalVisible] = useState(false);
-
+  const [startDate, setStartDate] = useState(
+    useSearchData((state) => state.startDate),
+  );
+  const [endDate, setEndDate] = useState(
+    useSearchData((state) => state.endDate),
+  );
+  const [current, setCurrent] = useState(
+    useSearchData((state) => state.current),
+  );
+  
   useFocusEffect(
     useCallback(() => {
       checkLogin();
@@ -50,6 +60,8 @@ export default function DetailView() {
   } else {
     imageSource = "";
   }*/
+  const[popUpVisible, setPopUpVisible] = useState(false);
+  
   const imageSource = "";
   console.log(
     "ID " + id + " currentImage " + currentImage + "imageSource " + imageSource,
@@ -71,22 +83,86 @@ export default function DetailView() {
       navigation.navigate("Tab", { screen: "Profile" });
       return;
     } else {
-      DeviceEventEmitter.emit("ADD_OUTGOING_REQUEST", {
-        id: Date.now(),
-        userId: id,
-        name: user.name,
-        startDate: user.startDate,
-        endDate: user.endDate,
-        message: "Would love to do a month-long swap in Vienna!",
-        outgoing: 1,
-      });
-      setRequestSent(true);
-      setButtonText("Request sent to ");
+	  setPopUpVisible(true);
     }
   };
-
+	
   return (
     <View style={{ flex: 1 }}>
+	
+	<Modal transparent visible = {popUpVisible} animationType="fade">
+	<View style = {{flex:1, paddingHorizontal:50, paddingVertical:100}}>
+		<View style ={{flex:1, alignItems:"center", backgroundColor:"rgba(0, 0, 0, 0.8)"}}>
+		<View style = {{flex:1}}/>
+		<View style = {{flex:1}}>
+		<Text style = {{fontWeight:"bold", fontSize:20, color: "white"}}>Do you want to request a swap?</Text>
+		</View>
+			<View style={{flex:10}}>
+			<FlatSwapCalendarNew
+				  startDate={startDate}
+				  endDate={endDate}
+				  isVisible={true}
+				  onDatePress={(day) => {
+					if (current == "start") {
+					  setEndDate(null);
+					  setStartDate(day.dateString);
+					  setCurrent("end");
+					} else {
+					  const start = new Date(startDate);
+					  const end = new Date(day.dateString);
+					  if (end.getTime() > start.getTime()) {
+						setEndDate(day.dateString);
+						setCurrent("start");
+					  } else {
+						setStartDate(null);
+						setEndDate(null);
+						setCurrent("start");
+					  }
+					}
+				  }}
+				/>
+			
+				</View>
+				<View style={{flex:2, justifyContent:"center", paddingHorizontal:25, alignItems:"right"}}>
+				<Text style = {{fontWeight:"bold", fontSize:20, color: "white"}}>{"Select a time period for your swap!"} </Text>
+				
+				</View>
+				<View style={{flex:2, flexDirection:"row"}}>
+					<TouchableOpacity style={[styles.button,{flex:1, justifyContent:"center"}]} onPress = {()=>{
+					DeviceEventEmitter.emit("ADD_OUTGOING_REQUEST", {
+					id: Date.now(),
+					userId: id,
+					name: user.name,
+					startDate: user.startDate,
+					endDate: user.endDate,
+					message: "Would love to do a month-long swap in Vienna!",
+					outgoing: 1,
+					});
+					setRequestSent(true);
+					setButtonText("Request sent to ");
+					setPopUpVisible(false);
+					
+					}
+					
+					}>
+					
+					<Text style={styles.buttonText}>
+					  Send
+					</Text>
+				  </TouchableOpacity>
+				  <TouchableOpacity style={[styles.button,{flex:1, justifyContent:"center"}]} onPress = {()=>setPopUpVisible(false)}>
+					<Text style={styles.buttonText}>
+					  Cancel
+					</Text>
+				  </TouchableOpacity>
+				</View>
+			</View>
+		</View>
+		
+		
+	</Modal>
+	
+	
       <View
         style={{
           width: "100%",

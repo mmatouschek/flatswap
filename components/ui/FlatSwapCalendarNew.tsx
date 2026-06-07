@@ -3,26 +3,20 @@ import { View, Modal, StyleSheet, Text, Pressable } from "react-native";
 import SearchBar from "../components/SearchBar";
 import { useRouter  } from "expo-router";
 import { Calendar } from 'react-native-calendars';
+
 type Properties = {
-  isVisible: boolean;
-  top: string;
-  left: string;
   startDate: string;
   endDate: string;
-  onBackdropPress: () => void;
   onDatePress: () => void;
 };
 
-export default function FlatSwapCalendar({isVisible, top="20.7%", left="90", startDate, endDate, onBackdropPress,onDatePress}: Properties) {
+export default function FlatSwapCalendarNew({startDate, endDate, onDatePress,}: Properties) {
   const markedDates = buildMarkedDateRange(
     startDate,
     endDate
   );
   const currentDate = startDate ? startDate : "2026-06-01"
   return (
-    <Modal visible={isVisible} transparent animationType="fade">
-	<Pressable style={styles.background} onPress={onBackdropPress}/>
-      <View style={[styles.modal, {top:top, left:left}]}>
       <Calendar
 		current={currentDate}
 		startDate={startDate}
@@ -31,8 +25,6 @@ export default function FlatSwapCalendar({isVisible, top="20.7%", left="90", sta
         onDayPress={onDatePress}
 		markedDates={markedDates}
       />
-    </View>
-    </Modal>
   );
 }
 
